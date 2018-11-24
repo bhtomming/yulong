@@ -1,0 +1,528 @@
+2018-11-23 22:48:13-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单信息
+Array
+(
+    [order_id] => 78
+    [order_sn] => 2018112355322
+    [user_id] => 5600
+    [order_status] => 0
+    [shipping_status] => 0
+    [pay_status] => 0
+    [consignee] => 木子
+    [country] => 1
+    [province] => 7
+    [city] => 100
+    [district] => 894
+    [address] => 测试
+    [zipcode] => 
+    [tel] => 13008821418
+    [mobile] => 
+    [email] => 
+    [best_time] => 
+    [sign_building] => 
+    [postscript] => 
+    [shipping_id] => -1
+    [shipping_name] => 
+    [pay_id] => 9
+    [pay_name] => 微信支付
+    [how_oos] => 等待所有商品备齐后再发
+    [how_surplus] => 
+    [pack_name] => 
+    [card_name] => 
+    [card_message] => 
+    [inv_payee] => 
+    [inv_content] => 
+    [goods_amount] => 0.10
+    [shipping_fee] => 0.00
+    [insure_fee] => 0.00
+    [pay_fee] => 0.00
+    [pack_fee] => 0.00
+    [card_fee] => 0.00
+    [money_paid] => 0.00
+    [surplus] => 0.00
+    [integral] => 0
+    [integral_money] => 0.00
+    [bonus] => 0.00
+    [order_amount] => 0.10
+    [from_ad] => 55
+    [referer] => 本站
+    [add_time] => 1542955692
+    [confirm_time] => 0
+    [pay_time] => 0
+    [shipping_time] => 0
+    [pack_id] => 0
+    [card_id] => 0
+    [bonus_id] => 0
+    [invoice_no] => 
+    [extension_code] => 
+    [extension_id] => 0
+    [to_buyer] => 
+    [pay_note] => 
+    [agency_id] => 0
+    [inv_type] => 
+    [tax] => 0.00
+    [is_separate] => 0
+    [parent_id] => 0
+    [discount] => 0.00
+    [fencheng] => 0.01
+    [distribute_status] => 0
+    [back_reason] => 
+    [sales1_money] => 0.01
+    [sales2_money] => 0.00
+    [sales3_money] => 0.00
+    [sales4_money] => 0.00
+    [sales5_money] => 0.00
+    [shouhuo_time] => 0
+    [order_amount_formated] => ￥<span>0.10</span>
+    [log_id] => 78
+)
+
+
+
+2018-11-23 22:48:13-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.phptotal_fee==> 
+10
+
+
+2018-11-23 22:48:13-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.phpnotify_url ==> 
+http://bhyulong.cn/wx_native_callback.php
+
+
+2018-11-23 22:52:31-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单信息
+Array
+(
+    [order_id] => 79
+    [order_sn] => 2018112323606
+    [user_id] => 5600
+    [order_status] => 0
+    [shipping_status] => 0
+    [pay_status] => 0
+    [consignee] => 木子
+    [country] => 1
+    [province] => 7
+    [city] => 100
+    [district] => 894
+    [address] => 测试
+    [zipcode] => 
+    [tel] => 13008821418
+    [mobile] => 
+    [email] => 
+    [best_time] => 
+    [sign_building] => 
+    [postscript] => 
+    [shipping_id] => -1
+    [shipping_name] => 
+    [pay_id] => 9
+    [pay_name] => 微信支付
+    [how_oos] => 等待所有商品备齐后再发
+    [how_surplus] => 
+    [pack_name] => 
+    [card_name] => 
+    [card_message] => 
+    [inv_payee] => 
+    [inv_content] => 
+    [goods_amount] => 0.10
+    [shipping_fee] => 0.00
+    [insure_fee] => 0.00
+    [pay_fee] => 0.00
+    [pack_fee] => 0.00
+    [card_fee] => 0.00
+    [money_paid] => 0.00
+    [surplus] => 0.00
+    [integral] => 0
+    [integral_money] => 0.00
+    [bonus] => 0.00
+    [order_amount] => 0.10
+    [from_ad] => 55
+    [referer] => 本站
+    [add_time] => 1542955950
+    [confirm_time] => 0
+    [pay_time] => 0
+    [shipping_time] => 0
+    [pack_id] => 0
+    [card_id] => 0
+    [bonus_id] => 0
+    [invoice_no] => 
+    [extension_code] => 
+    [extension_id] => 0
+    [to_buyer] => 
+    [pay_note] => 
+    [agency_id] => 0
+    [inv_type] => 
+    [tax] => 0.00
+    [is_separate] => 0
+    [parent_id] => 0
+    [discount] => 0.00
+    [fencheng] => 0.01
+    [distribute_status] => 0
+    [back_reason] => 
+    [sales1_money] => 0.01
+    [sales2_money] => 0.00
+    [sales3_money] => 0.00
+    [sales4_money] => 0.00
+    [sales5_money] => 0.00
+    [shouhuo_time] => 0
+    [order_amount_formated] => ￥<span>0.10</span>
+    [log_id] => 79
+)
+
+
+
+2018-11-23 22:52:31-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.phptotal_fee==> 
+10
+
+
+2018-11-23 22:52:31-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.phpnotify_url ==> 
+http://bhyulong.cn/wx_native_callback.php
+
+
+2018-11-23 22:55:13-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单信息
+Array
+(
+    [order_id] => 80
+    [order_sn] => 2018112330164
+    [user_id] => 5600
+    [order_status] => 0
+    [shipping_status] => 0
+    [pay_status] => 0
+    [consignee] => 木子
+    [country] => 1
+    [province] => 7
+    [city] => 100
+    [district] => 894
+    [address] => 测试
+    [zipcode] => 
+    [tel] => 13008821418
+    [mobile] => 
+    [email] => 
+    [best_time] => 
+    [sign_building] => 
+    [postscript] => 
+    [shipping_id] => -1
+    [shipping_name] => 
+    [pay_id] => 9
+    [pay_name] => 微信支付
+    [how_oos] => 等待所有商品备齐后再发
+    [how_surplus] => 
+    [pack_name] => 
+    [card_name] => 
+    [card_message] => 
+    [inv_payee] => 
+    [inv_content] => 
+    [goods_amount] => 0.10
+    [shipping_fee] => 0.00
+    [insure_fee] => 0.00
+    [pay_fee] => 0.00
+    [pack_fee] => 0.00
+    [card_fee] => 0.00
+    [money_paid] => 0.00
+    [surplus] => 0.00
+    [integral] => 0
+    [integral_money] => 0.00
+    [bonus] => 0.00
+    [order_amount] => 0.10
+    [from_ad] => 55
+    [referer] => 本站
+    [add_time] => 1542956112
+    [confirm_time] => 0
+    [pay_time] => 0
+    [shipping_time] => 0
+    [pack_id] => 0
+    [card_id] => 0
+    [bonus_id] => 0
+    [invoice_no] => 
+    [extension_code] => 
+    [extension_id] => 0
+    [to_buyer] => 
+    [pay_note] => 
+    [agency_id] => 0
+    [inv_type] => 
+    [tax] => 0.00
+    [is_separate] => 0
+    [parent_id] => 0
+    [discount] => 0.00
+    [fencheng] => 0.01
+    [distribute_status] => 0
+    [back_reason] => 
+    [sales1_money] => 0.01
+    [sales2_money] => 0.00
+    [sales3_money] => 0.00
+    [sales4_money] => 0.00
+    [sales5_money] => 0.00
+    [shouhuo_time] => 0
+    [order_amount_formated] => ￥<span>0.10</span>
+    [log_id] => 80
+)
+
+
+
+2018-11-23 22:55:13-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.phptotal_fee==> 
+10
+
+
+2018-11-23 22:55:13-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.phpnotify_url ==> 
+http://bhyulong.cn/wx_native_callback.php
+
+
+2018-11-23 22:56:01-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单信息
+Array
+(
+    [order_id] => 80
+    [order_sn] => 2018112330164
+    [user_id] => 5600
+    [order_status] => 0
+    [shipping_status] => 0
+    [pay_status] => 0
+    [consignee] => 木子
+    [country] => 1
+    [province] => 7
+    [city] => 100
+    [district] => 894
+    [address] => 测试
+    [zipcode] => 
+    [tel] => 13008821418
+    [mobile] => 
+    [email] => 
+    [best_time] => 
+    [sign_building] => 
+    [postscript] => 
+    [shipping_id] => -1
+    [shipping_name] => 
+    [pay_id] => 9
+    [pay_name] => 微信支付
+    [how_oos] => 等待所有商品备齐后再发
+    [how_surplus] => 
+    [pack_name] => 
+    [card_name] => 
+    [card_message] => 
+    [inv_payee] => 
+    [inv_content] => 
+    [goods_amount] => 0.10
+    [shipping_fee] => 0.00
+    [insure_fee] => 0.00
+    [pay_fee] => 0.00
+    [pack_fee] => 0.00
+    [card_fee] => 0.00
+    [money_paid] => 0.00
+    [surplus] => 0.00
+    [integral] => 0
+    [integral_money] => 0.00
+    [bonus] => 0.00
+    [order_amount] => 0.10
+    [from_ad] => 55
+    [referer] => 本站
+    [add_time] => 1542956112
+    [confirm_time] => 0
+    [pay_time] => 0
+    [shipping_time] => 0
+    [pack_id] => 0
+    [card_id] => 0
+    [bonus_id] => 0
+    [invoice_no] => 
+    [extension_code] => 
+    [extension_id] => 0
+    [to_buyer] => 
+    [pay_note] => 
+    [agency_id] => 0
+    [inv_type] => 
+    [tax] => 0.00
+    [is_separate] => 0
+    [parent_id] => 0
+    [discount] => 0.00
+    [fencheng] => 0.01
+    [distribute_status] => 0
+    [back_reason] => 
+    [sales1_money] => 0.01
+    [sales2_money] => 0.00
+    [sales3_money] => 0.00
+    [sales4_money] => 0.00
+    [sales5_money] => 0.00
+    [shouhuo_time] => 0
+    [order_amount_formated] => ￥<span>0.10</span>
+    [log_id] => 80
+)
+
+
+
+2018-11-23 22:56:01-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.phptotal_fee==> 
+10
+
+
+2018-11-23 22:56:01-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.phpnotify_url ==> 
+http://bhyulong.cn/wx_native_callback.php
+
+
+2018-11-23 22:56:29-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单信息
+Array
+(
+    [order_id] => 81
+    [order_sn] => 2018112320567
+    [user_id] => 5600
+    [order_status] => 0
+    [shipping_status] => 0
+    [pay_status] => 0
+    [consignee] => 木子
+    [country] => 1
+    [province] => 7
+    [city] => 100
+    [district] => 894
+    [address] => 测试
+    [zipcode] => 
+    [tel] => 13008821418
+    [mobile] => 
+    [email] => 
+    [best_time] => 
+    [sign_building] => 
+    [postscript] => 
+    [shipping_id] => -1
+    [shipping_name] => 
+    [pay_id] => 9
+    [pay_name] => 微信支付
+    [how_oos] => 等待所有商品备齐后再发
+    [how_surplus] => 
+    [pack_name] => 
+    [card_name] => 
+    [card_message] => 
+    [inv_payee] => 
+    [inv_content] => 
+    [goods_amount] => 0.10
+    [shipping_fee] => 0.00
+    [insure_fee] => 0.00
+    [pay_fee] => 0.00
+    [pack_fee] => 0.00
+    [card_fee] => 0.00
+    [money_paid] => 0.00
+    [surplus] => 0.00
+    [integral] => 0
+    [integral_money] => 0.00
+    [bonus] => 0.00
+    [order_amount] => 0.10
+    [from_ad] => 55
+    [referer] => 本站
+    [add_time] => 1542956188
+    [confirm_time] => 0
+    [pay_time] => 0
+    [shipping_time] => 0
+    [pack_id] => 0
+    [card_id] => 0
+    [bonus_id] => 0
+    [invoice_no] => 
+    [extension_code] => 
+    [extension_id] => 0
+    [to_buyer] => 
+    [pay_note] => 
+    [agency_id] => 0
+    [inv_type] => 
+    [tax] => 0.00
+    [is_separate] => 0
+    [parent_id] => 0
+    [discount] => 0.00
+    [fencheng] => 0.01
+    [distribute_status] => 0
+    [back_reason] => 
+    [sales1_money] => 0.01
+    [sales2_money] => 0.00
+    [sales3_money] => 0.00
+    [sales4_money] => 0.00
+    [sales5_money] => 0.00
+    [shouhuo_time] => 0
+    [order_amount_formated] => ￥<span>0.10</span>
+    [log_id] => 81
+)
+
+
+
+2018-11-23 22:56:29-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.phptotal_fee==> 
+10
+
+
+2018-11-23 22:56:29-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.phpnotify_url ==> 
+http://bhyulong.cn/wx_native_callback.php
+
+
+2018-11-23 22:57:27-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单信息
+Array
+(
+    [order_id] => 81
+    [order_sn] => 2018112320567
+    [user_id] => 5600
+    [order_status] => 0
+    [shipping_status] => 0
+    [pay_status] => 0
+    [consignee] => 木子
+    [country] => 1
+    [province] => 7
+    [city] => 100
+    [district] => 894
+    [address] => 测试
+    [zipcode] => 
+    [tel] => 13008821418
+    [mobile] => 
+    [email] => 
+    [best_time] => 
+    [sign_building] => 
+    [postscript] => 
+    [shipping_id] => -1
+    [shipping_name] => 
+    [pay_id] => 9
+    [pay_name] => 微信支付
+    [how_oos] => 等待所有商品备齐后再发
+    [how_surplus] => 
+    [pack_name] => 
+    [card_name] => 
+    [card_message] => 
+    [inv_payee] => 
+    [inv_content] => 
+    [goods_amount] => 0.10
+    [shipping_fee] => 0.00
+    [insure_fee] => 0.00
+    [pay_fee] => 0.00
+    [pack_fee] => 0.00
+    [card_fee] => 0.00
+    [money_paid] => 0.00
+    [surplus] => 0.00
+    [integral] => 0
+    [integral_money] => 0.00
+    [bonus] => 0.00
+    [order_amount] => 0.10
+    [from_ad] => 55
+    [referer] => 本站
+    [add_time] => 1542956188
+    [confirm_time] => 0
+    [pay_time] => 0
+    [shipping_time] => 0
+    [pack_id] => 0
+    [card_id] => 0
+    [bonus_id] => 0
+    [invoice_no] => 
+    [extension_code] => 
+    [extension_id] => 0
+    [to_buyer] => 
+    [pay_note] => 
+    [agency_id] => 0
+    [inv_type] => 
+    [tax] => 0.00
+    [is_separate] => 0
+    [parent_id] => 0
+    [discount] => 0.00
+    [fencheng] => 0.01
+    [distribute_status] => 0
+    [back_reason] => 
+    [sales1_money] => 0.01
+    [sales2_money] => 0.00
+    [sales3_money] => 0.00
+    [sales4_money] => 0.00
+    [sales5_money] => 0.00
+    [shouhuo_time] => 0
+    [order_amount_formated] => ￥<span>0.10</span>
+    [log_id] => 81
+)
+
+
+
+2018-11-23 22:57:27-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.phptotal_fee==> 
+10
+
+
+2018-11-23 22:57:27-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.phpnotify_url ==> 
+http://bhyulong.cn/wx_native_callback.php
+
+

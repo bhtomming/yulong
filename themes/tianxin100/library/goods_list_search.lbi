@@ -1,0 +1,62 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="filter" style="position:static; top:0px; width:100%;">
+  <form method="GET" class="sort" id="listform" name="listform">
+
+    <ul class="filter-inner">
+      <li class="">
+      <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=DESC&keywords={$keywords}#goods_list&">综合
+       {if $pager.search.sort =='goods_id' && $pager.search.order == 'DESC'}<i class="f-ico-arrow-d"></i>{/if}</a> </li>
+      <li class="">
+      <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=click_count&order=DESC&keywords={$keywords}#goods_list">人气
+      {if $pager.search.sort =='click_count' && $pager.search.order == 'DESC'}<i class="f-ico-arrow-d"></i>{/if} </a> </li>
+      <li >
+      <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=sales_count&order=DESC&keywords={$keywords}#goods_list">销量
+       {if $pager.search.sort =='sales_count' && $pager.search.order == 'DESC'}<i class="f-ico-arrow-d"></i>{/if} </a></li>
+      <li >
+      <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.search.sort == 'shop_price' && $pager.search.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->&keywords={$keywords}#goods_list">价格 <span>
+      {if $pager.search.sort == 'shop_price' && $pager.search.order == 'ASC'}<i class="f-ico-triangle-mt "></i>{/if}
+     {if $pager.search.sort == 'shop_price' && $pager.search.order == 'DESC'}<i class="f-ico-triangle-mb "></i>{/if}
+       </span>
+       </a> </li>
+      
+    </ul>
+    <input type="hidden" name="category" value="{$category}" />
+    <input type="hidden" name="display" value="{$pager.display}" id="display" />
+    <input type="hidden" name="brand" value="{$brand_id}" />
+    <input type="hidden" name="price_min" value="{$price_min}" />
+    <input type="hidden" name="price_max" value="{$price_max}" />
+    <input type="hidden" name="filter_attr" value="{$filter_attr}" />
+    <input type="hidden" name="page" id="curpage" value="{$pager.page}" />
+    <input type="hidden" name="sort" value="{$pager.sort}" />
+    <input type="hidden" name="order" value="{$pager.order}" />
+    <input type="hidden" name="keywords" value="{$keywords}" />
+  </form>
+</div>
+   	<!--{if $goods_list}-->
+<div class="goodsbox" style="width: 100%; overflow:hidden;">
+  <ul>
+     <!--{foreach name=goods_list from=$goods_list item=goods}-->
+      <!-- {if $goods.goods_id} -->
+    <li class="clearfix">
+        <a href="{$goods.url}" title="{$goods.name|escape:html}">
+        <img src="{$site_url}{$goods.goods_thumb}" alt="{$goods.name|escape:html}">
+        <div>
+          <h4>{$goods.name|escape:html} </h4>
+          <p>{$goods.goods_brief}</p>
+          <font>
+            <span class="ico">购买价格</span>
+            <span class="price">{if $goods.promote_price}{$goods.promote_price}{else}{$goods.shop_price}{/if}</span>
+          </font>
+        </div>
+      </a>
+    </li>
+     <!--{/if}-->
+    {/foreach}
+  </ul>
+</div>
+
+    <!---{else}-->
+    <div id="J_ItemList" class="srp album flex-f-row" style="opacity:1;">
+    <p style="text-align:center;">找不到匹配条件的商品哦~ ~</p>
+    </div>
+    <!--{/if}-->

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>玉泷-首页</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0"> 
+  <script>
+           //通过window.screen.width获取屏幕的宽度
+          var offWidth = window.screen.width / 30; //这里用宽度/30表示1rem取得的px
+          document.getElementsByTagName("html")[0].style.fontSize = offWidth + 'px'; //把rem的值复制给顶级标签html的font-size
+      </script>
+
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<!-- banner start -->
+
+<div id="slider" class="mui-slider" >
+			<div class="mui-slider-group mui-slider-loop">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="images/banner.gif">
+					</a>
+				</div>
+				<!-- 第一张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/banner.gif">
+					</a>
+				</div>
+				<!-- 第二张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/banner.gif">
+					</a>
+				</div>
+				<!-- 第三张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/banner.gif">
+					</a>
+				</div>
+				<!-- 第四张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/banner.gif">
+					</a>
+				</div>
+				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="images/banner.gif">
+					</a>
+				</div>
+			</div>
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+</div>
+<!-- banner end -->
+
+<!-- 搜索 start  -->
+<div id="search">
+	<span>在 商 城 内 搜 索</span>
+	<form action="">
+		<input type="text" name="keyword"  class="keyword" />
+		<input type="submit" name="" class="btn" value="">
+	</form>
+</div>
+<!-- 搜索 end  -->
+<!-- 导航 start -->
+<div id="nav" class="clearfix">
+	<a href="">玉泷地产</a>
+	<a href="">玉泷悦途</a>
+	<a href="">玉泷农业</a>
+	<a href="">玉泷科技</a>
+</div>
+<!-- 导航 end -->
+
+<!-- 每日降价 start -->
+<div class="title"><a class="fr" href="">查看更多 > </a><i></i>每日降价商品区</div>
+
+<div id="seller" class="box_two clearfix"  >
+	<a href="" title="">
+		<img src="../images/bh_yadan_image.jpg" alt="" title="" />
+		<span class="ico">抢购价格</span><span class="price">￥56</span>
+		<p>农家散养土鸡蛋，蛋黄大而橙黄，含有丰富的维生素和矿物质。</p>
+	</a>
+	<a href="" title="">
+		<img src="../images/bh_yadan_image.jpg" alt="" title="" />
+		<span class="ico">抢购价格</span><span class="price">￥56</span>
+		<p>农家散养土鸡蛋，蛋黄大而橙黄，含有丰富的维生素和矿物质。</p>
+	</a>
+</div>
+<!-- 每日降价 end -->
+
+<!-- 拼团 start -->
+<div class="title"><a class="fr" href="">查看更多 > </a><i></i>拼团商品区</div>
+
+<div class="trem">
+	<a href="" class="clearfix">
+		<div class="img">
+			<img src="images/good_1.png">
+			<span class="title" ></span >
+			<font>观海大床房</font>
+		</div>
+			<dl class="clearfix">				
+				<dd class="fl"><span class="ico">拼团价格</span><span class="price">￥58.00</span></dd>
+				<dd class="fl"><span class="ico">拼团人数</span><span class="price"> 10人</span> </dd>
+				<dd class="fr"><span class="redBtn">去拼团</span></dd>
+			</dl>
+		
+		<p class="desc">
+备有空调、冰箱、电视、洗衣机、厨房和全套智能家居，一键语音控制，免费WIFI，免费停车。
+		</p>
+	</a>
+</div> 
+
+<!-- 拼团 end -->
+
+<!-- 热销区 start -->
+<div class="title"><a class="fr" href="">查看更多 > </a><i></i>商品热销区</div>
+
+<div class="goodsbox">
+	<ul>
+		<li class="clearfix">
+			<a href="">
+				<img src="images/good1.gif">
+				<div>
+					<h4>农家散养绿壳蛋</h4>
+					<p>农家散养土鸡蛋，蛋黄大而橙黄，含有丰富的维生素和矿物质。</p>
+					<font>
+						<span class="ico">购买价格</span>
+						<span class="price">58.00</span>
+					</font>
+				</div>
+			</a>
+		</li>
+
+		<li class="clearfix">
+			<a href="">
+				<img src="images/good1.gif">
+				<div>
+					<h4>农家散养绿壳蛋</h4>
+					<p>农家散养土鸡蛋，蛋黄大而橙黄，含有丰富的维生素和矿物质。</p>
+					<font>
+						<span class="ico">购买价格</span>
+						<span class="price">58.00</span>
+					</font>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- 热销区 end -->
+
+<!-- 新品区 start -->
+<div class="title"><a class="fr" href="">查看更多 > </a><i></i>新商品区</div>
+
+<div class="goodsbox">
+	<ul>
+		<li class="clearfix">
+			<a href="">
+				<img src="images/good1.gif">
+				<div>
+					<h4>农家散养绿壳蛋</h4>
+					<p>农家散养土鸡蛋，蛋黄大而橙黄，含有丰富的维生素和矿物质。</p>
+					<font>
+						<span class="ico">购买价格</span>
+						<span class="price">58.00</span>
+					</font>
+				</div>
+			</a>
+		</li>
+
+		<li class="clearfix">
+			<a href="">
+				<img src="images/good1.gif">
+				<div>
+					<h4>农家散养绿壳蛋</h4>
+					<p>农家散养土鸡蛋，蛋黄大而橙黄，含有丰富的维生素和矿物质。</p>
+					<font>
+						<span class="ico">购买价格</span>
+						<span class="price">58.00</span>
+					</font>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+</div>
+<!-- 新品区 end -->
+
+<!-- 所有商品区 start -->
+<div class="title"><a class="fr" href="">查看更多 > </a><i></i>所有商品区</div>
+
+<div class="goodsbox">
+	<ul>
+		<li class="clearfix">
+			<a href="">
+				<img src="images/good1.gif">
+				<div>
+					<h4>农家散养绿壳蛋</h4>
+					<p>农家散养土鸡蛋，蛋黄大而橙黄，含有丰富的维生素和矿物质。</p>
+					<font>
+						<span class="ico">购买价格</span>
+						<span class="price">58.00</span>
+					</font>
+				</div>
+			</a>
+		</li>
+
+		<li class="clearfix">
+			<a href="">
+				<img src="images/good1.gif">
+				<div>
+					<h4>农家散养绿壳蛋</h4>
+					<p>农家散养土鸡蛋，蛋黄大而橙黄，含有丰富的维生素和矿物质。</p>
+					<font>
+						<span class="ico">购买价格</span>
+						<span class="price">58.00</span>
+					</font>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- 所有商品区 end -->
+
+<!-- 底部导航 -->
+<footer>
+	<ul>
+		<li><a href="">首页</a></li>
+		<li><a href="">热卖</a></li>
+		<li><a href="">分销</a></li>
+		<li><a href="">我的</a></li>
+		<li><a href="">客服</a></li>
+	</ul>
+</footer>
+
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/lhf.js" charset="utf-8"></script>
+</body>
+</html>

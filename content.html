@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>玉泷-关于我们</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0"> 
+  <script>
+           //通过window.screen.width获取屏幕的宽度
+          var offWidth = window.screen.width / 30; //这里用宽度/30表示1rem取得的px
+          document.getElementsByTagName("html")[0].style.fontSize = offWidth + 'px'; //把rem的值复制给顶级标签html的font-size
+      </script>
+
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+		body{ background: #FFFFFF; margin-bottom: 0;}
+		* { padding: 0px; margin: 0px;}
+		.main { width: 100%; max-width: 800px; margin: 0 auto;}
+		.main img {width: 100%; display: block;}
+		.main h2 { text-align: center; background: red; line-height: 3rem; color: #fff; font-size: 1.5rem; font-weight: 200; padding: 0px; margin: 0px 0 1rem;}
+		.main .content  { padding: 0 2% 0 2.5%; }
+		.main .content h4 { font-weight: 100;color: #333;}
+		.main .content p { margin: 1rem 0; text-indent: 2rem;color: #333;}
+		.main .content  ul li h4 {color: #35b3ec;}
+		 ul li { color: #35b3ec; margin: 2rem 0;}
+		.tel { color: red; text-align: center; margin: 2rem 0;}
+	</style>
+
+</head>
+<body>
+
+<div class="main">
+	<img src="images/1_01.jpg">
+	<h2>关 于 我 们</h2>
+	<div class="content">
+	<h4>公司的简介：</h4>
+<p> 玉泷集团创立于2014年2月，现旗下设有北海玉泷房地产代理有限公司、北海玉泷电子科技有限公司、广西玉泷酒店管理有限公司、北海玉泷农业发展有限公司、北海市玉泷建筑工程有限公司。</p>
+<p>  玉泷地产始终依托“创造经典”的经营理念，坚持“精诚、务实、创新、发展”的企业精神，坚持走品牌经营之路，以“精心设计，诚信服务”为宗旨，强大和始终如一的诚信精神塑造了“玉泷地产”品牌，力铸成为北海房地产界的良好口碑典范。房地产经营范围有房地产商品信息咨询、营销策划、房屋托管、室内装修与设计等；</p>
+<p>   玉泷电子科技智能家居完成了智能家居所有相关的产品研发生产和产品实地体验，公司拥有智能主机、智能无线开关、智能无线插座等力多项电子产品专利权，力求打造适合人居生活理念的产品。主要经营智能家居、电子智能产品的科技开发、生产加工及销售；</p>
+<p> 玉泷酒店管理，以悦途客舍金鸡店为示范，首创现代智能家居酒店。全屋智能系统给您带来便捷舒适的生活体验。</p>
+<p> 玉泷农业公司实行规模化开发、规范化管理、产销一体化的经营模式，并致力于依靠科技进步，打造品牌、积极改进和规范栽培管理技术，延长产业链。主要经营经济林种植、农业综合开发、苗木基地建设、畜禽销售、水产品销售等于一体的创新型企业。</p>
+	<ul>
+		<li>
+		<h4>服务对象：</h4>
+		第一，旅游/投资客户<br/>
+		第二，热爱烹饪，时间充裕的家庭用户<br/>
+		第三，办公室场景下，针对性便利店/轻餐<br/>
+		第四，追求高端品位的用户<br/>
+		本平台支持到店购买和在线下单（手机端），支持支付宝、微信付款。
+		</li>
+		<li>
+		<h4>价格优势：</h4>
+		玉泷平台在价格上优势明显，商城上的价格一般低于实体价；平台订酒店，免押金、免查房；买东西或积分返利，积分可兑换现金。消费者更舒心、放心、安心、省心。
+		</li>
+		<li>
+		<h4>未来计划</h4>
+		玉泷集团总部拥有一只专业团队，营销策划技术人员占比重大。玉泷平台计划：平台面向全国市场招商、希望通过线上驱动，淘系消费数据能力，线下布局酒店、地产、农业、智能家居各产业与各大企事业集团、各优质农产品联盟等开展合作，模式成熟后，实现数据资源共享和共同发展。
+		</li>
+	</ul>
+		<div class="tel">商务洽谈电话：400-678-7613</div>
+	</div>
+	<img src="images/1_06.jpg">
+	<a class="u-cs" target="_blank"><img  src="images/1_07.jpg"></a>
+</div>
+
+<!--2944039529-->
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/lhf.js" charset="utf-8"></script>
+<script type="text/javascript" >
+$(function(){
+	function is_weixin(e) {
+		var ua = window.navigator.userAgent.toLowerCase();
+		if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+		//	e.attr('href', 'http://wpa.qq.com/msgrd?v=3&uin=2944039529&site=玉泷客服&menu=yes'); }
+		e.attr('href', 'http://wpa.qq.com/msgrd?v=3&uin=2944039529&site=弹溜溜官方&menu=yes'); }
+	else {
+			e.attr('href','mqq://im/chat?chat_type=wpa&uin=2944039529&version=1&src_type=web'); }
+	}
+	$('.u-cs').click(function () {
+		is_weixin($(this));
+	});
+})
+</script>
+</body>
+</html>

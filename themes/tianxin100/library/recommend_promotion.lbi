@@ -1,0 +1,18 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{if $promotion_goods}
+<div class="bg2"></div>
+<div class="title"><a class="fr" href="../search.php?intro=promotion">查看更多 > </a><i></i>每日降价商品区</div>
+
+<div id="seller" class="box_two clearfix"  >
+ {foreach from=$promotion_goods item=goods name=promotion_goods key=key}
+  <a href="{$goods.url}" title="{$goods.name|escape:html}">
+    <img src="{$site_url}{$goods.thumb}"  alt="{$goods.name|escape:html}" title="{$goods.name|escape:html}" />
+    <span class="ico">抢购价格</span>
+    <span class="price">{if $goods.promote_price}{$goods.promote_price}{else}{$goods.shop_price}{/if}
+    </span>
+    <p>{$goods.brief}</p>
+  </a>
+  {/foreach}
+</div>
+
+{/if}

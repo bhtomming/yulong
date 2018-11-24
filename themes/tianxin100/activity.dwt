@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>{$page_title} </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<link href="{$ectouch_themes}/images/touch-icon.png" rel="apple-touch-icon-precomposed" />
+<link href="{$ectouch_themes}/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="{$ectouch_themes}/ectouch.css?v=1.1.1" rel="stylesheet" type="text/css" />
+<style>
+ .main { width: 100%; max-width: 800px; margin: 0 auto;}
+.main img {width: 100%; display: block;margin: 0.5rem 1rem; border:0.1rem soild #ddd; }
+</style>
+</head>
+<body>
+<div id="page" style="right: 0px; left: 0px; display: block;">
+  <header id="header" style="z-index:1">
+    <div class="header_l"> <a class="ico_10" href="cat_all.php"> 返回 </a> </div>
+    <h1> {$lang.activity_list} </h1>
+  </header>
+<div class="main">
+    <a href="pintuan.php"><img src="" title="拼团" alt="拼团"></a>
+    <a href="cut.php"><img src="" title="砍价" alt="砍价"></a>
+    <a href="group_buy.php"><img src="" title="团购 " alt="团购 "></a>
+    <a href="exchange.php"><img src="" title="积分兑换" alt="积分兑换"></a>
+</div>
+
+  <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --> </div>
+
+</body>
+</html>

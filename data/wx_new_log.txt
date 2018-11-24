@@ -1,0 +1,2476 @@
+2018-11-23 22:52:22------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 22:52:22------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 22:52:22-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[78]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[jvyy5jwakzs2hmlihcc551t4opsqmr0s]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112355322]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[8B6B0EC069509AEA27890D9CB6A6FFFF]]></sign>
+<time_end><![CDATA[20181123224822]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000236201811237206917444]]></transaction_id>
+</xml>'
+
+
+2018-11-23 22:52:22-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 22:52:22-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 22:52:41------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 22:52:41------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 22:52:41-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[79]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[906148wrw0ju2wvogxwifwu6ptrjuubf]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112323606]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[6C5713FA577BD89FF524F9617B695753]]></sign>
+<time_end><![CDATA[20181123225240]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000235201811232055724200]]></transaction_id>
+</xml>'
+
+
+2018-11-23 22:52:41-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 22:52:41-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 22:52:411542984761__/home/wwwroot/yulong/include/lib_payment.php152
+Array
+(
+    [log_id] => 79
+    [order_id] => 79
+    [order_amount] => 0.10
+    [order_type] => 0
+    [is_paid] => 0
+)
+
+2018-11-23 22:52:411542984761__/home/wwwroot/yulong/include/lib_payment.php169
+Array
+(
+    [order_id] => 79
+    [user_id] => 5600
+    [order_sn] => 2018112323606
+    [consignee] => 木子
+    [address] => 测试
+    [tel] => 13008821418
+    [shipping_id] => -1
+    [extension_code] => 
+    [extension_id] => 0
+    [goods_amount] => 0.10
+)
+
+2018-11-23 22:52:411542984761__/home/wwwroot/yulong/include/lib_payment.php186
+pay
+2018-11-23 22:52:411542984761__/home/wwwroot/yulong/include/lib_payment.php216
+Array
+(
+    [virtual_card] => Array
+        (
+            [0] => Array
+                (
+                    [goods_id] => 17
+                    [goods_name] => 客舍酒店观海大床房
+                    [num] => 1
+                )
+
+        )
+
+)
+
+2018-11-23 22:52:411542984761__/home/wwwroot/yulong/include/lib_payment.php225
+-1
+2018-11-23 22:52:411542984761__/home/wwwroot/yulong/include/lib_payment.php230
+-1
+2018-11-23 22:52:411542984761__/home/wwwroot/yulong/include/lib_payment.php237
+UPDATE `yulong`.`ecs_order_info` SET shipping_status = '1', shipping_time = '1542955961' WHERE order_id = '79'
+2018-11-23 22:52:57------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 22:52:57------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 22:52:57-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[79]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[906148wrw0ju2wvogxwifwu6ptrjuubf]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112323606]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[6C5713FA577BD89FF524F9617B695753]]></sign>
+<time_end><![CDATA[20181123225240]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000235201811232055724200]]></transaction_id>
+</xml>'
+
+
+2018-11-23 22:52:57-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 22:52:57-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 22:53:12------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 22:53:12------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 22:53:12-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[79]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[906148wrw0ju2wvogxwifwu6ptrjuubf]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112323606]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[6C5713FA577BD89FF524F9617B695753]]></sign>
+<time_end><![CDATA[20181123225240]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000235201811232055724200]]></transaction_id>
+</xml>'
+
+
+2018-11-23 22:53:12-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 22:53:12-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 22:53:43------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 22:53:43------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 22:53:43-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[79]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[906148wrw0ju2wvogxwifwu6ptrjuubf]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112323606]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[6C5713FA577BD89FF524F9617B695753]]></sign>
+<time_end><![CDATA[20181123225240]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000235201811232055724200]]></transaction_id>
+</xml>'
+
+
+2018-11-23 22:53:43-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 22:53:43-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 22:56:43------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 22:56:43------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 22:56:43-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[79]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[906148wrw0ju2wvogxwifwu6ptrjuubf]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112323606]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[6C5713FA577BD89FF524F9617B695753]]></sign>
+<time_end><![CDATA[20181123225240]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000235201811232055724200]]></transaction_id>
+</xml>'
+
+
+2018-11-23 22:56:43-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 22:56:43-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 22:58:55------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 22:58:55------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 22:58:55-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[74]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[vlqspb2e2jih3ctb69j6d7awaqx1toqo]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112370161]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[BE437C10F8BF833671A13C5CDB351CA7]]></sign>
+<time_end><![CDATA[20181123222449]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000230201811237270305065]]></transaction_id>
+</xml>'
+
+
+2018-11-23 22:58:55-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 22:58:55-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 22:59:01------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 22:59:01------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 22:59:01-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[81]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[wyhswfbinf3rj7x5un9dvai87mg9ww95]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112320567]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[EB284EE4363D3F7F0EF7784D3AE5DAFF]]></sign>
+<time_end><![CDATA[20181123225900]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000216201811231317768029]]></transaction_id>
+</xml>'
+
+
+2018-11-23 22:59:01-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 22:59:01-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 22:59:011542985141__/home/wwwroot/yulong/include/lib_payment.php152
+Array
+(
+    [log_id] => 81
+    [order_id] => 81
+    [order_amount] => 0.10
+    [order_type] => 0
+    [is_paid] => 0
+)
+
+2018-11-23 22:59:011542985141__/home/wwwroot/yulong/include/lib_payment.php169
+Array
+(
+    [order_id] => 81
+    [user_id] => 5600
+    [order_sn] => 2018112320567
+    [consignee] => 木子
+    [address] => 测试
+    [tel] => 13008821418
+    [shipping_id] => -1
+    [extension_code] => 
+    [extension_id] => 0
+    [goods_amount] => 0.10
+)
+
+2018-11-23 22:59:011542985141__/home/wwwroot/yulong/include/lib_payment.php186
+pay
+2018-11-23 22:59:011542985141__/home/wwwroot/yulong/include/lib_payment.php216
+Array
+(
+    [virtual_card] => Array
+        (
+            [0] => Array
+                (
+                    [goods_id] => 17
+                    [goods_name] => 客舍酒店观海大床房
+                    [num] => 1
+                )
+
+        )
+
+)
+
+2018-11-23 22:59:011542985141__/home/wwwroot/yulong/include/lib_payment.php225
+-1
+2018-11-23 22:59:011542985141__/home/wwwroot/yulong/include/lib_payment.php230
+-1
+2018-11-23 22:59:011542985141__/home/wwwroot/yulong/include/lib_payment.php237
+UPDATE `yulong`.`ecs_order_info` SET shipping_status = '1', shipping_time = '1542956341' WHERE order_id = '81'
+2018-11-23 22:59:18------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 22:59:18------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 22:59:18-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[81]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[wyhswfbinf3rj7x5un9dvai87mg9ww95]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112320567]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[EB284EE4363D3F7F0EF7784D3AE5DAFF]]></sign>
+<time_end><![CDATA[20181123225900]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000216201811231317768029]]></transaction_id>
+</xml>'
+
+
+2018-11-23 22:59:18-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 22:59:18-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 22:59:34------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 22:59:34------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 22:59:34-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[81]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[wyhswfbinf3rj7x5un9dvai87mg9ww95]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112320567]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[EB284EE4363D3F7F0EF7784D3AE5DAFF]]></sign>
+<time_end><![CDATA[20181123225900]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000216201811231317768029]]></transaction_id>
+</xml>'
+
+
+2018-11-23 22:59:34-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 22:59:34-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:00:05------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:00:05------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:00:05-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[81]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[wyhswfbinf3rj7x5un9dvai87mg9ww95]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112320567]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[EB284EE4363D3F7F0EF7784D3AE5DAFF]]></sign>
+<time_end><![CDATA[20181123225900]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000216201811231317768029]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:00:05-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:00:05-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:03:06------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:03:06------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:03:06-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[81]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[wyhswfbinf3rj7x5un9dvai87mg9ww95]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112320567]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[EB284EE4363D3F7F0EF7784D3AE5DAFF]]></sign>
+<time_end><![CDATA[20181123225900]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000216201811231317768029]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:03:06-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:03:06-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:03:41------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:03:41------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:03:41-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[75]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[eqlic2fgw1j96g2mf6d3koaestxhke3k]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112322154]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[8E706B5B2629A23AE4A87BB2A9FC7FBD]]></sign>
+<time_end><![CDATA[20181123222935]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000221201811235436868925]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:03:41-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:03:41-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:11:54------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:11:54------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:11:54-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[76]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[bzbv4ktpmla9hydjw4ymvwp02oxepn95]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112330330]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[E75468978A39E036F12818969F4DF1E4]]></sign>
+<time_end><![CDATA[20181123223749]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000213201811237425707288]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:11:54-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:11:54-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:12:45------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:12:45------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:12:45-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[71]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[xop2masex5wi79qj5bsuzuhqp5ohoh1w]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112306504]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[0104E6F5FF752BE440CA194071E7C789]]></sign>
+<time_end><![CDATA[20181123220839]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000233201811232148064473]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:12:45-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:12:45-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:17:21------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:17:21------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:17:21-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[72]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[b0retrfs3mk2ju61zj8x9nwhmf4cvqpe]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112326758]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[1C97273D154D544B44DEDBD33EF3F0DF]]></sign>
+<time_end><![CDATA[20181123221316]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000237201811236926958173]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:17:21-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:17:21-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:17:49------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:17:49------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:17:49-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[77]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[ljls0zkr4j0wyq400rfqfgonxsi9dwqw]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112329816]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[ECCDD20C6DC2D6EC10EAEC46BE6A8744]]></sign>
+<time_end><![CDATA[20181123224342]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000232201811237311553758]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:17:49-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:17:49-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:18:53------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:18:54------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:18:54-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[73]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[v5wsxa1u96wjipzetqtiowdsxx5hmku5]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112346513]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[BD25611E0B07CE6FA684E98B3C498545]]></sign>
+<time_end><![CDATA[20181123221446]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000219201811234417019389]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:18:54-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:18:54-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:22:23------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:22:23------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:22:23-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[78]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[jvyy5jwakzs2hmlihcc551t4opsqmr0s]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112355322]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[8B6B0EC069509AEA27890D9CB6A6FFFF]]></sign>
+<time_end><![CDATA[20181123224822]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000236201811237206917444]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:22:23-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:22:23-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:26:44------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:26:44------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:26:44-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[79]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[906148wrw0ju2wvogxwifwu6ptrjuubf]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112323606]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[6C5713FA577BD89FF524F9617B695753]]></sign>
+<time_end><![CDATA[20181123225240]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000235201811232055724200]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:26:44-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:26:44-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:28:57------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:28:57------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:28:57-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[74]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[vlqspb2e2jih3ctb69j6d7awaqx1toqo]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112370161]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[BE437C10F8BF833671A13C5CDB351CA7]]></sign>
+<time_end><![CDATA[20181123222449]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000230201811237270305065]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:28:57-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:28:57-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:33:07------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:33:07------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:33:07-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[81]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[wyhswfbinf3rj7x5un9dvai87mg9ww95]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112320567]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[EB284EE4363D3F7F0EF7784D3AE5DAFF]]></sign>
+<time_end><![CDATA[20181123225900]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000216201811231317768029]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:33:07-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:33:07-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:33:42------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:33:42------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:33:42-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[75]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[eqlic2fgw1j96g2mf6d3koaestxhke3k]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112322154]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[8E706B5B2629A23AE4A87BB2A9FC7FBD]]></sign>
+<time_end><![CDATA[20181123222935]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000221201811235436868925]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:33:42-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:33:42-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:41:56------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:41:56------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:41:56-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[76]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[bzbv4ktpmla9hydjw4ymvwp02oxepn95]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112330330]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[E75468978A39E036F12818969F4DF1E4]]></sign>
+<time_end><![CDATA[20181123223749]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000213201811237425707288]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:41:56-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:41:56-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:42:46------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:42:46------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:42:46-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[71]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[xop2masex5wi79qj5bsuzuhqp5ohoh1w]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112306504]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[0104E6F5FF752BE440CA194071E7C789]]></sign>
+<time_end><![CDATA[20181123220839]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000233201811232148064473]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:42:46-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:42:46-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:47:23------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:47:23------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:47:23-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[72]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[b0retrfs3mk2ju61zj8x9nwhmf4cvqpe]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112326758]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[1C97273D154D544B44DEDBD33EF3F0DF]]></sign>
+<time_end><![CDATA[20181123221316]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000237201811236926958173]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:47:23-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:47:23-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:47:50------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:47:50------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:47:50-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[77]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[ljls0zkr4j0wyq400rfqfgonxsi9dwqw]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112329816]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[ECCDD20C6DC2D6EC10EAEC46BE6A8744]]></sign>
+<time_end><![CDATA[20181123224342]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000232201811237311553758]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:47:50-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:47:50-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:48:55------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:48:55------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:48:55-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[73]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[v5wsxa1u96wjipzetqtiowdsxx5hmku5]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112346513]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[BD25611E0B07CE6FA684E98B3C498545]]></sign>
+<time_end><![CDATA[20181123221446]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000219201811234417019389]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:48:55-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:48:55-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:52:25------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:52:25------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:52:25-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[78]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[jvyy5jwakzs2hmlihcc551t4opsqmr0s]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112355322]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[8B6B0EC069509AEA27890D9CB6A6FFFF]]></sign>
+<time_end><![CDATA[20181123224822]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000236201811237206917444]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:52:25-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:52:25-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:56:46------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:56:46------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:56:46-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[79]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[906148wrw0ju2wvogxwifwu6ptrjuubf]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112323606]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[6C5713FA577BD89FF524F9617B695753]]></sign>
+<time_end><![CDATA[20181123225240]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000235201811232055724200]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:56:46-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:56:46-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-23 23:58:59------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-23 23:58:59------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-23 23:58:59-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[74]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[vlqspb2e2jih3ctb69j6d7awaqx1toqo]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112370161]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[BE437C10F8BF833671A13C5CDB351CA7]]></sign>
+<time_end><![CDATA[20181123222449]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000230201811237270305065]]></transaction_id>
+</xml>'
+
+
+2018-11-23 23:58:59-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-23 23:58:59-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 00:03:08------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 00:03:08------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 00:03:08-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[81]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[wyhswfbinf3rj7x5un9dvai87mg9ww95]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112320567]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[EB284EE4363D3F7F0EF7784D3AE5DAFF]]></sign>
+<time_end><![CDATA[20181123225900]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000216201811231317768029]]></transaction_id>
+</xml>'
+
+
+2018-11-24 00:03:08-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 00:03:08-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 00:03:44------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 00:03:44------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 00:03:44-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[75]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[eqlic2fgw1j96g2mf6d3koaestxhke3k]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112322154]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[8E706B5B2629A23AE4A87BB2A9FC7FBD]]></sign>
+<time_end><![CDATA[20181123222935]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000221201811235436868925]]></transaction_id>
+</xml>'
+
+
+2018-11-24 00:03:44-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 00:03:44-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 00:11:57------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 00:11:57------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 00:11:57-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[76]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[bzbv4ktpmla9hydjw4ymvwp02oxepn95]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112330330]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[E75468978A39E036F12818969F4DF1E4]]></sign>
+<time_end><![CDATA[20181123223749]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000213201811237425707288]]></transaction_id>
+</xml>'
+
+
+2018-11-24 00:11:57-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 00:11:57-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 00:12:48------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 00:12:48------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 00:12:48-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[71]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[xop2masex5wi79qj5bsuzuhqp5ohoh1w]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112306504]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[0104E6F5FF752BE440CA194071E7C789]]></sign>
+<time_end><![CDATA[20181123220839]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000233201811232148064473]]></transaction_id>
+</xml>'
+
+
+2018-11-24 00:12:48-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 00:12:48-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 00:17:25------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 00:17:25------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 00:17:25-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[72]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[b0retrfs3mk2ju61zj8x9nwhmf4cvqpe]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112326758]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[1C97273D154D544B44DEDBD33EF3F0DF]]></sign>
+<time_end><![CDATA[20181123221316]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000237201811236926958173]]></transaction_id>
+</xml>'
+
+
+2018-11-24 00:17:25-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 00:17:25-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 00:17:52------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 00:17:52------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 00:17:52-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[77]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[ljls0zkr4j0wyq400rfqfgonxsi9dwqw]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112329816]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[ECCDD20C6DC2D6EC10EAEC46BE6A8744]]></sign>
+<time_end><![CDATA[20181123224342]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000232201811237311553758]]></transaction_id>
+</xml>'
+
+
+2018-11-24 00:17:52-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 00:17:52-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 00:18:56------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 00:18:56------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 00:18:56-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[73]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[v5wsxa1u96wjipzetqtiowdsxx5hmku5]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112346513]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[BD25611E0B07CE6FA684E98B3C498545]]></sign>
+<time_end><![CDATA[20181123221446]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000219201811234417019389]]></transaction_id>
+</xml>'
+
+
+2018-11-24 00:18:56-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 00:18:56-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 00:22:26------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 00:22:26------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 00:22:26-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[78]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[jvyy5jwakzs2hmlihcc551t4opsqmr0s]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112355322]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[8B6B0EC069509AEA27890D9CB6A6FFFF]]></sign>
+<time_end><![CDATA[20181123224822]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000236201811237206917444]]></transaction_id>
+</xml>'
+
+
+2018-11-24 00:22:26-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 00:22:26-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 00:26:48------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 00:26:48------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 00:26:48-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[79]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[906148wrw0ju2wvogxwifwu6ptrjuubf]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112323606]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[6C5713FA577BD89FF524F9617B695753]]></sign>
+<time_end><![CDATA[20181123225240]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000235201811232055724200]]></transaction_id>
+</xml>'
+
+
+2018-11-24 00:26:48-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 00:26:48-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 00:29:01------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 00:29:01------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 00:29:01-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[74]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[vlqspb2e2jih3ctb69j6d7awaqx1toqo]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112370161]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[BE437C10F8BF833671A13C5CDB351CA7]]></sign>
+<time_end><![CDATA[20181123222449]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000230201811237270305065]]></transaction_id>
+</xml>'
+
+
+2018-11-24 00:29:01-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 00:29:01-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 00:33:10------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 00:33:10------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 00:33:10-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[81]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[wyhswfbinf3rj7x5un9dvai87mg9ww95]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112320567]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[EB284EE4363D3F7F0EF7784D3AE5DAFF]]></sign>
+<time_end><![CDATA[20181123225900]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000216201811231317768029]]></transaction_id>
+</xml>'
+
+
+2018-11-24 00:33:10-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 00:33:10-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 00:33:46------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 00:33:46------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 00:33:46-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[75]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[eqlic2fgw1j96g2mf6d3koaestxhke3k]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112322154]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[8E706B5B2629A23AE4A87BB2A9FC7FBD]]></sign>
+<time_end><![CDATA[20181123222935]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000221201811235436868925]]></transaction_id>
+</xml>'
+
+
+2018-11-24 00:33:46-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 00:33:46-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 00:41:59------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 00:41:59------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 00:41:59-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[76]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[bzbv4ktpmla9hydjw4ymvwp02oxepn95]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112330330]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[E75468978A39E036F12818969F4DF1E4]]></sign>
+<time_end><![CDATA[20181123223749]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000213201811237425707288]]></transaction_id>
+</xml>'
+
+
+2018-11-24 00:41:59-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 00:41:59-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 00:47:53------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 00:47:53------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 00:47:53-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[77]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[ljls0zkr4j0wyq400rfqfgonxsi9dwqw]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112329816]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[ECCDD20C6DC2D6EC10EAEC46BE6A8744]]></sign>
+<time_end><![CDATA[20181123224342]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000232201811237311553758]]></transaction_id>
+</xml>'
+
+
+2018-11-24 00:47:53-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 00:47:53-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 00:52:27------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 00:52:27------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 00:52:27-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[78]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[jvyy5jwakzs2hmlihcc551t4opsqmr0s]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112355322]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[8B6B0EC069509AEA27890D9CB6A6FFFF]]></sign>
+<time_end><![CDATA[20181123224822]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000236201811237206917444]]></transaction_id>
+</xml>'
+
+
+2018-11-24 00:52:27-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 00:52:27-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 00:56:50------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 00:56:50------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 00:56:50-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[79]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[906148wrw0ju2wvogxwifwu6ptrjuubf]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112323606]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[6C5713FA577BD89FF524F9617B695753]]></sign>
+<time_end><![CDATA[20181123225240]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000235201811232055724200]]></transaction_id>
+</xml>'
+
+
+2018-11-24 00:56:50-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 00:56:50-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 01:03:12------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 01:03:12------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 01:03:12-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[81]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[wyhswfbinf3rj7x5un9dvai87mg9ww95]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112320567]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[EB284EE4363D3F7F0EF7784D3AE5DAFF]]></sign>
+<time_end><![CDATA[20181123225900]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000216201811231317768029]]></transaction_id>
+</xml>'
+
+
+2018-11-24 01:03:12-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 01:03:12-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 01:12:50------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 01:12:50------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 01:12:50-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[71]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[xop2masex5wi79qj5bsuzuhqp5ohoh1w]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112306504]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[0104E6F5FF752BE440CA194071E7C789]]></sign>
+<time_end><![CDATA[20181123220839]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000233201811232148064473]]></transaction_id>
+</xml>'
+
+
+2018-11-24 01:12:50-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 01:12:50-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 01:17:27------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 01:17:27------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 01:17:27-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[72]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[b0retrfs3mk2ju61zj8x9nwhmf4cvqpe]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112326758]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[1C97273D154D544B44DEDBD33EF3F0DF]]></sign>
+<time_end><![CDATA[20181123221316]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000237201811236926958173]]></transaction_id>
+</xml>'
+
+
+2018-11-24 01:17:27-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 01:17:27-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 01:18:57------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 01:18:57------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 01:18:57-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[73]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[v5wsxa1u96wjipzetqtiowdsxx5hmku5]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112346513]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[BD25611E0B07CE6FA684E98B3C498545]]></sign>
+<time_end><![CDATA[20181123221446]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000219201811234417019389]]></transaction_id>
+</xml>'
+
+
+2018-11-24 01:18:57-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 01:18:57-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 01:29:03------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 01:29:03------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 01:29:03-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[74]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[vlqspb2e2jih3ctb69j6d7awaqx1toqo]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112370161]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[BE437C10F8BF833671A13C5CDB351CA7]]></sign>
+<time_end><![CDATA[20181123222449]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000230201811237270305065]]></transaction_id>
+</xml>'
+
+
+2018-11-24 01:29:03-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 01:29:03-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 01:33:47------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 01:33:47------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 01:33:47-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[75]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[eqlic2fgw1j96g2mf6d3koaestxhke3k]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112322154]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[8E706B5B2629A23AE4A87BB2A9FC7FBD]]></sign>
+<time_end><![CDATA[20181123222935]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000221201811235436868925]]></transaction_id>
+</xml>'
+
+
+2018-11-24 01:33:47-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 01:33:47-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 01:42:00------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 01:42:00------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 01:42:00-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[76]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[bzbv4ktpmla9hydjw4ymvwp02oxepn95]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112330330]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[E75468978A39E036F12818969F4DF1E4]]></sign>
+<time_end><![CDATA[20181123223749]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000213201811237425707288]]></transaction_id>
+</xml>'
+
+
+2018-11-24 01:42:00-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 01:42:00-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 01:47:55------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 01:47:55------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 01:47:55-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[77]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[ljls0zkr4j0wyq400rfqfgonxsi9dwqw]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112329816]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[ECCDD20C6DC2D6EC10EAEC46BE6A8744]]></sign>
+<time_end><![CDATA[20181123224342]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000232201811237311553758]]></transaction_id>
+</xml>'
+
+
+2018-11-24 01:47:55-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 01:47:55-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 01:52:29------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 01:52:29------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 01:52:29-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[78]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[jvyy5jwakzs2hmlihcc551t4opsqmr0s]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112355322]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[8B6B0EC069509AEA27890D9CB6A6FFFF]]></sign>
+<time_end><![CDATA[20181123224822]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000236201811237206917444]]></transaction_id>
+</xml>'
+
+
+2018-11-24 01:52:29-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 01:52:29-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 01:56:52------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 01:56:52------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 01:56:52-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[79]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[906148wrw0ju2wvogxwifwu6ptrjuubf]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112323606]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[6C5713FA577BD89FF524F9617B695753]]></sign>
+<time_end><![CDATA[20181123225240]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000235201811232055724200]]></transaction_id>
+</xml>'
+
+
+2018-11-24 01:56:52-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 01:56:52-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
+2018-11-24 02:03:13------/home/wwwroot/yulong/wx_native_callback.phpREQUEST 参数：Array
+(
+)
+
+
+
+2018-11-24 02:03:13------/home/wwwroot/yulong/wx_native_callback.php38 payment 参数：wx_new_jspay Object
+(
+)
+
+
+
+2018-11-24 02:03:13-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php传递过来的XML
+'<xml><appid><![CDATA[wx633270b1ec197cac]]></appid>
+<attach><![CDATA[81]]></attach>
+<bank_type><![CDATA[CFT]]></bank_type>
+<cash_fee><![CDATA[10]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[1504052631]]></mch_id>
+<nonce_str><![CDATA[wyhswfbinf3rj7x5un9dvai87mg9ww95]]></nonce_str>
+<openid><![CDATA[o2H460fVaVXMz4nPDZI4sA6jvUpI]]></openid>
+<out_trade_no><![CDATA[2018112320567]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[EB284EE4363D3F7F0EF7784D3AE5DAFF]]></sign>
+<time_end><![CDATA[20181123225900]]></time_end>
+<total_fee>10</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[4200000216201811231317768029]]></transaction_id>
+</xml>'
+
+
+2018-11-24 02:03:13-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php支付成功
+
+
+
+2018-11-24 02:03:13-----------------/home/wwwroot/yulong/include/modules/payment/wx_new_jspay.php订单金额0.10
+
+
+
