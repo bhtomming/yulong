@@ -849,7 +849,7 @@ jQuery(function($){
       <div class="blank"></div>
       <table width="100%" border="0" cellpadding="5" cellspacing="1">
         <tr>
-          <td align="right" bgcolor=""><a href="user.php?act=account_deposit" class="f6">{$lang.surplus_type_0}</a> | <a href="user.php?act=account_raply" class="f6">{$lang.surplus_type_1}</a> | <a href="user.php?act=account_detail" class="f6">{$lang.add_surplus_log}</a> | <a href="user.php?act=account_log" class="f6">{$lang.view_application}</a></td>
+          <td align="right" bgcolor=""><a href="user.php?act=account_deposit" class="f6">{$lang.surplus_type_0}</a> | <a href="distribute.php?act=account_raply" class="f6">{$lang.surplus_type_1}</a> | <a href="user.php?act=account_detail" class="f6">{$lang.add_surplus_log}</a> | <a href="user.php?act=account_log" class="f6">{$lang.view_application}</a></td>
         </tr>
       </table>
       <!-- {/if} --> 

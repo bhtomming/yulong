@@ -38,7 +38,6 @@ class wechatCallbackapi {
 	} 
 	public function responseMsg($db, $user, $base_url)
 	{
-
 		$postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
 		$debug = 0;
 		if ($_GET['debug'] == 1) {
@@ -108,8 +107,9 @@ class wechatCallbackapi {
 			if(empty($q_name)){
 				$q_name="weixin";
 			}
+			//查找推荐人ID
 			$affiliate_id = $db -> getOne("SELECT `affiliate` FROM `wxch_user` WHERE `wxid` = '$fromUsername'");
-			if ($affiliate_id >= 1) {
+			if ($affiliate_id >= 1) { //存在推荐人
 				$affiliate = '&u=' . $affiliate_id;
 			} 
 			if ($goods_is_ret == 'false') {
@@ -118,6 +118,7 @@ class wechatCallbackapi {
 				$goods_is = '';
 			} 
 			$plustj = $plustj_ret['cfg_value'];
+			//查询网络主体，目前没有使用。
 			$wxch_bd = $db -> getOne("SELECT `cfg_value` FROM `wxch_cfg` WHERE `cfg_name` = 'bd'");
 			if (empty($base_ret['cfg_value'])) {
 				$m_url = $base_url . $m_ret['cfg_value'];
@@ -151,38 +152,42 @@ class wechatCallbackapi {
 
 			
 			if (!empty($ret['user_id'])) {
-			
 				$user_id = $ret['user_id'];
 			} 
 			$ret = $db -> getRow("SELECT `wxid` FROM `wxch_user` WHERE `wxid` = '$fromUsername'");
-			if (empty($ret)) {
+			if (empty($ret)) {//新用户加入
 				if (!empty($fromUsername)) {
 					$db -> query("INSERT INTO `wxch_user` (`subscribe`, `wxid` , `dateline`) VALUES ('1','$fromUsername','$time')");
 				} 
-			} else {
+			} else {//不是新用户就把用户状态改为关注
 				$db -> query("UPDATE  `wxch_user` SET  `subscribe` =  '1',`dateline` = '$time' WHERE  `wxch_user`.`wxid` = '$fromUsername';");
 			} 
-			$subscribe = 1;
+			$subscribe = 1; //关注状态，目前没有使用
+            //保存收到的文本消息,可以是关键词回复
 			if ($msgType == 'text') {
-				$db -> query("INSERT INTO `wxch_message` (`wxid`, `message`, `dateline`) VALUES
-( '$fromUsername', '$keyword', $time);");
+				$db -> query("INSERT INTO `wxch_message` (`wxid`, `message`, `dateline`) VALUES( '$fromUsername', '$keyword', $time);");
 			} 
 			$belong = $db -> insert_id();
 			$thistable = $db -> prefix . 'users';
+			//查找密码
 			$ec_pwd = $db -> getOne("SELECT `cfg_value` FROM `wxch_cfg` WHERE `cfg_name` = 'userpwd'");
+			//自动注册值为5
 			$autoreg_rand = $db -> getOne("SELECT `autoreg_rand` FROM `wxch_autoreg` WHERE `autoreg_id` = 1");
+			//生成长度为5的密码
 			$s_mima=$this->randomkeys($autoreg_rand);
 			$ec_pwd=$ec_pwd.$s_mima;
 			$ec_pwd_no=$ec_pwd;
-			$ec_pwd = md5($ec_pwd);
+			$ec_pwd = md5($ec_pwd);//密码加密
 			$ret_22 = $db -> getRow("SELECT * FROM `$thistable` WHERE `wxid` = '$fromUsername'");
+			//用户名长度等于28时,设置用户级别为99
 			if (strlen($ret_22['user_name']) == 28) {
 				$sql_del = "UPDATE `$thistable` SET `user_rank` = '99',`wxch_bd`='no' WHERE `wxid` ='$fromUsername'";
 				$db -> query($sql_del);
 			} 
-			$zhanghaoinfo="";
+			$zhanghaoinfo="";//账号信息
+            //如果用户名是空的,自动注册
 			if (empty($uname)) {
-		
+			    W_log('准备自动注册账号');
 				$wxch_user_name_sql = "SELECT `user_name` FROM `$thistable` WHERE `wxch_bd`='ok' AND `wxid` = '$fromUsername'";
 				$wxch_user_name = $db -> getOne($wxch_user_name_sql);
 				$wxch_user_wxid_sql = "SELECT `wxid` FROM `$thistable` WHERE `wxid`=`user_name` AND `wxid` = '$fromUsername'";
@@ -191,28 +196,33 @@ class wechatCallbackapi {
 				/*甜  心  1  00修复开发*/
 				$db->query("UPDATE `wxch_user` SET `setp`= 21,`uname`='$wxch_user_name' WHERE `wxid`= '$fromUsername';");
 				/*甜  心  1  00修复开发*/
-				if (empty($wxch_user_wxid)) {				
+				if (empty($wxch_user_wxid)) {
+				    W_log('没有微信号');
 					if (empty($wxch_user_name)) {
+					    W_log('没有用户名');
 						$wxch_nobd_wxid_sql = "SELECT `wxid` FROM `$thistable` WHERE `wxch_bd`='no' AND `wxid` = '$fromUsername'";
 						$wxch_nobd_wxid = $db -> getOne($wxch_nobd_wxid_sql);
 						if (empty($wxch_nobd_wxid)) {
+						    W_log('微信号是空的');
 							if (file_exists('uc_state.php')) {
 								include('uc_state.php');
-							} 
-							if ($uc_state) {
-								$salt = $uc_salt;
-								$uc_pwd = $uc_pwd;
-								$uc_sql = "INSERT INTO $uc_table (`username`, `password`, `salt`) VALUES ('$fromUsername', '$uc_pwd', '$salt')";
-								$db -> query($uc_sql);
-								$ecs_user_id = $db -> insert_id();
-								$uc_username = 'wx' . $ecs_user_id;
-								$uc_update = "UPDATE $uc_table  SET `username` = '$uc_username' WHERE `uid` = '$ecs_user_id'";
-								$db -> query($uc_update);
-								$ecs_password = md5($ecs_password);
-								$wxch_user_sql = "INSERT INTO `$thistable` (`user_id`,`user_name`,`password`,`wxid`,`user_rank`,`wxch_bd`,`reg_time`) VALUES ('$ecs_user_id','$uc_username','$ecs_password','$fromUsername','99','no','$time')";
-								$db -> query($wxch_user_sql);
-							} else {							
-							
+								W_log('加载用户状态文件');
+                                if ($uc_state) {
+                                    $salt = $uc_salt;
+                                    $uc_pwd = $uc_pwd;
+                                    $uc_sql = "INSERT INTO $uc_table (`username`, `password`, `salt`) VALUES ('$fromUsername', '$uc_pwd', '$salt')";
+                                    $db -> query($uc_sql);
+                                    $ecs_user_id = $db -> insert_id();
+                                    $uc_username = 'wx' . $ecs_user_id;
+                                    $uc_update = "UPDATE $uc_table  SET `username` = '$uc_username' WHERE `uid` = '$ecs_user_id'";
+                                    $db -> query($uc_update);
+                                    $ecs_password = md5($ecs_password);
+                                    $wxch_user_sql = "INSERT INTO `$thistable` (`user_id`,`user_name`,`password`,`wxid`,`user_rank`,`wxch_bd`,`reg_time`) VALUES ('$ecs_user_id','$uc_username','$ecs_password','$fromUsername','99','no','$time')";
+                                    $db -> query($wxch_user_sql);
+                                    W_log('更新用户状态文件');
+                                }
+							} else {
+							W_log('没有用户状态文件');
 								$autoreg_state = $db -> getOne("SELECT `state` FROM `wxch_autoreg` WHERE `autoreg_id` = 1");
 								if($autoreg_state){
 									$wxch_user_sql = "INSERT INTO `$thistable` ( `user_name`,`password`,`wxid`,`user_rank`,`wxch_bd`,`password_tianxin`,`reg_time`) VALUES ('$fromUsername','$ec_pwd','$fromUsername','99','no','$ec_pwd_no','$time')";
@@ -240,6 +250,7 @@ class wechatCallbackapi {
                                         }
 									$db->query("UPDATE  ecs_users SET `wxch_bd`='ok',`wxid`='$fromUsername' WHERE `user_name`='$ecs_user_name'");
 									$zhanghaoinfo="您的账号：".$ecs_user_name."密码：".$ec_pwd_no.$tianxin100_t;
+									W_log('自动注册用户:'.$ecs_user_name);
 								}else{
 									$zhanghaoinfo="自动注册功能未开启！";
 								}
@@ -248,21 +259,31 @@ class wechatCallbackapi {
 					} 
 				}
 				else {
+				    W_log('更新用户级别信息');
 					$wxch_user_sql = " UPDATE `$thistable` SET `user_rank` = '99',`wxch_bd`='no' WHERE `wxid` ='$fromUsername'";
 					$db -> query($wxch_user_sql);
 				} 
 			}
 			
 			/*甜心  100  兼容推荐链接成为下线功能Start*/
-			
+			//查找上级ID
 			$u_parent_id = $db -> getOne("SELECT `parent_id` FROM `ecs_users` WHERE `wxid`= '$fromUsername'");
+			//查找上级销售员ID
 			$sales1_id = $db -> getOne("SELECT `sales1_id` FROM `ecs_users` WHERE `wxid`= '$fromUsername'");
+			//如果没有上级或没有销售员
 			if(empty($u_parent_id)||empty($sales1_id)){
+			    W_log('查找推荐人当中...');
+			    //查找推荐人
 				$affiliate_p = $db -> getOne("SELECT `affiliate` FROM `wxch_user` WHERE `wxid`= '$fromUsername'");
+				//没有推荐人
 				if(empty($affiliate_p)){
 					$affiliate_p=0;
+                    W_log('没有推荐人');
 				}else{
+                    W_log('推荐人是:'.$affiliate_p);
+				    //有推荐人,查找推荐人微信ID
 					$qu_wxid = "SELECT wxid FROM `ecs_users` WHERE `user_id` = '$affiliate_p'";
+					//如果存在推荐人微信ID,找出该推荐的4级推荐人,并设置用户的推荐人
 					if(!empty($qu_wxid)){
 						$sales2_sql="SELECT * FROM `ecs_users` WHERE `user_id` = '$affiliate_p'";
 						$sales2info=$db -> getRow($sales2_sql);	
@@ -275,7 +296,8 @@ class wechatCallbackapi {
 					}
 				}
 			}
-			/*甜心  100  兼容推荐链接成为下线功能END*/	
+			/*甜心  100  兼容推荐链接成为下线功能END*/
+
 			$newsTpl = "<xml>
                          <ToUserName><![CDATA[%s]]></ToUserName>
                          <FromUserName><![CDATA[%s]]></FromUserName>
@@ -315,15 +337,19 @@ class wechatCallbackapi {
 
             W_log(__LINE__ .'$postObj -> EventKey : '. $postObj -> EventKey );
 
-			if ($postObj -> Event == 'subscribe') {
+
+            //如果是关注事件
+			if ($postObj -> Event == 'subscribe') {//微信发送过来为关注事件时
+			    W_log($fromUsername.'关注公众号事件');
+			    //判断微信发来消息没有关键词，没有就设置，有就用关键词.
 				if (strlen($postObj -> EventKey) == 0) {
 					$ret = $db -> getRow("SELECT `type_id` FROM  `wxch_coupon` WHERE `id` = 1");
 					if ($ret['type_id'] >= 1) {
+					    //关注送红包
 						$postObj -> EventKey = 'gzyhj';
-						
 					} else {
 						$postObj -> EventKey = 'subscribe';
-					} 
+					}
 				} else {
 					$qrscene = $postObj -> EventKey;
 					$scene_id_arr = explode("qrscene_", $qrscene);
@@ -331,20 +357,24 @@ class wechatCallbackapi {
 					$db -> query("UPDATE `wxch_qr` SET `subscribe`=`subscribe` + 1 WHERE `scene_id`= '$scene_id';");
 					$scan_ret = $db -> getRow("SELECT * FROM `wxch_qr` WHERE scene_id =$scene_id");
 					$tianxin_users = $db -> getRow("SELECT * FROM `ecs_users` WHERE user_id =$scene_id");
-					
 					if(!empty($tianxin_users)){
-					
 						$postObj -> EventKey = 'affiliate_推荐成功_' . $scene_id;
 					} else {
 						$postObj -> EventKey = $scan_ret['function'];
 					} 
 				} 
 			}
+			//取消关注事件
 			elseif ($postObj -> Event == 'unsubscribe') {
 				$db -> query("UPDATE  `wxch_user` SET  `subscribe` =  '0' WHERE  `wxch_user`.`wxid` = '$fromUsername';");
-				$subscribe = 0;
+				//$subscribe = 0; 没有用的变量
+				W_log($fromUsername.'取消关注');
+				exit();
 			}
+			//扫码事件
 			elseif ($postObj -> Event == 'SCAN') {
+                W_log($fromUsername.'扫描推荐码');
+                W_log('推荐码的值是:'.$postObj -> EventKey);
 				$qrscene = $postObj -> EventKey;
 				$scene_id = $qrscene;
 				$update_sql = "UPDATE `wxch_qr` SET `scan`=`scan` + 1 WHERE `scene_id`= '$scene_id';";
@@ -368,18 +398,19 @@ class wechatCallbackapi {
 			if ($postObj -> MsgType == 'event') {
 				$keyword = $postObj -> EventKey;
 				$menu_message = 'menu:' . $keyword;
-				$db -> query("INSERT INTO `wxch_message` (`wxid`, `message`, `dateline`) VALUES
-( '$fromUsername', '$menu_message', $time);");
+                W_log('进入到事件处理,时$keyword:'.$keyword);
+                W_log('进入到事件处理,添加一个menu_message:'.$menu_message);
+				$db -> query("INSERT INTO `wxch_message` (`wxid`, `message`, `dateline`) VALUES( '$fromUsername', '$menu_message', $time);");
 			}
 
 			if ($postObj -> MsgType == 'voice') {
 				$keyword = $postObj -> Recognition;
 				$menu_message = 'voice:' . $keyword;
-				$db -> query("INSERT INTO `wxch_message` (`wxid`, `message`, `dateline`) VALUES
-( '$fromUsername', '$menu_message', $time);");
+				$db -> query("INSERT INTO `wxch_message` (`wxid`, `message`, `dateline`) VALUES( '$fromUsername', '$menu_message', $time);");
 			}
 
 			$wxch_table = 'wxch_msg';
+			//查询消息表格，目前这个表格没有值
 			$wxch_msg = $db -> getAll("SELECT * FROM  `$wxch_table`");
 			foreach($wxch_msg as $k => $v) {
 				$commands[$k] = $v;
@@ -392,7 +423,7 @@ class wechatCallbackapi {
 			}
 			/*判断关键字，调用系统内置函数End*/
             W_log(__LINE__ .'$keyword: ' . $keyword );
-			//用户设置关键字回复，图文或则文本
+			//用户设置关键字回复，图文或则文本,自动回复功能
 			$this -> getauto($db, $keyword, $textTpl, $newsTpl, $base_url, $m_url, $fromUsername, $toUsername, $time, $article_url);
 			
 			//多客服触发
@@ -449,7 +480,8 @@ class wechatCallbackapi {
 							$sales3_id=$sales2info['sales2_id'];
 							$sales4_id=$sales2info['sales3_id'];
 							$sales5_id=$sales2info['sales4_id'];
-							$sales6_id=$sales2info['sales5_id'];$sales7_id=$sales2info['sales6_id'];
+							$sales6_id=$sales2info['sales5_id'];
+							$sales7_id=$sales2info['sales6_id'];
 							$sales8_id=$sales2info['sales7_id'];
 							$sales9_id=$sales2info['sales8_id'];
 							$sql ="UPDATE ecs_users SET sales1_id = '$aff_arr[2]',parent_id = '$aff_arr[2]',sales2_id = '$sales2_id',sales3_id='$sales3_id',sales4_id='$sales4_id',sales5_id='$sales5_id'   WHERE `wxid` = '$fromUsername';";
@@ -1305,6 +1337,7 @@ nation=大雁塔&mode=driving&region=西安';
 			}
 			elseif ($keyword == 'gzyhj') {
 				//关注送红包
+                W_log('送红包处理');
 				$msgType = "text";
 				$contentStr = $this -> coupon($db, $fromUsername);
 				if(!empty($zhanghaoinfo)){
@@ -1347,14 +1380,21 @@ nation=大雁塔&mode=driving&region=西安';
 			elseif ($keyword == 'subscribe') {
 				/* 甜  心 10 0  新 增修 复  如果是直接关注的则默认分配上级账号避免推荐关系混乱*/
 				$affiliate = unserialize($GLOBALS['_CFG_MOBILE']['affiliate']);	
-				$parent_id=(float)$affiliate['config']['parent_id'];				
+				$parent_id=(float)$affiliate['config']['parent_id'];
+				W_log('当前用户上级:'.$parent_id);
+				//存在推荐人，查询推荐人ID
 				if(!empty($parent_id)){
-					$user_parent_id = $db -> getOne("SELECT `parent_id` FROM `ecs_users` WHERE `wxid` ='$fromUsername'");		
-					if(empty($user_parent_id)){			
+				    W_log('正在查找推荐人...');
+					$user_parent_id = $db -> getOne("SELECT `parent_id` FROM `ecs_users` WHERE `wxid` ='$fromUsername'");
+					//如果推荐人为空，则设置推荐人为全局推荐人
+					if(empty($user_parent_id)){
+					    W_log('设置推荐人是全局推荐人');
 						$db->query("UPDATE  ecs_users SET `parent_id`='$parent_id',sales1_id = '$parent_id' WHERE `wxid`='$fromUsername'");
 					}
 				}
 				/* 甜  心 10 0  新 增修 复  如果是直接关注的则默认分配上级账号避免推荐关系混乱*/
+
+                //关键词回复，目前表格没有内容
 				$type1 = $db -> getOne("SELECT `type` FROM `wxch_keywords1` WHERE `is_start` = 1");
 				if($type1==3){
 					$keyword="关注回复文本";
@@ -1454,7 +1494,7 @@ nation=大雁塔&mode=driving&region=西安';
 		}
 		else
 		{
-            //W_log('empty $postStr ' );
+
 			echo '';
 			exit;
 		} 
@@ -1743,7 +1783,8 @@ nation=大雁塔&mode=driving&region=西安';
 		return $data;
 	} 
 	protected function getauto($db, $keyword, $textTpl, $newsTpl, $base_url, $m_url, $fromUsername, $toUsername, $time, $article_url) {
-		$this -> universal($fromUsername, $base_url);
+	    W_log('获取自动注册信息');
+	    $this -> universal($fromUsername, $base_url);
 		$auto_res = $ret = $db -> getAll("SELECT * FROM `wxch_keywords`");
 		if (count($auto_res) > 0) {
 			foreach($auto_res as $k => $v) {
@@ -1777,6 +1818,10 @@ nation=大雁塔&mode=driving&region=西安';
 									} 
 									$gourl = $m_url . $article_url . $vvv['article_id'];
 									$ArticleCount = count($res);
+                                    W_log('回复链接是:'.$gourl);
+                                    W_log('回复图片是:'.$picurl);
+                                    W_log('回复描述是:'.$vvv['description']);
+                                    W_log('回复标题是:'.$vvv['title']);
 									$items .= "<item>
                              <Title><![CDATA[" . $vvv['title'] . "]]></Title>
                              <Description><![CDATA[" . $vvv['description'] . "]]></Description>
@@ -1798,8 +1843,10 @@ nation=大雁塔&mode=driving&region=西安';
 
 
 	protected function getauto_reg($db, $keyword, $textTpl, $newsTpl, $base_url, $m_url, $fromUsername, $toUsername, $time, $article_url,$user_name,$ec_pwd_no,$zhanghaoinfo,$user_password) {
-		$this -> universal($fromUsername, $base_url);
+		W_log('进入到自动注册处理');
+	    $this -> universal($fromUsername, $base_url);
 		$auto_res = $ret = $db -> getAll("SELECT * FROM `wxch_keywords1`");
+		W_log('找到'.count($auto_res).'条信息');
 		if (count($auto_res) > 0) {
 			foreach($auto_res as $k => $v) {
 				if ($v['status'] == 1) {
@@ -1843,13 +1890,17 @@ nation=大雁塔&mode=driving&region=西安';
 									if (!empty($vvv['file_url'])) {
 										$picurl = $base_url . $vvv['file_url'];
 									} else {
-										$picurl = $base_url . 'themes/default/images/logo.gif';
+										$picurl = $base_url . '/themes/default/images/logo.gif';
 										if (!is_null($GLOBALS['_CFG']['template'])) {
-											$picurl = $base_url . 'themes/' . $GLOBALS['_CFG']['template'] . '/images/logo.gif';
+											$picurl = $base_url . '/themes/' . $GLOBALS['_CFG']['template'] . '/images/logo.gif';
 										} 
 									} 
 									$gourl = $m_url . $article_url . $vvv['article_id'];
 									$ArticleCount = count($res);
+									W_log('回复链接是:'.$gourl);
+									W_log('回复图片是:'.$picurl);
+									W_log('回复描述是:'.$vvv['description']);
+									W_log('回复标题是:'.$vvv['title']);
 									$items .= "<item>
                              <Title><![CDATA[" . $vvv['title'] . "]]></Title>
                              <Description><![CDATA[" . $vvv['description'] . "]]></Description>
@@ -1922,6 +1973,7 @@ nation=大雁塔&mode=driving&region=西安';
 		return $k_arr;
 	} 
 	public function universal($wxid, $base_url) {
+	    W_log('反序列化用户信息，基本链接:'.$base_url);
 		$arr = explode("/", $base_url);
 		if (count($arr) == 5) {
 			$gourl = $arr[2];
@@ -2015,6 +2067,7 @@ nation=大雁塔&mode=driving&region=西安';
 		} 
 	} 
 	private function update_info($host, $wxid) {
+	    W_log('调用更新用户信息函数');
 		if (function_exists(fsockopen)) {
 			$fp = fsockopen("$host", 80, $errno, $errstr, 10);
 		} else {
@@ -2043,6 +2096,7 @@ nation=大雁塔&mode=driving&region=西安';
 		} 
 	} 
 	private function update_info_url($host, $wxid, $append) {
+	    W_log('调用更新链接');
 		if (function_exists(fsockopen)) {
 			$fp = fsockopen("$host", 80, $errno, $errstr, 10);
 		} else {

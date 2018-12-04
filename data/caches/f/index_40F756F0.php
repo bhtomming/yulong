@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:50:"D:/phpStudy/WWW/yulong/themes/tianxin100/index.dwt";i:1;s:63:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/index_icon.lbi";i:2;s:72:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_promotion.lbi";i:3;s:66:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_hot.lbi";i:4;s:66:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_new.lbi";i:5;s:67:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_best.lbi";i:6;s:73:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_electronic.lbi";i:7;s:63:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/footer_nav.lbi";i:8;s:75:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/top_tianxin100_guanzhu.lbi";}s:7:"expires";i:1543031576;s:8:"maketime";i:1543027976;}<!DOCTYPE html >
+<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:50:"D:/phpStudy/WWW/yulong/themes/tianxin100/index.dwt";i:1;s:63:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/index_icon.lbi";i:2;s:72:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_promotion.lbi";i:3;s:66:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_hot.lbi";i:4;s:66:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_new.lbi";i:5;s:67:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_best.lbi";i:6;s:73:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_electronic.lbi";i:7;s:63:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/footer_nav.lbi";i:8;s:75:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/top_tianxin100_guanzhu.lbi";}s:7:"expires";i:1543907045;s:8:"maketime";i:1543903445;}<!DOCTYPE html >
 <html>
 <head>
 <meta name="Generator" content="ECSHOP v2.7.3" />
@@ -20,16 +20,13 @@
 <div id="page" style="right: 0px; left: 0px; display: block; overflow-y: hidden;overflow-x : hidden; ">
 <div id="slider" class="mui-slider" >
       <div class="mui-slider-group mui-slider-loop">      
-          
-           <div class="mui-slider-item">
+                     <div class="mui-slider-item">
             <a href="affiche.php?ad_id=54&uri="><img src="data/afficheimg/1529304114744282499.jpg"\/></a>
           </div>         
-          
-           <div class="mui-slider-item">
+                     <div class="mui-slider-item">
             <a href="affiche.php?ad_id=55&uri="><img src="data/afficheimg/1529304129815614548.jpg"\/></a>
           </div>         
-          
-           <div class="mui-slider-item">
+                     <div class="mui-slider-item">
             <a href="affiche.php?ad_id=56&uri="><img src="data/afficheimg/1529303026745483327.jpg"\/></a>
           </div>         
              
@@ -64,8 +61,7 @@
 <div class="title"><a class="fr" href="search.php?intro=hot">查看更多 > </a><i></i>商品热销区</div>
 <div class="goodsbox">
   <ul>
-    
-    <li class="clearfix">
+        <li class="clearfix">
         <a href="goods.php?id=9" title="江津九叶青干花椒">
         <img src="/images/201809/thumb_img/9_thumb_G_1537811397490.jpg" alt="江津九叶青干花椒">
         <div>
@@ -78,8 +74,7 @@
         </div>
       </a>
     </li>
-    
-    <li class="clearfix">
+        <li class="clearfix">
         <a href="goods.php?id=10" title="北部湾红树林海鸭蛋">
         <img src="/images/201809/thumb_img/10_thumb_G_1537836230063.jpg" alt="北部湾红树林海鸭蛋">
         <div>
@@ -92,8 +87,7 @@
         </div>
       </a>
     </li>
-    
-    <li class="clearfix">
+        <li class="clearfix">
         <a href="goods.php?id=11" title="九叶青花椒粉">
         <img src="/images/201809/thumb_img/11_thumb_G_1537836884330.jpg" alt="九叶青花椒粉">
         <div>
@@ -106,15 +100,13 @@
         </div>
       </a>
     </li>
-    
-  </ul>
+      </ul>
 </div>
 <div class="bg2"></div>
 <div class="title"><a class="fr" href="search.php?intro=new">查看更多 > </a><i></i>新商品区</div>
 <div class="goodsbox">
   <ul>
-    
-    <li class="clearfix">
+        <li class="clearfix">
         <a href="goods.php?id=14" title="标准大床房">
         <img src="/images/201809/thumb_img/14_thumb_G_1538008963882.jpg" alt="标准大床房">
         <div>
@@ -127,8 +119,7 @@
         </div>
       </a>
     </li>
-    
-    <li class="clearfix">
+        <li class="clearfix">
         <a href="goods.php?id=15" title="标准双床房">
         <img src="/images/201809/thumb_img/15_thumb_G_1538008937327.jpg" alt="标准双床房">
         <div>
@@ -141,8 +132,7 @@
         </div>
       </a>
     </li>
-    
-    <li class="clearfix">
+        <li class="clearfix">
         <a href="goods.php?id=16" title="豪华亲子房">
         <img src="/images/201809/thumb_img/16_thumb_G_1538008921159.jpg" alt="豪华亲子房">
         <div>
@@ -155,15 +145,13 @@
         </div>
       </a>
     </li>
-    
-  </ul>
+      </ul>
 </div>
 <div class="bg2"></div>
 <div class="title"><a class="fr" href="search.php?intro=best">查看更多 > </a><i></i>商品推荐区</div>
 <div class="goodsbox">
   <ul>
-    
-    <li class="clearfix">
+        <li class="clearfix">
         <a href="goods.php?id=12" title="北海蓝色之都小户型A">
         <img src="/images/201809/thumb_img/12_thumb_G_1538003435899.jpg" alt="北海蓝色之都小户型A">
         <div>
@@ -184,8 +172,7 @@
         </div>
       </a>
     </li>
-    
-    <li class="clearfix">
+        <li class="clearfix">
         <a href="goods.php?id=13" title="北海蓝色之都房型B">
         <img src="/images/201809/thumb_img/13_thumb_G_1538004230757.jpg" alt="北海蓝色之都房型B">
         <div>
@@ -206,8 +193,7 @@
         </div>
       </a>
     </li>
-    
-  </ul>
+      </ul>
 </div>
 </div>
 <footer>
@@ -220,14 +206,26 @@
   </ul>
 </footer>
 <script src="http://w1.ttkefu.com/k/?fid=7J9FHF6"  charset=utf-8></script>
-<div style='display:none;'><a href='http://www.ttkefu.com'>在线客服</a></div>
-    
-<style>
+<div style='display:none;'><a href='http://www.ttkefu.com'>在线客服</a></div><style>
 #qrcode { display:block; position:fixed; z-index:99999; width:100%; height:100%; top:0px; left:0px; padding:40% 0 0 0;    text-align: center;
 background-color:#000000;background:rgba(0, 0, 0, 0.5);}
 #qrcode img {width:60%; height:auto;}
 #qrcode  a {display:block; color:#fff;}
 </style>
+     	
+	<div id="qrcode">
+		<span onclick="qrcode_hide()" style="display: block;text-align: right; margin: 0 20%;color: #fff; font-size: 10px;">关闭</span>
+				<img src="/images/qrcode_344.jpg" />
+				<a href="javascript:;">长按二维码 ，马上关注公众号</a>
+	 </div>	
+	<script>
+		function qrcode_hide(){
+			$('#qrcode').hide();
+			setTimeout(function(){
+				$('#qrcode').show();
+			},5000);
+		}
+	</script>
   
 <script type="text/javascript" src="themes/tianxin100/js/jquery-1.9.1.min.js"></script>
 <script src="js/mui.min.js"></script>

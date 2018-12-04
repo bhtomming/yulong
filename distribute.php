@@ -2291,9 +2291,13 @@ elseif ($action == 'act_account')
         $amount = '-'.$amount;
         $surplus['payment'] = '';
         $surplus['rec_id']  = insert_user_account($surplus, $amount);
+        //审核通过前冻结用户提现资金
+
+        log_account_change($user_id,$amount,abs($amount),0,0,$_LANG['surplus_type_1'],ACT_DRAWING);
+
 
         /* 如果成功提交 */
-        if ($surplus['rec_id'] > 0)
+        if ($surplus['rec_id'] > 0  )
         {
             $content = $_LANG['surplus_appl_submit'];
             show_message($content, $_LANG['back_account_log'], 'distribute.php?act=account_log', 'info');
@@ -4103,6 +4107,8 @@ function get_accountlist($user_id, $account_type = '')
 
     return array('account' => $arr, 'filter' => $filter, 'page_count' => $filter['page_count'], 'record_count' => $filter['record_count']);
 }
+
+
 
 
 ?>

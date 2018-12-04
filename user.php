@@ -18,6 +18,7 @@ define('IN_ECTOUCH', true);
 
 require(dirname(__FILE__) . '/include/init.php');
 require(ROOT_PATH . 'include/lib_weixintong.php');
+require_once(ROOT_PATH . 'weixin/open-api.php');
 $user_id = $wechat->get_userid();
 /* 载入语言文件 */
 require_once(ROOT_PATH . 'lang/' .$_CFG['lang']. '/user.php');
@@ -202,12 +203,11 @@ elseif($action == 'tuiguang')
 
     if($_GET['qr'])
     {
-
         //如果记录存在，判断图片是否存在 不存在则生成新图片
     //    如果记录不存在，则生成新图片新记录
         $base_url =  filter_var( $_SERVER['HTTP_HOST'], FILTER_VALIDATE_IP) ? 'bhyulong.cn': $_SERVER['HTTP_HOST'] ;
 //        $base_url =  'http://www.bhyulong.cn';
-        $base_url = 'http://' .$base_url .  '/index.php?scene_id=' . $user_id .'&u=' . $user_id  ."&scene_id=".$user_id;
+        $base_url = 'http://' .$base_url .  '/index.php?scene_id=' . $user_id .'&u=' . $user_id;
         $qrPath = basename($_POST['qrImg']);
         $ajaxRespone = array(
             'code'=>0,
@@ -223,7 +223,16 @@ elseif($action == 'tuiguang')
             die;
         }
 
-        //test do something code 
+
+        //微信生成带参数二维码
+        $weixin = new Weixin();
+        $qrName = $weixin->get_wx_user_qrcode($user_id);
+        /*if(isset($qrPath)){
+            $ajaxRespone['code'] = 1 ;
+            $ajaxRespone['msg'] = $qrName;
+            echo json_encode($ajaxRespone);
+            die;
+        }*/
 
         //判断头像
         if(createFaceImg($qrPath,$user_id)){
@@ -233,14 +242,14 @@ elseif($action == 'tuiguang')
             die;
         }
 
+
         //判断 合成图片
         scerweima1($qrPath,$user_id);
-
-        $ajaxRespone['img'] = '/qrcode/'. str_replace('.png','.jpg',$qrPath) ;
+        $ajaxRespone['img'] =  'qrcode/'.str_replace('.png','.jpg',$qrPath) ;
         echo json_encode($ajaxRespone);
         die;
-
     }
+
     $qr_path = $GLOBALS['db']->getRow("SELECT qr_path FROM wxch_qr_tianxin100 WHERE scene_id = '$user_id' order by id desc ");
     $smarty->assign('tuiguang', $qr_path);
 	$smarty->display('user_transaction.dwt');
@@ -2028,6 +2037,9 @@ elseif ($action == 'act_account')
         $amount = '-'.$amount;
         $surplus['payment'] = '';
         $surplus['rec_id']  = insert_user_account($surplus, $amount);
+
+        //冻结用户提现资金
+        log_account_change($user_id,$amount,abs($amount),0,0,$_LANG['surplus_type_1'],ACT_DRAWING);
 
         /* 如果成功提交 */
         if ($surplus['rec_id'] > 0)

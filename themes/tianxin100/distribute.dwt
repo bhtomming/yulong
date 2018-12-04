@@ -10,7 +10,7 @@
 		<meta content="email=no" name="format-detection">
 		<meta content="yes" name="apple-mobile-web-app-capable">
 		<meta content="black" name="apple-mobile-web-app-status-bar-style">
-    	<title>分销中心</title>
+
 		
 <link href="{$ectouch_themes}/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <link href="{$ectouch_themes}/ectouch.css?id=1212" rel="stylesheet" type="text/css" />

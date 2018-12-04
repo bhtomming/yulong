@@ -5,12 +5,23 @@ background-color:#000000;background:rgba(0, 0, 0, 0.5);}
 #qrcode img { width:60%; height:auto;}
 #qrcode  a { display:block; color:#fff;}
 </style>
-
-  {if $is_subscribe eq 0}
-    <div id="qrcode">
-    <span onclick="$('#qrcode').hide();" style="display: block;text-align: right; margin: 0 20%;color: #fff; font-size: 10px;">关闭</span>
-    <img src="/images/qrcode_344.jpg" />
-  	<a href="javascript:;">长按二维码 ，马上关注公众号</a>
-  	 </div>
+  {if $is_subscribe eq 0}   	
+	<div id="qrcode">
+		<span onclick="qrcode_hide()" style="display: block;text-align: right; margin: 0 20%;color: #fff; font-size: 10px;">关闭</span>
+		{if $tuijian }
+		<img src="{$user_img}" />
+		{else}
+		<img src="/images/qrcode_344.jpg" />
+		{/if}
+		<a href="javascript:;">长按二维码 ，马上关注公众号</a>
+	 </div>	
+	<script>
+		function qrcode_hide(){
+			$('#qrcode').hide();
+			setTimeout(function(){
+				$('#qrcode').show();
+			},5000);
+		}
+	</script>
   {/if}
 

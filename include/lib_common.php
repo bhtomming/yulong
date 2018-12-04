@@ -3418,7 +3418,7 @@ function get_wap_advlist( $position, $num )
     }
     return $arr;
 }
-/*
+/**
  * 生成分享二维码
  * @param $url 二维码链接
  * @param $fname 二维码名称
@@ -3437,12 +3437,13 @@ function get_wap_advlist( $position, $num )
  * */
 function createQR($url='',$fname = ''){
     require_once ROOT_PATH. 'wechat/phpqrcode.php';
-    $value = $url;         //二维码内容
+    $value = $url;         //二维码链接
     $errorCorrectionLevel = 'H';  //容错级别
     $matrixPointSize = 5;      //生成图片大小
-    //生成二维码图片
+    //生成二维码图片文件名
     if(empty($fname)) $fname = time().'.png';
     $time = substr($fname,0,-4);
+    //图片路径
     $ewmPath = 'images/qrcode/'.$fname;
     $jpg_ewmPath = str_replace('.png','.jpg',$ewmPath);
     if(!file_exists(ROOT_PATH.$jpg_ewmPath)){

@@ -18,28 +18,24 @@ define('IN_ECTOUCH', true);
 require(dirname(__FILE__) . '/include/init.php');
 require(ROOT_PATH . 'include/lib_weixintong.php');
 
-$user_id = $wechat->get_userid();
+//$user_id = $wechat->get_userid();
+//$is_subscribe =  $db->getOne( "select wx.subscribe from ecs_users as e left join wxch_user wx on wx.wxid=e.wxid  where e.user_id = '$user_id'", true);
 
-//判断微信是否已经关注公众号
-$is_subscribe =  $db->getOne( "select wx.subscribe from ecs_users as e left join wxch_user wx on wx.wxid=e.wxid  where e.user_id = '$user_id'", true);
-if(!is_wechat_browser()){
-    $is_subscribe = 1 ; //如果不是微信浏览器 不需要提示关注温馨公众号 LHF 2018-10-19
-} else{
-    if($is_subscribe == 0)
-        $wechat->get_userid();
-
-     $is_subscribe =  $db->getOne( "select wx.subscribe from ecs_users as e left join wxch_user wx on wx.wxid=e.wxid  where e.user_id = '$user_id'", true);
-
+$is_subscribe = 0 ; //默认不需要提示关注温馨公众号
+if(is_wechat_browser()){ //判断是否微信浏览器
+    $user_id = $wechat->get_userid();
+    //查询微信是否已经关注公众号
+    $is_subscribe =  $db->getOne( "select wx.subscribe from ecs_users as e left join wxch_user wx on wx.wxid=e.wxid  where e.user_id = '$user_id'", true);
 }
-
-// 设置 判断是否关注公众号cookie
-if($is_subscribe == 0 && !isset($_COOKIE['checkis_subscribe'] ) ){
+//var_dump($is_subscribe == 0 && !isset($_COOKIE['checkis_subscribe'] ));exit();
+// 设置 判断是否关注公众号cookie 目前没有起任何作用 2018-11-27
+/*if($is_subscribe == 0 && !isset($_COOKIE['checkis_subscribe'] ) ){
     foreach ($_COOKIE as $k=>$v) {
         setcookie($k,'',time()-3600,'/');
     }
     session_destroy();
     setcookie('checkis_subscribe',1,time()+3600) ;
-}
+}*/
 
 $smarty->assign('is_subscribe',$is_subscribe);
 
@@ -65,15 +61,7 @@ fclose($tp);
 
 die('1212');*/
 
-//LHF 测试 订单
-if($_GET['lhf']){
 
-    var_dump($_SERVER);
-//    echo ROOT_PATH . DATA_DIR . '/log.txt' ;
-    file_put_contents(ROOT_PATH . DATA_DIR . '/log_1.txt', print_r($_GET,true));
-
-    die ;
-}
 //LHF 清除cookie session
 if($_GET['cs']=='cs'){
 
@@ -83,6 +71,12 @@ if($_GET['cs']=='cs'){
     session_destroy();
     die('已清除 cookie session ' );
    // header('Location: /index.php');
+}
+
+//判断是否推荐过来，如果是推荐过来在主页显示推荐人的二维码
+if(isset($_GET['scene_id']) && isset($_GET['u'])){
+    $smarty->assign('tuijian',true);
+    $smarty->assign('user_img',"/qrcode/scene/{$_GET['u']}.jpg");
 }
 
 
@@ -215,9 +209,9 @@ if (!$smarty->is_cached('index.dwt', $cache_id))
 			$level_register_up = (float)$affiliate['config']['level_register_up'];
 			$rank_points =  $GLOBALS['db']->getOne("SELECT rank_points FROM " . $GLOBALS['ecs']->table('users')."where user_id=".$_SESSION["user_id"]);	
 			if($rank_points>$level_register_up||$rank_points==$level_register_up){		
-			$url=$config['site_url']."mobile/index.php?scene_id=$userid&u=".$userid ."&scene_id=".$userid;
+			$url=$config['site_url']."mobile/index.php?scene_id=$userid&u=".$userid;
 			//20141204新增分享返积分
-			$dourl=$config['site_url']."re_url.php?scene_id=$userid&user_id=".$userid ."&scene_id=".$userid;
+			$dourl=$config['site_url']."re_url.php?scene_id=$userid&user_id=".$userid;
 			}else{
 					$url="";
 					//20141204新增分享返积分

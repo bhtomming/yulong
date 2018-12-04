@@ -1,4 +1,4 @@
-<?php
+<?php
 $data = array (
   'shop_name' => '玉泷',
   'shop_title' => '玉泷',
@@ -101,7 +101,7 @@ $data = array (
   'use_surplus' => '1',
   'use_how_oos' => '1',
   'send_confirm_email' => '0',
-  'send_ship_email' => '0',
+  'send_ship_email' => '1',
   'send_cancel_email' => '0',
   'send_invalid_email' => '0',
   'order_pay_note' => '1',
@@ -113,9 +113,9 @@ $data = array (
   'order_invalid_note' => '1',
   'order_cancel_note' => '1',
   'invoice_content' => '',
-  'anonymous_buy' => '1',
+  'anonymous_buy' => '0',
   'min_goods_amount' => 0,
-  'one_step_buy' => 0,
+  'one_step_buy' => 1,
   'invoice_type' => 
   array (
     'type' => 
@@ -131,7 +131,7 @@ $data = array (
       2 => 0,
     ),
   ),
-  'stock_dec_time' => '0',
+  'stock_dec_time' => '1',
   'cart_confirm' => '3',
   'send_service_email' => '0',
   'show_goods_in_cart' => '3',
@@ -188,5 +188,5 @@ $data = array (
   'new_number' => 3,
   'hot_number' => 3,
   'promote_number' => 3,
-);
+);
 ?>

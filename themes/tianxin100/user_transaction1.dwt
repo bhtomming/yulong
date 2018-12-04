@@ -701,13 +701,7 @@ jQuery(function($){
         </script>
       <div class="blank"></div>
       <table width="100%" border="0" cellpadding="5" cellspacing="1">
-        <tr>
-        <!--
-          <td align="left" bgcolor="">
-          <a href="distribute.php?act=account_detail" class="f6">账户明细</a> | 
-          <a href="distribute.php?act=account_log" class="f6">提现记录</a>
-          </td>
-          -->
+        <tr>     
           <td align="right" bgcolor="">
           <a href="user.php?act=account_deposit" class="f6">{$lang.surplus_type_0}</a> | <a href="distribute.php?act=account_raply" class="f6">{$lang.surplus_type_1}</a> | 
           <a href="user.php?act=account_detail" class="f6">账户明细</a> | <a href="user.php?act=account_log" class="f6">申请记录</a> 
@@ -739,7 +733,7 @@ jQuery(function($){
             </dl>
             <dl>
               <dd class="dd1">真实姓名 </dd>
-              <input name="real_name" type="text" placeholder="输入真实姓名如：如:尚网网络科技100"  class="dd2">
+              <input name="real_name" type="text" placeholder="输入真实姓名如：如:助派网络科技"  class="dd2">
             </dl>
              <dl>
               <dd class="dd1">开户行 </dd>

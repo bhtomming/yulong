@@ -566,13 +566,13 @@ function curl_grab_page($url,$data,$proxy='',$proxystatus='',$ref_url='')
 	curl_close ($ch);
 	unset($ch);
 }
-function Getheadimgurl($headimgurl,$type = '46') 
+function Getheadimgurl($headimgurl/*,$type = '.46'*/)
 {
-	if(!empty($headimgurl))
+	/*if(!empty($headimgurl))
 	{
 		$headimgurl = substr($headimgurl,0,-1);
 		$headimgurl = $headimgurl.$type;
-	}
+	}*/
 	return $headimgurl;
 }
 ?>
