@@ -420,8 +420,7 @@ jQuery(function($){
           <tr>
             <th align="center">排名</th>
             <th align="center">用户名</th>
-            <th align="center">消费积分</th>
-            <th align="center">等级积分</th>
+            <th align="center">当前积分</th>
           </tr>
           <?php $_from = $this->_var['list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'val');if (count($_from)):
     foreach ($_from AS $this->_var['val']):
@@ -430,8 +429,6 @@ jQuery(function($){
             <td align="center"><font class="<?php if ($this->_var['val']['number'] == '1'): ?>red <?php elseif ($this->_var['val']['number'] == '2'): ?>blue<?php elseif ($this->_var['val']['number'] == '3'): ?>gray<?php else: ?><?php endif; ?>  "><?php echo $this->_var['val']['number']; ?></font></td>
             <td align="center"><?php echo $this->_var['val']['name']; ?></td>
             <td align="center"><?php echo $this->_var['val']['pay_points']; ?></td>
-            <td align="center"><?php echo $this->_var['val']['rank_points']; ?></td>
-
           </tr>
           <?php endforeach; else: ?>
           <tr><td class="no-records" colspan="6"><?php echo $this->_var['lang']['no_records']; ?></td></tr>
@@ -439,8 +436,6 @@ jQuery(function($){
         </table>
             </section>
           </section>
-
-          <a href="user.php?act=tuiguang" class="go_tuiguang"> 立 即 分 销</a>
            <a href="user.php?act=tuiguang" class="go_tuiguang"> 立 即 赚 钱</a>
 
           <?php endif; ?>

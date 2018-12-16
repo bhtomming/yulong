@@ -200,60 +200,22 @@ if ($action == 'act_dianpu')
 //推广二维码
 elseif($action == 'tuiguang')
 {
-
-    if($_GET['qr'])
-    {
-        //如果记录存在，判断图片是否存在 不存在则生成新图片
-    //    如果记录不存在，则生成新图片新记录
-        $base_url =  filter_var( $_SERVER['HTTP_HOST'], FILTER_VALIDATE_IP) ? 'bhyulong.cn': $_SERVER['HTTP_HOST'] ;
-//        $base_url =  'http://www.bhyulong.cn';
-        $base_url = 'http://' .$base_url .  '/index.php?scene_id=' . $user_id .'&u=' . $user_id;
-        $qrPath = basename($_POST['qrImg']);
-        $ajaxRespone = array(
-            'code'=>0,
-            'http'=>$base_url,
-            'msg'=>''
-        );
-
-        //判断 二维码是否存在 ，如果不存在生成并返回 ，让页面再次请求判断
-        if($qrName = createQR( $base_url ,$qrPath ) ) {
-            $ajaxRespone['code'] = 1 ;
-            $ajaxRespone['msg'] = $qrName;
-            echo json_encode($ajaxRespone);
-            die;
-        }
-
-
-        //微信生成带参数二维码
-        $weixin = new Weixin();
-        $qrName = $weixin->get_wx_user_qrcode($user_id);
-        /*if(isset($qrPath)){
-            $ajaxRespone['code'] = 1 ;
-            $ajaxRespone['msg'] = $qrName;
-            echo json_encode($ajaxRespone);
-            die;
-        }*/
-
-        //判断头像
-        if(createFaceImg($qrPath,$user_id)){
-            $ajaxRespone['code'] = 2 ;
-            $ajaxRespone['msg'] = $qrPath;
-            echo json_encode($ajaxRespone);
-            die;
-        }
-
-
-        //判断 合成图片
-        scerweima1($qrPath,$user_id);
-        $ajaxRespone['img'] =  'qrcode/'.str_replace('.png','.jpg',$qrPath) ;
-        echo json_encode($ajaxRespone);
-        die;
-    }
-
     $qr_path = $GLOBALS['db']->getRow("SELECT qr_path FROM wxch_qr_tianxin100 WHERE scene_id = '$user_id' order by id desc ");
+    //判断有没有文件，没有就生成文件
+    if(empty($qr_path) || !file_exists(ROOT_PATH.'qrcode/'.$qr_path["qr_path"])){
+        $qr_path = array(
+            'qr_path' => createImg($qr_path["qr_path"],$user_id),
+        );
+    }
+    if(filesize(ROOT_PATH.'qrcode/scene/'.$user_id.'jpg') == 0){
+        header("refresh:1;URL='javascript:window.location.reload(); '");
+    }
+    $qr_path["qr_path"] = '/qrcode/'.$qr_path["qr_path"];
     $smarty->assign('tuiguang', $qr_path);
 	$smarty->display('user_transaction.dwt');
 }
+
+
 //  第三方登录接口
 elseif($action == 'oath')
 {
@@ -3792,7 +3754,7 @@ elseif ($action == 'point')
 //等级积分排序
 elseif ($action == 'point_order')
 {
-    $sql = "select user_id,user_name,pay_points,rank_points,nicheng,nick_name from  " . $ecs->table('users') . " ORDER BY rank_points desc LIMIT 10";
+    $sql = "select user_id,user_name,pay_points,rank_points,nicheng,nick_name from  " . $ecs->table('users') . " ORDER BY pay_points desc LIMIT 10";
 
     $list =  $db->getAll($sql);
     foreach ($list as $k => $v ){
@@ -4095,6 +4057,21 @@ function get_accountlist($user_id, $account_type = '')
     }
 
     return array('account' => $arr, 'filter' => $filter, 'page_count' => $filter['page_count'], 'record_count' => $filter['record_count']);
+}
+
+function createImg($qrPath,$user_id){
+    //微信生成带参数二维码
+    $weixin = new Weixin();
+    $qrName = $weixin->get_wx_user_qrcode($user_id);
+    $no_path = FALSE;
+    if(empty($qrPath)){
+        $qrPath = time().'jpg';
+        $no_path = TRUE;
+    }
+    //判断用户头像，没有就按默认生成
+    createFaceImg($qrPath,$user_id);
+    return scerweima1($qrPath,$user_id,$no_path);
+
 }
 
 

@@ -3470,16 +3470,17 @@ function createFaceImg ($fname,$user_id){
     {
         if($userInfo['headimgurl']){
             downloadImage($userInfo['headimgurl'],$h_imgsrc);
-            return true;
+            return $h_imgsrc;
         }
     }
     return false;
 }
 
-function scerweima1($fname,$user_id)
+function scerweima1($fname,$user_id,$no_path)
 {
     //判断文件是否存在
     if(!file_exists( ROOT_PATH.'qrcode/'.$fname) ){
+
         //二维码合成图片的  位置  参数
         $ewm_data = $GLOBALS['db'] -> getAll( "SELECT * FROM  `wxch_erweima` WHERE  `id` = 1" );
 
@@ -3499,10 +3500,19 @@ function scerweima1($fname,$user_id)
             $text_blue = $v['text_blue'];
         }
 
-        //===================================================================
+        //===================================================================//
 
         $time = substr($fname,0,-4);
-        $qr_imgs = 'images/qrcode/'.$time.".jpg";
+        $qr_src = 'qrcode/scene/'.$user_id.".jpg";
+        $qr_imgs= "images/qrcode/".$time.".jpg";
+        //加载图片信息
+        $target_qr =  imagecreatetruecolor($qr_width,$qr_height);
+        $source_qr = imagecreatefromjpeg(ROOT_PATH.$qr_src);
+        //调整二维码大小
+        Imagecopyresized($target_qr, $source_qr, 0, 0, 23, 23, $qr_width, $qr_height, 383, 383);
+        imagejpeg($target_qr,ROOT_PATH.$qr_imgs);
+        imagedestroy($target_qr);
+        imagedestroy($source_qr);
 
         $h_imgsrc= "images/qrcode/head/".$time.".jpg";
         //如果头像不存在 使用默认头像
@@ -3511,11 +3521,12 @@ function scerweima1($fname,$user_id)
             $h_imgsrc = "data/qrcode/headImg.jpg";
         }
         $h_time=$time."_1";
+
+        $h_name ='qrcode/'.$h_time.'.jpg';
         //判断 用户头像格式 转 JPG 格式
-        if(!file_exists(ROOT_PATH.'qrcode/'.$h_time.'.jpg'))
+        if(!file_exists(ROOT_PATH.'qrcode/'.$h_time.'.jpg')){
             $h_name=resizejpg(ROOT_PATH.$h_imgsrc,$hearimg_width,$hearimg_hight,$h_time);
-        else
-            $h_name ='qrcode/'.$h_time.'.jpg';
+        }
 
         //头像
         $h_imgs = $h_name;
@@ -3543,17 +3554,23 @@ function scerweima1($fname,$user_id)
         $nickname = empty($userInfo['nickname'])?$userInfo['user_name']:$userInfo['nickname'];
         #打水印
         $textcolor = imagecolorallocate($target_img, $text_red, $text_geren, $text_blue);
-//        imagettftext($target_img,18,0,268,59,$textcolor,$fontfile,$nickname);
+
         imagettftext($target_img,18,0,188,129,$textcolor,$fontfile,$nickname);
         Imagejpeg($target_img, ROOT_PATH.'qrcode/'.$time.'.jpg');
 
-        $s_data=$time.".jpg";
+        imagedestroy($target_img);
+        imagedestroy($source);
+        imagedestroy($h_source);
+        $s_data= $time.'.jpg';
         $scene_id = $userInfo['user_id'];
         $scene = $userInfo['user_name'];
-        $insert_sql = "INSERT INTO `wxch_qr_tianxin100` (`qr_path`,`scene`,`scene_id`, `nickname`) VALUES
+        //$insert_sql = "UPDATE `wxch_qr_tianxin100` SET `qr_path`='$s_data' WHERE `scene_id` = '$scene_id' ";
+        if($no_path){
+            $insert_sql = "INSERT INTO `wxch_qr_tianxin100` (`qr_path`,`scene`,`scene_id`, `nickname`) VALUES
                         ('$s_data','$scene', '$scene_id','$nickname')";
-        $GLOBALS['db']->query($insert_sql);
-        return $fname ;
+            $GLOBALS['db']->query($insert_sql);
+        }
+        return $s_data ;
     }else{
         return false ;
     }
@@ -3599,13 +3616,13 @@ function del_file($path){
     }
 }
 
-if(!function_exists()){
+
 function resizejpg($imgsrc,$imgwidth,$imgheight,$time)
 {
     //$imgsrc jpg格式图像路径 $imgdst jpg格式图像保存文件名 $imgwidth要改变的宽度 $imgheight要改变的高度
     //取得图片的宽度,高度值
     $arr = getimagesize($imgsrc);
-    header("Content-type: image/jpg");
+    //header("Content-type: image/jpg");
     $imgWidth = $imgwidth;
     $imgHeight = $imgheight;
     $imgsrc = imagecreatefromjpeg($imgsrc);
@@ -3613,9 +3630,11 @@ function resizejpg($imgsrc,$imgwidth,$imgheight,$time)
     imagecopyresampled($image, $imgsrc, 0, 0, 0, 0, $imgWidth, $imgHeight, $arr[0], $arr[1]);
     $name =  "qrcode/" . $time . ".jpg";
     Imagejpeg($image, ROOT_PATH .$name);
+    imagedestroy($imgsrc);
+    imagedestroy($image);
     return $name;
 }
-}
+
 function png2jpg($srcPathName, $delOri=true,$pw=false,$ph=false)
 {
     $srcFile = $srcPathName;
@@ -3638,4 +3657,6 @@ function png2jpg($srcPathName, $delOri=true,$pw=false,$ph=false)
         }
         imagedestroy($srcImage);
     }
+
+
 }

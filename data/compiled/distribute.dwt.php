@@ -41,7 +41,7 @@
 	</div>
 	<div class="xs_price">
 		<span><em><i class="price">￥<?php if ($this->_var['tianxin100all']['order_amount']): ?><?php echo $this->_var['tianxin100all']['order_amount']; ?><?php else: ?>0<?php endif; ?></i><i>累计销售</i></em></span>
-		<span><i class="price">￥<?php if ($this->_var['tianxin100all']['setmoney']): ?><?php echo $this->_var['tianxin100all']['setmoney']; ?><?php else: ?>0<?php endif; ?></i><i>累计佣金</i></span>
+		<span><i class="price">￥<?php echo $this->_var['user']['pay_points']; ?></i><i>累计积分</i></span>
 	</div>
 	<div class="per_icon_list">
 		<a class="per_list tab_per">
@@ -76,22 +76,22 @@
 	<div class="per_icon_list">
 			<a class="per_list tab_per">
 				<img src="themes/tianxin100/images/my3.png" class="icon"/>
-				<span>推荐人购买提成</span>
+				<span>我的积分</span>
 				<img src="themes/tianxin100/images/right.png" class="right_img"/>
 			</a>
 			<ul  style="display: none;">
-            <li><a>未付款订单佣金￥<?php if ($this->_var['tianxin100arr']['weifukuan']['setmoney']): ?><?php echo $this->_var['tianxin100arr']['weifukuan']['setmoney']; ?><?php else: ?>0<?php endif; ?></a></li>
-            <li><a>已付款订单佣金￥<?php if ($this->_var['tianxin100arr']['yifukuan']['setmoney']): ?><?php echo $this->_var['tianxin100arr']['yifukuan']['setmoney']; ?><?php else: ?>0<?php endif; ?></a></li>
-            <li><a>已收货订单佣金￥<?php if ($this->_var['tianxin100arr']['yishouhuo']['setmoney']): ?><?php echo $this->_var['tianxin100arr']['yishouhuo']['setmoney']; ?><?php else: ?>0<?php endif; ?></a></li>
-			<!-- <li><a>可提现余额<?php echo $this->_var['info']['surplus']; ?></a></li> -->
+            <li><a>自己订单积分：<?php echo $this->_var['self_points']; ?></a></li>
+            <li><a>直接下线订单积分：<?php echo $this->_var['direct_points']; ?></a></li>
+            <li><a>间接下线订单积分：<?php echo $this->_var['indirect_points']; ?></a></li>
+			<!-- <li><a>可用积分：<?php echo $this->_var['user']['pay_points']; ?></a></li> -->
 			<li><a href="article.php?id=8">了解积分</a></li>
 			<li><a href="exchange.php">积分兑换礼品</a></li>
           </ul>
 	</div>
-	<div class="per_icon_list">
+	<!--div class="per_icon_list">
 			<a class="per_list tab_per">
 				<img src="themes/tianxin100/images/my4.png" class="icon"/>
-				<span>个人购买返利</span>
+				<span>个人购买分成</span>
 				<img src="themes/tianxin100/images/right.png" class="right_img"/>
 			</a>
 		    <ul style="display: none;">
@@ -99,7 +99,7 @@
             <li><a>已付款订单返利￥<?php if ($this->_var['tianxinarrPersonal']['yifukuan']['setmoneyPersonal']): ?><?php echo $this->_var['tianxinarrPersonal']['yifukuan']['setmoneyPersonal']; ?><?php else: ?>0<?php endif; ?></a></li>
             <li><a>已收货订单返利￥<?php if ($this->_var['tianxinarrPersonal']['yishouhuo']['setmoneyPersonal']): ?><?php echo $this->_var['tianxinarrPersonal']['yishouhuo']['setmoneyPersonal']; ?><?php else: ?>0<?php endif; ?></a></li>
           </ul>
-	</div>
+	</div-->
 	<div class="per_icon_list">
 			<a class="per_list" href="distribute.php?act=account_raply">
 				<img src="themes/tianxin100/images/my5.png" class="icon"/>
@@ -125,17 +125,17 @@
 
 <section class="class="wrap"">
 <div class="content">
-  <?php $_from = $this->_var['user_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'user');if (count($_from)):
-    foreach ($_from AS $this->_var['user']):
+  <?php $_from = $this->_var['user_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'user_0_24511200_1544780765');if (count($_from)):
+    foreach ($_from AS $this->_var['user_0_24511200_1544780765']):
 ?>
    
-    	<a href="distribute.php?act=myorder&user_id=<?php echo $this->_var['user']['user_id']; ?>&level=<?php echo $this->_var['user']['level']; ?>">
+    	<a href="distribute.php?act=myorder&user_id=<?php echo $this->_var['user_0_24511200_1544780765']['user_id']; ?>&level=<?php echo $this->_var['user_0_24511200_1544780765']['level']; ?>">
         	<dl>
-            	<dt><?php if ($this->_var['user']['head_url'] != ''): ?><img src="<?php echo $this->_var['user']['head_url']; ?>"  border="0"><?php else: ?><img src="<?php echo $this->_var['ectouch_themes']; ?>/images/get_avatar.png"  border="0"><?php endif; ?></dt>
+            	<dt><?php if ($this->_var['user_0_24511200_1544780765']['head_url'] != ''): ?><img src="<?php echo $this->_var['user_0_24511200_1544780765']['head_url']; ?>"  border="0"><?php else: ?><img src="<?php echo $this->_var['ectouch_themes']; ?>/images/get_avatar.png"  border="0"><?php endif; ?></dt>
                 <div>
-                  <h3>&nbsp;会&nbsp;员&nbsp;名：<?php if ($this->_var['user']['nickname']): ?><?php echo $this->_var['user']['nickname']; ?><?php else: ?><?php echo $this->_var['user']['user_name']; ?><?php endif; ?></h3>
-                  <h3>订单数量：<?php echo $this->_var['user']['order_num']; ?></h3>
-                  <h3>提成金额：<?php echo $this->_var['user']['order_amount']; ?></h3>
+                  <h3>&nbsp;会&nbsp;员&nbsp;名：<?php if ($this->_var['user_0_24511200_1544780765']['nickname']): ?><?php echo $this->_var['user_0_24511200_1544780765']['nickname']; ?><?php else: ?><?php echo $this->_var['user_0_24511200_1544780765']['user_name']; ?><?php endif; ?></h3>
+                  <h3>订单数量：<?php echo $this->_var['user_0_24511200_1544780765']['order_num']; ?></h3>
+                  <h3>提成金额：<?php echo $this->_var['user_0_24511200_1544780765']['order_amount']; ?></h3>
                 <p>
     </p></div>
             </dl>

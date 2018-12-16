@@ -1,0 +1,37 @@
+{if $hotal_goods}
+<div class="bg2"></div>
+<h4 class="cate-title">酒店订房</h4>
+<div class="title"><a class="fr" href="../category.php?id=2">查看更多 > </a><span class="blue-text">玉泷悦途<sub>HOTEL RESERVATION</sub></span></div>
+<div class="goodsbox hotal">
+  <ul>
+    {foreach from=$hotal_goods item=goods name=hotal_goods}
+    <li class="clearfix hotel-list">
+        <a href="{$goods.url}" title="{$goods.name|escape:html}">
+        <img src="{$site_url}{$goods.thumb}" alt="{$goods.name|escape:html}">
+        <div class="good-info">
+          <h4>{$goods.name}</h4>
+          <p>{$goods.brief}</p>
+			<div class="goods-control">
+				<a class="icon icon-cart" href="javascript:addToCart({$goods.id})"></a>
+				<div class="icon-buy-border">
+					<a class="icon-buy"  href="javascript:addToCart1({$goods.id})">购买</a>
+				</div>
+				<span class="icon-rmb">RMB /</span>
+				<span class="price">{if $goods.promote_price}{$goods.promote_price}{else}{$goods.shop_price}{/if}</span>				
+			</div>
+        </div>
+      </a>
+    </li>
+    {/foreach}
+  </ul>
+  {if $hai_bao}
+  {foreach from=$hai_bao item=hb_goods}
+  <div class="hai-bao">
+    <a href="{$hb_goods.url}" title="{$hb_goods.name|escape:html}">
+        <img src="{$site_url}{$hb_goods.thumb}" alt="{$hb_goods.name|escape:html}">
+    </a>
+  </div>
+  {/foreach}
+  {/if}
+</div>
+{/if}

@@ -98,15 +98,23 @@ if ($action == 'default')
 	
 	$sql = "SELECT wxid FROM " .$GLOBALS['ecs']->table('users'). " WHERE user_id = '$user_id'";
     $wxid = $GLOBALS['db']->getOne($sql);
-	
-	/*尚网网络科技100  添加查看我的上级*/
-	$parent_id =$GLOBALS['db']->getOne( "SELECT parent_id FROM " .$GLOBALS['ecs']->table('users'). " WHERE user_id = '$user_id'");
-	$psql = "SELECT wxid,user_name FROM " .$GLOBALS['ecs']->table('users'). " WHERE user_id = '$parent_id'";
+	$user = user_info($user_id);
+
+	/*助派网络科技  查看上级信息*/
+	//$parent_id =$GLOBALS['db']->getOne( "SELECT parent_id FROM " .$GLOBALS['ecs']->table('users'). " WHERE user_id = '$user_id'");
+	$parent_id = $user['parent_id'];
+    $psql = "SELECT wxid,user_name FROM " .$GLOBALS['ecs']->table('users'). " WHERE user_id = '$parent_id'";
     $pinfo = $GLOBALS['db']->getRow($psql);
 	$pwxid= $pinfo['wxid'];
-	/*尚网网络科技100  添加查看我的上级*/
+
+	//初始化用户信息
+    //$weixinInfo = $GLOBALS['db']->getRow("SELECT nickname, headimgurl FROM wxch_user WHERE wxid = '$wxid'");
+    $info['avatar'] = '';
+    $parent = user_info($parent_id);
+    $info['username'] = $user['user_name'];
+    $info['pusername']=empty($parent['user_name'])? '':$parent['user_name'];
+	/*助派网络科技  查看上级微信信息*/
 	if(!empty($wxid)){
-	
 		$weixinInfo = $GLOBALS['db']->getRow("SELECT nickname, headimgurl FROM wxch_user WHERE wxid = '$wxid'");
 		$info['avatar'] = empty($weixinInfo['headimgurl']) ? '':$weixinInfo['headimgurl'];
 		$info['username'] = empty($weixinInfo['nickname']) ? $info['username']:$weixinInfo['nickname'];
@@ -114,9 +122,10 @@ if ($action == 'default')
 			$pusername = $GLOBALS['db']->getOne("SELECT nickname FROM wxch_user WHERE wxid = '$pwxid'");
 		}
 		$info['pusername']=empty($pusername)?$pinfo['user_name']:$pusername;
-		
+
 	}
-	/*尚网网络科技100分销微分销新增显示分销会员标准*/
+
+	/*助派网络科技分销微分销新增显示分销会员标准*/
 	$affiliate = unserialize($GLOBALS['_CFG']['affiliate']);
 	$level_register_up = (float)$affiliate['config']['level_register_up'];
 	$rank_points =  $GLOBALS['db']->getOne("SELECT rank_points FROM " . $GLOBALS['ecs']->table('users')."where user_id=".$_SESSION["user_id"]);
@@ -127,69 +136,76 @@ if ($action == 'default')
 		show_message('您还不是分销商哦', '请先购买商品获取权限', 'user.php', 'error'); 
 	}
 	/*显示各级会员数量*/
-	$affiliate = unserialize($GLOBALS['_CFG']['affiliate']);
 	$user_list['user_list'] = array();
-	$auid = $_SESSION['user_id'];
-	$up_uid = "'$auid'";
+	/*$auid = $_SESSION['user_id'];
+	$up_uid = "'$auid'";*/
 	$num =  count($affiliate['item']);
 	$res=array();
 	for ($i=1;$i<=$num;$i++)
 	{
-	    $sql="SELECT  count(*)  as num  FROM " . $ecs->table('users') . " WHERE sales".$i."_id=$up_uid";
+	    $sql="SELECT  count(*)  as num  FROM " . $ecs->table('users') . " WHERE sales".$i."_id=$user_id";
     	${"count".$i}=$GLOBALS['db']->getOne($sql);
     	$all_count+=${"count".$i};
     	$res[$i]=${"count".$i};
 	}
-	//print_r($res);
+
 	$smarty->assign('tianxin',        $tianxin);
-	/*尚网网络科技100分销微分销新增显示分销会员标准end*/
-	
+	/*助派网络科技分销微分销新增显示分销会员标准end*/
+
 	$smarty->assign('service_phone',        $_CFG['service_phone']);
 	
-	/*尚网网络科技100分销微分销新增查询佣金*/
-	//推荐注册分成
-	$affiliate = unserialize($GLOBALS['_CFG']['affiliate']);
-	$user_list['user_list'] = array();
-	$auid = $_SESSION['user_id'];
-    $up_uid = "'$auid'";
-	$allarr=array();
-    for ($i = 1; $i<=$num; $i++)
-    {
+	/*助派网络科技分销微分销新增查询积分*/
+    //直接下级创造积分
+    $direct_points = get_points($user_id,3);
 
-        $sql = "SELECT user_id FROM " . $ecs->table('users') . " WHERE sales".$i."_id  = ($up_uid)";
+    //间接下级创造积分
+    $indirect_points = get_points($user_id,4);
+
+    //自己的订单积分
+    $self_points = get_points($user_id,5);
+
+	//$allarr=array();
+    /*for ($i = 1; $i<=$num; $i++)
+    {
+        $sql = "SELECT user_id FROM " . $ecs->table('users') . " WHERE sales".$i."_id  = $user_id";
         $query = $db->query($sql);
-        ${count.$i}=0;
+        ${'count'.$i}=0;
         $up_uid_all='';
+
         while ($rt = $db->fetch_array($query))
         {
             $up_uid_all .= $up_uid_all ? ",'$rt[user_id]'" : "'$rt[user_id]'";
-            ${count.$i}++;
+            ${'count'.$i}++;
+
         }
-        if (!${count.$i}){break;}
-        /* 未付款佣金统计 */
+        if (!${'count'.$i}){break;}*/
+        //查询直接下级积分
+
+        /* 未付款佣金统计
         $sql="SELECT count(*) as order_num ,sum(sales".$i."_money)  as order_amount ,sum(goods_amount) as all_sales  FROM ".$GLOBALS['ecs']->table('order_info')."WHERE user_id in (".$up_uid_all.") and  pay_status=0 and order_status not in (2,4,7)";
         ${sales.$i._notpay}=$db->getRow($sql);
         $all_sales_notpay+=${sales.$i._paied}['all_sales'];
-        $sales_all_notpay+=${sales.$i._notpay}['order_amount'];
+        $sales_all_notpay+=${sales.$i._notpay}['order_amount'];*/
         
-        /* 已付款且为未货佣金统计 */
+        /* 已付款且为未货佣金统计
         $sql="SELECT count(*) as order_num ,sum(sales".$i."_money)  as order_amount,sum(goods_amount) as all_sales  FROM ".$GLOBALS['ecs']->table('order_info')."WHERE user_id in (".$up_uid_all.") and  pay_status=2 and   shipping_status  <> 2";
         ${sales.$i._paied}=$db->getRow($sql);
         $all_sales_paied+=${sales.$i._paied}['all_sales'];
-        $sales_all_paied+=${sales.$i._paied}['order_amount'];
+        $sales_all_paied+=${sales.$i._paied}['order_amount'];*/
         
-        /* 已收货佣金统计  */
+        /* 已收货佣金统计
         $sql="SELECT count(*) as order_num ,sum(sales".$i."_money)  as order_amount ,sum(goods_amount) as all_sales FROM ".$GLOBALS['ecs']->table('order_info')."WHERE user_id in (".$up_uid_all.") and  pay_status=2 and   shipping_status  =2";
         ${sales.$i._over}=$db->getRow($sql);
         $all_sales_over+=${sales.$i._paied}['all_sales'];
-        $sales_all_over+=${sales.$i._over}['order_amount'];		
-    }
+        $sales_all_over+=${sales.$i._over}['order_amount'];
+    //}
+
     
     $allarr['weifukuan']['setmoney']=$sales_all_notpay;
     $allarr['yifukuan']['setmoney']=$sales_all_paied;
-    $allarr['yishouhuo']['setmoney']=$sales_all_over;
+    $allarr['yishouhuo']['setmoney']=$sales_all_over;*/
     
-    /*尚网网络科技100 个人消费提成计算*/
+    /*尚网网络科技100 个人消费提成计算
     //未付款
     $sql="SELECT sum(fencheng) as order_amount FROM ".$GLOBALS['ecs']->table('order_info')."WHERE user_id=".$_SESSION['user_id']." and pay_status=0";
     $order_info=$db->getRow($sql);
@@ -206,16 +222,16 @@ if ($action == 'default')
     $setmoneyPersonal3 = round($order_info['order_amount'] * $affiliate['config']['level_money_personal']*0.01, 2);
     $tianxinarrPersonal['yishouhuo']['setmoneyPersonal'] = $setmoneyPersonal3;
     
-    $tianxinallPersonal = $setmoneyPersonal1 + $setmoneyPersonal2 + $setmoneyPersonal3;
+    $tianxinallPersonal = $setmoneyPersonal1 + $setmoneyPersonal2 + $setmoneyPersonal3;*/
     
-    $tianxin100all=array();
+    /*$tianxin100all=array();
 	$tianxin100all['setmoney']=$sales_all_notpay+$sales_all_paied+$sales_all_over;
 	$tianxin100all['order_amount']=$all_sales_notpay+$all_sales_paied+$$all_sales_over;
 		
 	$smarty->assign('tianxin100all',        $tianxin100all);
 	$smarty->assign('tianxin100arr',        $allarr); //积分分成
 	$smarty->assign('tianxinallPersonal',        $tianxinallPersonal);
-	$smarty->assign('tianxinarrPersonal',        $tianxinarrPersonal);  //返利分成
+	$smarty->assign('tianxinarrPersonal',        $tianxinarrPersonal);  //返利分成*/
 	
 	/*尚网网络科技100分销微分销新增查询佣金*/
     $smarty->assign('info',        $info);
@@ -230,7 +246,12 @@ if ($action == 'default')
 	$smarty->assign('user_id',        $_SESSION['user_id']);
 	$smarty->assign('all_count',        $all_count);
     $smarty->assign('user_notice', $_CFG['user_notice']);
+    $smarty->assign('user', $user);
+    $smarty->assign('self_points', $self_points);
+    $smarty->assign('direct_points', $direct_points);
+    $smarty->assign('indirect_points', $indirect_points);
     $smarty->assign('prompt',      get_user_prompt($user_id));
+    //var_dump($tianxin100all);exit;
     $smarty->display('distribute.dwt');
 }
 /*尚网网络科技100分销微分销开发*/
@@ -4106,6 +4127,12 @@ function get_accountlist($user_id, $account_type = '')
     }
 
     return array('account' => $arr, 'filter' => $filter, 'page_count' => $filter['page_count'], 'record_count' => $filter['record_count']);
+}
+
+function get_points($user_id,$type){
+    $sql = "SELECT sum(pay_points) as points FROM ".$GLOBALS['ecs']->table('account_log')." WHERE user_id = ".$user_id ." AND change_type = ".$type;
+    $p = $GLOBALS['db']->getRow($sql);
+    return $p['points'] ? $p['points'] : 0;
 }
 
 

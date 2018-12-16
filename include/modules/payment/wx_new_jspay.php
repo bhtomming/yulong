@@ -142,7 +142,7 @@ class wx_new_jspay
                 $html .= $jsApiParameters.",";
                 $html .= "function(res){";
                 $html .= "if(res.err_msg == 'get_brand_wcpay_request:ok'){window.location.href='".$GLOBALS['ecs']->url()."respond.php'}";
-                $html .= "WeixinJSBridge.log(res.err_msg);alert(res);";
+                $html .= "WeixinJSBridge.log(res.err_msg); if(res.err_msg == 'get_brand_wcpay_request:cancel'){alert('您已经取消支付')}else if(res.err_msg == 'get_brand_wcpay_request:fail'){alert('支付失败，可能的原因：签名错误、未注册APPID、项目设置APPID不正确、注册的APPID与设置的不匹配、其他异常等。');}";
                 $html .= "}";
                 $html .= ");";
                 $html .= "}";

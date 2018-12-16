@@ -176,7 +176,7 @@ elseif ($_REQUEST['act'] == 'edit_point')
     /* 取得参数 */
     $key = trim($_POST['id']) - 1;
     $val = (float)trim($_POST['val']);
-    $maxpoint = 100;
+    $maxpoint = 102;
     
     /* 尚网网络科技100 修改 关联购买自己有提成的比例，使总比例不超过100  sta*/
     $sql = "select value from " . $GLOBALS['ecs']->table('touch_shop_config') ." WHERE code = 'affiliate'";

@@ -1,0 +1,27 @@
+{if $house_goods}
+<h4 class="cate-title">房产置业</h4>
+<div class="title"><a class="fr" href="../category.php?id=1">查看更多 > </a><span class="blue-text">玉泷地产<sub>REAL ESTATE PROPERTY</sub></span></div>
+<div class="goodsbox hotal">
+  <ul>
+    {foreach from=$house_goods item=goods name=house_goods}
+    <li class="clearfix">
+        <a href="{$goods.url}" title="{$goods.name|escape:html}">
+        <img src="{$site_url}{$goods.thumb}" alt="{$goods.name|escape:html}">
+        <div class="good-info">
+          <h4>{$goods.name}</h4>
+          <p>{$goods.brief}</p>
+			<div class="goods-control">
+				<a class="icon icon-cart" href="javascript:addToCart({$goods.id})"></a>
+				<div class="icon-buy-border">
+					<a class="icon-buy"  href="javascript:addToCart1({$goods.id})">购买</a>
+				</div>
+				<span class="icon-rmb">RMB /</span>
+				<span class="price">{if $goods.promote_price}{$goods.promote_price}{else}{$goods.shop_price}{/if}</span>				
+			</div>
+        </div>
+      </a>
+    </li>
+    {/foreach}
+  </ul>
+</div>
+{/if}

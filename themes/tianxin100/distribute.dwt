@@ -40,7 +40,7 @@
 	</div>
 	<div class="xs_price">
 		<span><em><i class="price">￥{if $tianxin100all.order_amount}{$tianxin100all.order_amount}{else}0{/if}</i><i>累计销售</i></em></span>
-		<span><i class="price">￥{if $tianxin100all.setmoney}{$tianxin100all.setmoney}{else}0{/if}</i><i>累计佣金</i></span>
+		<span><i class="price">￥{$user.pay_points}</i><i>累计积分</i></span>
 	</div>
 	<div class="per_icon_list">
 		<a class="per_list tab_per">
@@ -73,22 +73,22 @@
 	<div class="per_icon_list">
 			<a class="per_list tab_per">
 				<img src="images/my3.png" class="icon"/>
-				<span>推荐人购买提成</span>
+				<span>我的积分</span>
 				<img src="images/right.png" class="right_img"/>
 			</a>
 			<ul  style="display: none;">
-            <li><a>未付款订单佣金￥{if  $tianxin100arr.weifukuan.setmoney}{$tianxin100arr.weifukuan.setmoney}{else}0{/if}</a></li>
-            <li><a>已付款订单佣金￥{if  $tianxin100arr.yifukuan.setmoney}{$tianxin100arr.yifukuan.setmoney}{else}0{/if}</a></li>
-            <li><a>已收货订单佣金￥{if  $tianxin100arr.yishouhuo.setmoney}{$tianxin100arr.yishouhuo.setmoney}{else}0{/if}</a></li>
-			<!-- <li><a>可提现余额{$info.surplus}</a></li> -->
+            <li><a>自己订单积分：{$self_points}</a></li>
+            <li><a>直接下线订单积分：{$direct_points}</a></li>
+            <li><a>间接下线订单积分：{$indirect_points}</a></li>
+			<!-- <li><a>可用积分：{$user.pay_points}</a></li> -->
 			<li><a href="article.php?id=8">了解积分</a></li>
 			<li><a href="exchange.php">积分兑换礼品</a></li>
           </ul>
 	</div>
-	<div class="per_icon_list">
+	<!--div class="per_icon_list">
 			<a class="per_list tab_per">
 				<img src="images/my4.png" class="icon"/>
-				<span>个人购买返利</span>
+				<span>个人购买分成</span>
 				<img src="images/right.png" class="right_img"/>
 			</a>
 		    <ul style="display: none;">
@@ -96,7 +96,7 @@
             <li><a>已付款订单返利￥{if  $tianxinarrPersonal.yifukuan.setmoneyPersonal}{$tianxinarrPersonal.yifukuan.setmoneyPersonal}{else}0{/if}</a></li>
             <li><a>已收货订单返利￥{if  $tianxinarrPersonal.yishouhuo.setmoneyPersonal}{$tianxinarrPersonal.yishouhuo.setmoneyPersonal}{else}0{/if}</a></li>
           </ul>
-	</div>
+	</div-->
 	<div class="per_icon_list">
 			<a class="per_list" href="distribute.php?act=account_raply">
 				<img src="images/my5.png" class="icon"/>

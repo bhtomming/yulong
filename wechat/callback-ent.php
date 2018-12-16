@@ -139,7 +139,8 @@ class wechatCallbackapi {
 					if (in_array($temp_img_arr[0], $temp_do)) {
 						$base_img_path = 'http://www.' . $temp_img_arr[1] . '.' . $temp_img_arr[2];
 					} 
-				} 
+				}
+				W_log('murl是:'.$img_murl);
 			}  
 			$oauth_location = $base_url . '/wechat/oauth/wxch_oauths.php?uri=';
 			$thistable = $db -> prefix . 'users';
@@ -348,7 +349,8 @@ class wechatCallbackapi {
 					    //关注送红包
 						$postObj -> EventKey = 'gzyhj';
 					} else {
-						$postObj -> EventKey = 'subscribe';
+						//$postObj -> EventKey = 'subscribe';
+						$postObj -> EventKey = 'wifi';
 					}
 				} else {
 					$qrscene = $postObj -> EventKey;
@@ -428,7 +430,8 @@ class wechatCallbackapi {
 			
 			//多客服触发
 			if ($keyword == 'kefu') {
-				$access_token = $db->getOne("SELECT `access_token` FROM `wxch_config` ");
+				//$access_token = $db->getOne("SELECT `access_token` FROM `wxch_config` ");
+                $access_token = $this->access_token($db);
                 echo $this->kefureturn($access_token, $fromUsername);
 				$msgType = "transfer_customer_service";
 				$contentStr = '客服转接';
@@ -593,7 +596,8 @@ class wechatCallbackapi {
 							$goods_url = $oauth_location . $m_url . 'goods.php?id=' . $v['goods_id'] . $affiliate;
 						} elseif ($oauth_state == 'false') {
 							$goods_url = $m_url . 'goods.php?id=' . $v['goods_id'] . $postfix . $affiliate;
-						} 
+						}
+						W_log('图片链接:'.$v['thumbnail_pic']);
 						$items .= "<item>
                  <Title><![CDATA[" . $v['goods_name'] . "]]></Title>
                  <PicUrl><![CDATA[" . $v['thumbnail_pic'] . "]]></PicUrl>
@@ -660,7 +664,8 @@ class wechatCallbackapi {
 							$goods_url = $oauth_location . $m_url . 'goods.php?id=' . $v['goods_id'] . $affiliate;
 						} elseif ($oauth_state == 'false') {
 							$goods_url = $m_url . 'goods.php?id=' . $v['goods_id'] . $postfix . $affiliate;
-						} 
+						}
+						W_log('图片链接'.$v['thumbnail_pic']);
 						$items .= "<item>
                  <Title><![CDATA[" . $v['goods_name'] . "]]></Title>
                  <PicUrl><![CDATA[" . $v['thumbnail_pic'] . "]]></PicUrl>
@@ -1925,14 +1930,17 @@ nation=大雁塔&mode=driving&region=西安';
 		$appsecret = $ret['appsecret'];
 		$dateline = $ret['dateline'];
 		$time = time();
+		$access_token = $ret['access_token'];
 		if (($time - $dateline) > 7200) {
 			$url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=$appid&secret=$appsecret";
 			$ret_json = $this ->curl_get_contents($url);
 			$ret = json_decode($ret_json);
 			if ($ret -> access_token) {
 				$db -> query("UPDATE `wxch_config` SET `access_token` = '$ret->access_token',`dateline` = '$time' WHERE `wxch_config`.`id` =1;");
-			} 
-		} 
+			    $access_token = $ret->access_token;
+			}
+		}
+		return $access_token;
 	} 
 	public function delete_menu($db) {
 		$this -> access_token($db);

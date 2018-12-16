@@ -8,7 +8,8 @@
 
  */
 
- 
+
+
 
 function addToCart1(goodsId, parentId)
 
@@ -2380,4 +2381,5 @@ document.body.appendChild(newMask);
 
 
 }
+
 

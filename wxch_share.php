@@ -6,9 +6,9 @@ require(ROOT_PATH . 'include/lib_weixintong.php');
 	$sql_two="SELECT wxid FROM " . $GLOBALS['ecs']->table('users') . " WHERE user_id = '$up_uid'";	
 	$wxid=$GLOBALS['db']->GetOne($sql_two);
 	$w_title="您有新朋友加入了，赶紧看看吧";
-	$w_description="新朋友的消费您都将有提成哦";
+	$w_description="新朋友的消费您都将有积分哦";
 	$site_url=$config['site_url'];
-	$w_url=$site_url."mobile/user.php?act=fenxiao&rank=1&wxid=".$wxid;
+	$w_url=$site_url."/distribute.php";
 	$w_picurl="";
 	$post_msg = '{
        "touser":"'.$wxid.'",

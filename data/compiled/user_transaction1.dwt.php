@@ -730,13 +730,7 @@ jQuery(function($){
         </script>
       <div class="blank"></div>
       <table width="100%" border="0" cellpadding="5" cellspacing="1">
-        <tr>
-        <!--
-          <td align="left" bgcolor="">
-          <a href="distribute.php?act=account_detail" class="f6">账户明细</a> | 
-          <a href="distribute.php?act=account_log" class="f6">提现记录</a>
-          </td>
-          -->
+        <tr>     
           <td align="right" bgcolor="">
           <a href="user.php?act=account_deposit" class="f6"><?php echo $this->_var['lang']['surplus_type_0']; ?></a> | <a href="distribute.php?act=account_raply" class="f6"><?php echo $this->_var['lang']['surplus_type_1']; ?></a> | 
           <a href="user.php?act=account_detail" class="f6">账户明细</a> | <a href="user.php?act=account_log" class="f6">申请记录</a> 

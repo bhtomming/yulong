@@ -72,7 +72,16 @@ elseif ($_REQUEST['act'] == 'list')
     $smarty->assign('full_page',        1);
 
     $order_list = order_list();
+
+    foreach ($order_list['orders'] as $index => $order){
+        $order_id = $order['order_id'];
+        $order['g_list'] = get_order_goods($order);
+        $order_list['orders'][$index] = $order;
+        //var_dump($order);exit;
+    }
+    //var_dump($order_list['orders']);exit;
     $smarty->assign('order_list',   $order_list['orders']);
+    //$smarty->assign('goods_list',   $goods_list);
     $smarty->assign('filter',       $order_list['filter']);
     $smarty->assign('record_count', $order_list['record_count']);
     $smarty->assign('page_count',   $order_list['page_count']);
@@ -277,10 +286,10 @@ elseif ($_REQUEST['act'] == 'info')
         //生成快递100查询接口链接
         $shipping   = get_shipping_object($order['shipping_id']);
 //        var_dump($shipping);
-//        var_dump($shipping);die;
+//        var_dump(get_class_methods($shipping));die;
         $query_link = $shipping->kuaidi100($order['invoice_no']);
         //优先使用curl模式发送数据
-       // var_dump($query_link);die;
+//        var_dump($query_link);die;
         if (function_exists('curl_init') == 1){
             $curl = curl_init();
             curl_setopt ($curl, CURLOPT_URL, $query_link);
@@ -5877,7 +5886,7 @@ function get_order_goods($order)
 {
     $goods_list = array();
     $goods_attr = array();
-    $sql = "SELECT o.*, g.suppliers_id AS suppliers_id,IF(o.product_id > 0, p.product_number, g.goods_number) AS storage, o.goods_attr, IFNULL(b.brand_name, '') AS brand_name, p.product_sn " .
+    $sql = "SELECT o.*,g.goods_thumb, g.suppliers_id AS suppliers_id,IF(o.product_id > 0, p.product_number, g.goods_number) AS storage, o.goods_attr, IFNULL(b.brand_name, '') AS brand_name, p.product_sn " .
             "FROM " . $GLOBALS['ecs']->table('order_goods') . " AS o ".
             "LEFT JOIN " . $GLOBALS['ecs']->table('products') . " AS p ON o.product_id = p.product_id " .
             "LEFT JOIN " . $GLOBALS['ecs']->table('goods') . " AS g ON o.goods_id = g.goods_id " .
@@ -5915,6 +5924,7 @@ function get_order_goods($order)
 
         //处理货品id
         $row['product_id'] = empty($row['product_id']) ? 0 : $row['product_id'];
+
 
         $goods_list[] = $row;
     }
@@ -7086,4 +7096,6 @@ function get_payment($code)
 
     return $payment;
 }
+
+
 ?>

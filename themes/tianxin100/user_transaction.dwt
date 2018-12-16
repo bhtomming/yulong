@@ -145,20 +145,13 @@
         </section>
       <script>
       var qrImg = '{$tuiguang.qr_path}';
-      getQRshareImg({qrImg:qrImg});
+		  console.log(qrImg);
+      getQRshareImg(qrImg);
       function getQRshareImg(param)
       {
-          $.post('/user.php?act=tuiguang&qr=1',param,function(data){
+          
+         $('#qrImg').attr('src',param).show();
              
-              data = JSON.parse(data) ;
-              if(parseInt(data.code) > 0)
-              {
-                  getQRshareImg({qrImg:data.msg});
-                  return false;
-              }
-              $('#qrImg').attr('src',data.img).show();
-              //alert(data.http);
-          })
      }
       </script>
      <!--{/if}-->

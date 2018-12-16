@@ -6,7 +6,7 @@ if ($this->_foreach['nav_middle_list']['total'] > 0):
 ?>
 	<a href="<?php echo $this->_var['nav']['url']; ?>"> 
 		<img alt="<?php echo $this->_var['nav']['name']; ?>" src="<?php echo $this->_var['nav']['pic']; ?>" />
-		<span><?php echo $this->_var['nav']['name']; ?></span>
+		<!--<span><?php echo $this->_var['nav']['name']; ?></span>-->
 	</a>
 
 <?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?>

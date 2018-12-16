@@ -10,11 +10,8 @@
 <link href="<?php echo $this->_var['ectouch_themes']; ?>/ectouch.css?v=1.1.1" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo $this->_var['ectouch_themes']; ?>/css/mui.min.css?v=1.1.1">
 <link rel="stylesheet" type="text/css" href="<?php echo $this->_var['ectouch_themes']; ?>/css/style.css?v=1.1.1">
-<script>
-     //通过window.screen.width获取屏幕的宽度
-    //var offWidth = window.screen.width / 30; //这里用宽度/30表示1rem取得的px
-    //document.getElementsByTagName("html")[0].style.fontSize = offWidth + 'px'; //把rem的值复制给顶级标签html的font-size
-</script>
+
+
 
 
 </head>
@@ -85,22 +82,32 @@ if ($this->_foreach['wap_index_ad']['total'] > 0):
 
 
 
-<?php echo $this->fetch('library/recommend_hot.lbi'); ?>
-
-
-
-
-<?php echo $this->fetch('library/recommend_new.lbi'); ?>
-
-
-
 <?php echo $this->fetch('library/recommend_best.lbi'); ?>
 
 
+	
+	
 
-<?php echo $this->fetch('library/recommend_electronic.lbi'); ?>
+<?php echo $this->fetch('library/recommend_hotal.lbi'); ?>
 
 
+
+<?php echo $this->fetch('library/recommend_specialty.lbi'); ?>
+
+	
+
+<?php echo $this->fetch('library/recommend_furnishing.lbi'); ?>
+
+	
+
+<?php echo $this->fetch('library/recommend_house.lbi'); ?>
+	
+
+
+<div class="bottom-log">
+    <img src="<?php echo $this->_var['ectouch_themes']; ?>/images/bottom-logo.png" />
+    <p>玉泷商城期待您的加入!</p>
+</div>
 </div>
 <?php echo $this->fetch('library/footer_nav.lbi'); ?>
 <?php echo $this->fetch('library/top_tianxin100_guanzhu.lbi'); ?>
@@ -108,6 +115,10 @@ if ($this->_foreach['wap_index_ad']['total'] > 0):
 <script type="text/javascript" src="themes/tianxin100/js/jquery-1.9.1.min.js"></script>
 <script src="js/mui.min.js"></script>
 <script type="text/javascript" src="js/lhf.js" charset="utf-8"></script>
+	<?php echo $this->smarty_insert_scripts(array('files'=>'jquery.json.js,transport_index.js')); ?>
+<script type="text/javascript" src="themes/tianxin100/js/touchslider.dev.js"></script>
+<?php echo $this->smarty_insert_scripts(array('files'=>'common.js')); ?>
+
 
 </body>
 </html>

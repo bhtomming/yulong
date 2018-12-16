@@ -858,6 +858,9 @@ elseif ($_REQUEST['step'] == 'checkout')
      */
     $total = order_fee($order, $cart_goods, $consignee);
 
+    //显示给用户购买后获得积分
+    $total['user_points'] = $total['will_get_integral'] * 0.2;
+
     $smarty->assign('total', $total);
     $smarty->assign('shopping_money', sprintf($_LANG['shopping_money'], $total['formated_goods_price']));
     $smarty->assign('market_price_desc', sprintf($_LANG['than_market_price'], $total['formated_market_price'], $total['formated_saving'], $total['save_rate']));
@@ -1743,6 +1746,7 @@ elseif ($_REQUEST['step'] == 'done')
         'agency_id'       => get_agency_by_regions(array($consignee['country'], $consignee['province'], $consignee['city'], $consignee['district']))
         );
 
+
     /* 扩展信息 */
     if (isset($_SESSION['flow_type']) && intval($_SESSION['flow_type']) != CART_GENERAL_GOODS)
     {
@@ -1923,6 +1927,7 @@ elseif ($_REQUEST['step'] == 'done')
         }
     }
 
+
     /* 如果订单金额为0（使用余额或积分或红包支付），修改订单状态为已确认、已付款 */
     if ($order['order_amount'] <= 0)
     {
@@ -1953,7 +1958,8 @@ elseif ($_REQUEST['step'] == 'done')
     }
 
     $affiliate = unserialize($_CFG['affiliate']);
-    if(isset($affiliate['on']) && $affiliate['on'] == 1 && $affiliate['config']['separate_by'] == 1)
+
+    /*if(isset($affiliate['on']) && $affiliate['on'] == 1 && $affiliate['config']['separate_by'] == 1)
     {
         //推荐订单分成
         $parent_id = get_affiliate();
@@ -1971,7 +1977,37 @@ elseif ($_REQUEST['step'] == 'done')
     {
         //分成功能关闭
         $parent_id = 0;
+    }*/
+    $parent_id = $user_info['parent_id'] ? $user_info['parent_id'] : 0;
+    $user_points = 0;
+
+    //判断是否开启分成
+    if(isset($affiliate['on']) && $affiliate['on'] == 1){
+
+        $parent_info = user_info($user_info["parent_id"]);
+        $user_name = $user_info['user_name'];
+
+        /************用户积分分配*****************/
+        //购买商品获得总积分
+        $goods_points =$total['will_get_integral'];
+
+        //当前用户可获得积分
+        $user_points = $goods_points * floatval($affiliate['item'][0]['level_point']/100);
+
+        //上级用户可获得积分
+        $parent_points = $goods_points * floatval($affiliate['item'][1]['level_point']/100);
+
+        //判断是否存在上上级,改变类型3为直接级，4为间接级,5为自己购买获得积分
+        if($parent_info['parent_id'] != 0){
+            //上上级用户可获得积分
+            $pparent_points = $goods_points * floatval($affiliate['item'][2]['level_point']/100);
+            $pparent_info = user_info($parent_info['parent_id']);
+            log_account_change($pparent_info['user_id'],0,0,0,$pparent_points,sprintf('间接下线: %s购买商品,获得积分: %s',$user_name,$pparent_points),3);
+        }
+        log_account_change($parent_info['user_id'],0,0,0,$parent_points,sprintf('直接下线: %s购买商品,获得积分: %s',$user_name,$parent_points),4);
     }
+
+
     $order['parent_id'] = $parent_id;
     $affiliate = unserialize($GLOBALS['_CFG']['affiliate']);
     $num =  count($affiliate['item']);
@@ -2062,11 +2098,11 @@ elseif ($_REQUEST['step'] == 'done')
     /* 处理余额、积分、红包 */
     if ($order['user_id'] > 0 && $order['surplus'] > 0)
     {
-        log_account_change($order['user_id'], $order['surplus'] * (-1), 0, 0, 0, sprintf($_LANG['pay_order'], $order['order_sn']));
+        log_account_change($order['user_id'], $order['surplus'] * (-1), 0, 0, $user_points, sprintf($_LANG['pay_order'], $order['order_sn']),5);
     }
     if ($order['user_id'] > 0 && $order['integral'] > 0)
     {
-        log_account_change($order['user_id'], 0, 0, 0, $order['integral'] * (-1), sprintf($_LANG['pay_order'], $order['order_sn']));
+        log_account_change($order['user_id'], 0, 0, 0, $order['integral'] * (-1), sprintf($_LANG['pay_order'], $order['order_sn']),5);
     }
 
 
@@ -2213,6 +2249,7 @@ elseif ($_REQUEST['step'] == 'done')
 
         $smarty->assign('pay_online', $pay_online);
     }
+
     if(!empty($order['shipping_name']))
     {
         $order['shipping_name']=trim(stripcslashes($order['shipping_name']));

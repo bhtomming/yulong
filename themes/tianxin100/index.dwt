@@ -9,11 +9,8 @@
 <link href="{$ectouch_themes}/ectouch.css?v=1.1.1" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="{$ectouch_themes}/css/mui.min.css?v=1.1.1">
 <link rel="stylesheet" type="text/css" href="{$ectouch_themes}/css/style.css?v=1.1.1">
-<script>
-     //通过window.screen.width获取屏幕的宽度
-    //var offWidth = window.screen.width / 30; //这里用宽度/30表示1rem取得的px
-    //document.getElementsByTagName("html")[0].style.fontSize = offWidth + 'px'; //把rem的值复制给顶级标签html的font-size
-</script>
+
+
 
 
 </head>
@@ -81,26 +78,37 @@
 <!-- 热销区 start -->
 
 <!-- TemplateBeginEditable name="首页推荐模块" -->
-<!-- #BeginLibraryItem "/library/recommend_hot.lbi" -->
- <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_best.lbi" -->
+<!-- #EndLibraryItem -->
 
 <!-- 热销区 end -->
-
-<!-- 新品区 start -->
-<!-- #BeginLibraryItem "/library/recommend_new.lbi" -->
+	
+	
+<!-- 酒店专区 start -->
+<!-- #BeginLibraryItem "/library/recommend_hotal.lbi" -->
  <!-- #EndLibraryItem -->
-<!-- 新品区 end -->
+<!-- 酒店专区 end -->
 
-<!-- 商品推荐 start -->
-<!-- #BeginLibraryItem "/library/recommend_best.lbi" -->
+<!-- 特色产品 start -->
+<!-- #BeginLibraryItem "/library/recommend_specialty.lbi" -->
  <!-- #EndLibraryItem -->
-<!-- 商品推荐 end -->
-
-<!-- 电子产品 start -->
-<!-- #BeginLibraryItem "/library/recommend_electronic.lbi" -->
+<!-- 特色产品 end -->
+	
+<!-- 智能家居 start -->
+<!-- #BeginLibraryItem "/library/recommend_furnishing.lbi" -->
  <!-- #EndLibraryItem -->
-<!-- 电子产品 end -->
+<!-- 智能家居 end -->
+	
+<!-- 房产置业 start -->
+<!-- #BeginLibraryItem "/library/recommend_house.lbi" -->
+ <!-- #EndLibraryItem -->
+<!-- 房产置业  end -->	
 
+
+<div class="bottom-log">
+    <img src="{$ectouch_themes}/images/bottom-logo.png" />
+    <p>玉泷商城期待您的加入!</p>
+</div>
 </div>
 <!-- #BeginLibraryItem "/library/footer_nav.lbi" --> <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/top_tianxin100_guanzhu.lbi" --> <!-- #EndLibraryItem -->
@@ -108,6 +116,10 @@
 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
 <script src="js/mui.min.js"></script>
 <script type="text/javascript" src="js/lhf.js" charset="utf-8"></script>
+	{insert_scripts files='jquery.json.js,transport_index.js'}
+<script type="text/javascript" src="themes/tianxin100/js/touchslider.dev.js"></script>
+{insert_scripts files='common.js'}
+
 
 </body>
 </html>

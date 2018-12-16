@@ -3,7 +3,7 @@
 <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
 	<a href="{$nav.url}"> 
 		<img alt="{$nav.name}" src="{$nav.pic}" />
-		<span>{$nav.name}</span>
+		<!--<span>{$nav.name}</span>-->
 	</a>
 
 {/foreach}

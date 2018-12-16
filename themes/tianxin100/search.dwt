@@ -27,9 +27,10 @@
       </div>
     </div>
   </header>
-  <!-- #BeginLibraryItem "/library/goods_list_search.lbi" --><!-- #EndLibraryItem -->
+	<!-- #BeginLibraryItem "/library/goods_list_search.lbi" --><!-- #EndLibraryItem -->
+	<!-- #BeginLibraryItem "/library/footer_nav.lbi" --><!-- #EndLibraryItem -->
 </div>
-<!-- #BeginLibraryItem "/library/footer_nav.lbi" --><!-- #EndLibraryItem -->
+
 
 <script type="text/javascript" src="{$ectouch_themes}/js/jquery.min.js"></script>
 <script type="text/javascript" src="{$ectouch_themes}/js/jquery.more.js"></script>
@@ -68,24 +69,29 @@ var getPageList = (function(){
           }else{
             var price = v.shop_price ;
           }
-            var html = '<li class="clearfix">\
-              <a href="{$goods.url}" title="'+v.name+'">\
-              <img src="'+v.goods_thumb+'" alt="'+v.name+'">\
-              <div>\
-                <h4>'+v.name+'</h4>\
-                <p>'+v.goods_brief+'</p>\
-                <font>\
-                  <span class="ico">购买价格</span>\
-                  <span class="price">'+price+'</span>\
-                </font>\
-              </div>\
-            </a>\
-          </li>';
-          $('.goodsbox ul').append(html);
+            //搜索结果处理
+			 var html = '<li class="clearfix">\
+				<a href="'+v.url+'" title="'+v.name+'">\
+					<img src="'+v.goods_thumb+'" alt="'+v.name+'">\
+					<div  class="good-info">\
+						<h4>'+v.name+'</h4>\
+						<p>'+v.goods_brief+'</p>\
+						<div class="goods-control">\
+							<a class="icon icon-cart" href="javascript:addToCart(1);"></a>\
+							<div class="icon-buy-border">\
+								<a class="icon-buy"  href="javascript:addToCart1(1);">购买</a>\
+							</div>\
+						<span class="icon-rmb">RMB /</span>\
+						<span class="price">价格</span>\
+						</div>\
+					</div>\
+				</a>\
+			</li>';
+			 $('.goodsbox ul').append(html);
 
          });
          if(loadMore == false){
-          $('.goodsbox ul').append('<li style="text-align:center; min-height:2rem;">已经到底喽～</li>');
+          $('.goodsbox').append('<div class="splite-line" style="min-height:2rem;">已经到底喽～</div>');
          }
          $('#mark').hide();
 
@@ -96,7 +102,7 @@ var getPageList = (function(){
         if(isloading) return false ;
         //只有一页 ，不加载
         if(parseInt(max_page) <= 1) {
-          $('.goodsbox ul').append('<li style="text-align:center; min-height:2rem;">已经到底喽～</li>');
+          $('.goodsbox').append('<div class="splite-line" style="min-height:2rem;">已经到底喽～</div>');
           isloading = true;
           return false ;
         }
