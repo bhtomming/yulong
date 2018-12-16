@@ -14,10 +14,6 @@
           <p>{$goods.brief}</p>
 			<div class="goods-control">
 				<a class="icon icon-cart" href="javascript:addToCart({$goods.id})"></a>
-				<div class="icon-buy-border">
-					<a class="icon-buy"  href="javascript:addToCart1({$goods.id})">购买</a>
-				</div>
-				<span class="icon-rmb">RMB /</span>
 				<span class="price">{if $goods.promote_price}{$goods.promote_price}{else}{$goods.shop_price}{/if}</span>				
 			</div>
         </div>

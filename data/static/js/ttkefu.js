@@ -1969,7 +1969,7 @@ if(window.location.href.substring(0,8)!="file:///" && window.location.href.subst
         setInterval('ttkefuyaoqing.show()',30*1000);
     }*/
 
-    document.write('<a href="javascript:tana(2);" ><div id="ttkefuico"  style="width:25px; height:85px; border-top-right-radius:4px;border-bottom-right-radius:4px; padding:8px 0px 0px 0px; padding-left:5px;  background:#006633; line-height:18px; position:fixed; color:#ffffff; left:0px; top:140px;cursor:pointer; font-size:15px; text-align:left; z-index:999999999999999;" >在线客服</div></a>');
+    /*document.write('<a href="javascript:tana(2);" ><div id="ttkefuico"  style="width:25px; height:85px; border-top-right-radius:4px;border-bottom-right-radius:4px; padding:8px 0px 0px 0px; padding-left:5px;  background:#006633; line-height:18px; position:fixed; color:#ffffff; left:0px; top:140px;cursor:pointer; font-size:15px; text-align:left; z-index:999999999999999;" >在线客服</div></a>')*/
 
     /*----*/
     if(document.getElementById("sj_ttkefu_ico")){
@@ -2045,10 +2045,10 @@ if(window.location.href.substring(0,8)!="file:///" && window.location.href.subst
         {
             document.getElementById("ttkefulist").style.top = parseInt(document.getElementById("ttkefulist").style.top)+percent+"px";
         }
-        if(document.getElementById("ttkefuico"))
+       /* if(document.getElementById("ttkefuico"))
         {
             document.getElementById("ttkefuico").style.top = parseInt(document.getElementById("ttkefuico").style.top)+percent+"px";
-        }
+        }*/
 
         if(document.getElementById("ttkefutel"))
         {

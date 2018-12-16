@@ -10,6 +10,7 @@
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 <link rel="stylesheet" type="text/css" href="themes/tianxin100/css/public.css?v=1.1.2"/>
 <link rel="stylesheet" type="text/css" href="themes/tianxin100/css/goods.css?v=1.1.2"/>
+<link href="<?php echo $this->_var['ectouch_themes']; ?>/css/style.css?v=1.1.1" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="themes/tianxin100/js/jquery.js"></script>
 <?php echo $this->smarty_insert_scripts(array('files'=>'jquery.json.js,transport_index.js')); ?>
 <script type="text/javascript" src="themes/tianxin100/js/touchslider.dev.js"></script>
@@ -531,17 +532,17 @@ if ($this->_foreach['releated_goods_data']['total'] > 0):
     </h2>
       <div class="bd">
         <ul>
-           <?php $_from = $this->_var['fittings']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'goods_0_39611200_1544780143');if (count($_from)):
-    foreach ($_from AS $this->_var['goods_0_39611200_1544780143']):
+           <?php $_from = $this->_var['fittings']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'goods_0_77900000_1544946781');if (count($_from)):
+    foreach ($_from AS $this->_var['goods_0_77900000_1544946781']):
 ?>
           <li>
-            <a href="<?php echo $this->_var['goods_0_39611200_1544780143']['url']; ?>">
+            <a href="<?php echo $this->_var['goods_0_77900000_1544946781']['url']; ?>">
               <div class="products_kuang">
-                <img src="<?php echo $this->_var['goods_0_39611200_1544780143']['goods_thumb']; ?>"></div>
-              <div class="goods_name"><?php echo htmlspecialchars($this->_var['goods_0_39611200_1544780143']['short_name']); ?></div>
+                <img src="<?php echo $this->_var['goods_0_77900000_1544946781']['goods_thumb']; ?>"></div>
+              <div class="goods_name"><?php echo htmlspecialchars($this->_var['goods_0_77900000_1544946781']['short_name']); ?></div>
               <div class="price" >
-              <p href="<?php echo $this->_var['goods_0_39611200_1544780143']['url']; ?>"><?php echo $this->_var['goods_0_39611200_1544780143']['fittings_price']; ?> </p>
-                 <a href="javascript:addToCart(<?php echo $this->_var['goods_0_39611200_1544780143']['goods_id']; ?>);" class="car">
+              <p href="<?php echo $this->_var['goods_0_77900000_1544946781']['url']; ?>"><?php echo $this->_var['goods_0_77900000_1544946781']['fittings_price']; ?> </p>
+                 <a href="javascript:addToCart(<?php echo $this->_var['goods_0_77900000_1544946781']['goods_id']; ?>);" class="car">
                     <img src="themes/tianxin100/images/xin/cutp.png">
                 </a>
               </div>
@@ -565,7 +566,7 @@ function goTop(){
 <div class="footer_nav">
  <ul> 
  <li class="bian"><a href="index.php"><em class="goods_nav1"></em><span>首页</span></a> </li>
- <!--<li class="bian"><a href="mqqwpa://im/chat?chat_type=wpa&uin=2944039529&version=1&src_type=web&web_src=bjhuli.com"><em class="goods_nav2"></em><span>客服</span></a> </li>  --><?php echo $this->_var['service_phone_bak']; ?>
+<li class="nav-kefu"><a href="javascript:tana(2);"><em class="goods_nav2"></em><span>客服</span></a> </li>
  <li><a href="javascript:collect(<?php echo $this->_var['goods']['goods_id']; ?>)" id="favorite_add" class="collet<?php echo $this->_var['goods']['is_collet']; ?>"><em class="goods_nav3"></em><span>收藏</span></a></li>
  </ul>
  <dl>
@@ -574,8 +575,8 @@ function goTop(){
  </dl>                
 </div>
 
-<script src="http://w1.ttkefu.com/k/?fid=7J9FHF6"  charset=utf-8></script>
-<div style='display:none;'><a href='http://www.ttkefu.com'>在线客服</a></div>
+
+
 <script type="text/javascript">
 var goods_id = <?php echo $this->_var['goods_id']; ?>;
 var goodsattr_style = <?php echo empty($this->_var['cfg']['goodsattr_style']) ? '1' : $this->_var['cfg']['goodsattr_style']; ?>;
@@ -733,6 +734,7 @@ function changePriceResponse(res)
 	}
 	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
 </script>
+<?php echo $this->smarty_insert_scripts(array('files'=>'ttkefu.js')); ?>
 
 </body>
 </html>

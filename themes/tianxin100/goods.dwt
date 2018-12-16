@@ -9,6 +9,7 @@
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 <link rel="stylesheet" type="text/css" href="themes/tianxin100/css/public.css?v=1.1.2"/>
 <link rel="stylesheet" type="text/css" href="themes/tianxin100/css/goods.css?v=1.1.2"/>
+<link href="{$ectouch_themes}/css/style.css?v=1.1.1" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="themes/tianxin100/js/jquery.js"></script>
 {insert_scripts files='jquery.json.js,transport_index.js'}
 <script type="text/javascript" src="themes/tianxin100/js/touchslider.dev.js"></script>
@@ -517,7 +518,7 @@ function goTop(){
 <div class="footer_nav">
  <ul> 
  <li class="bian"><a href="index.php"><em class="goods_nav1"></em><span>首页</span></a> </li>
- <!--<li class="bian"><a href="mqqwpa://im/chat?chat_type=wpa&uin=2944039529&version=1&src_type=web&web_src=bjhuli.com"><em class="goods_nav2"></em><span>客服</span></a> </li>  --><!-- tel:{$service_phone_bak} -->
+<li class="nav-kefu"><a href="javascript:tana(2);"><em class="goods_nav2"></em><span>客服</span></a> </li>
  <li><a href="javascript:collect({$goods.goods_id})" id="favorite_add" class="collet{$goods.is_collet}"><em class="goods_nav3"></em><span>收藏</span></a></li>
  </ul>
  <dl>
@@ -526,8 +527,8 @@ function goTop(){
  </dl>                
 </div>
 
-<script src="http://w1.ttkefu.com/k/?fid=7J9FHF6"  charset=utf-8></script>
-<div style='display:none;'><a href='http://www.ttkefu.com'>在线客服</a></div>
+
+
 <script type="text/javascript">
 var goods_id = {$goods_id};
 var goodsattr_style = {$cfg.goodsattr_style|default:1};
@@ -683,6 +684,7 @@ function changePriceResponse(res)
 	}
 	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
 </script>
+{insert_scripts files='ttkefu.js'}
 
 </body>
 </html>

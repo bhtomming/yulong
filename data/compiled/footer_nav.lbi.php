@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" type="text/css" href="<?php echo $this->_var['ectouch_themes']; ?>/css/style.css?v=1.1.1">
+
 
 <footer>
   <ul>
@@ -7,7 +7,7 @@
     <li><a href="search.php?intro=hot">热卖</a></li>
     <li><a href="user.php?act=tuiguang">分销</a></li>
     <li><a href="user.php">我的</a></li>
-   <li><a href="tel:19943192712">客服</a></li>
+   <li><a href="javascript:tana(2);">客服</a></li>
   </ul>
 </footer>
 <!--script src="http://w1.ttkefu.com/k/?fid=7J9FHF6"  charset=utf-8></script-->

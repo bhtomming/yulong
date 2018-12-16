@@ -171,8 +171,8 @@
 /*底部导航*/
 .bian{ border-right:1px solid #eeeeee; margin-left:-1px;}
 .footer_nav{ width:100%; height:50px; position:fixed; z-index:100; bottom:0px; background:#f8f8f8;border-top:1px solid #eeeeee;}
-.footer_nav ul{ width:30%; float:left; height:50px;}
-.footer_nav ul li{ width:50%; float:left; height:50px;}
+.footer_nav ul{ width:50%; float:left; height:50px;}
+.footer_nav ul li{ width:33.3333%; float:left; height:50px;}
 .footer_nav ul li span{ display:block; width:100%; height:30px; text-align:center; font-size:12px; color:#666; line-height:20px;}
 .footer_nav ul li em{ display:block; width:30px; height:25px; margin:auto;background: url(../images/pub_goods.png) no-repeat;background-size:auto 280px;}
 .footer_nav ul li .goods_nav1{ background-position:0 -190px;}
@@ -181,11 +181,11 @@
  .footer_nav ul li .collet0 .goods_nav3{ background: url(../images/star_rating.png) no-repeat; background-size:77% auto;background-position:center 3px;}
  .footer_nav ul li .collet1 .goods_nav3{background: url(../images/star_rating.png) no-repeat;background-size:80% auto;background-position:center -22px;}
 
-.footer_nav dl{ width:70%; float:left; height:47px;}
-.footer_nav dl dd{ width:50%; float:left; height:48px;text-align:center; margin-top:-1px;}
-.footer_nav dl dd a{ font-size:16px; line-height:48px; color:#FFF }
-.footer_nav dl .flow{ background:#ff9c00}
-.footer_nav dl .goumai{ background:#dd2726}
+.footer_nav dl{ width:50%; float:left; height:47px;padding: 0.2rem 0.1rem 0.2rem 0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.footer_nav dl dd{ width:50%; float:left; height:2.6rem;text-align:center; }
+.footer_nav dl dd a{ font-size:16px; height:2.6rem; color:#FFF }
+.footer_nav dl .flow{ /*background:#ff9c00*/border-radius: 1.2rem 0 0 1.2rem;background-image: -webkit-linear-gradient(left, #FFC500, #FF9402);background-image: linear-gradient(to right, #FFC500, #FF9402);}
+.footer_nav dl .goumai{ /*background:#dd2726*/border-radius: 0 1.2rem 1.2rem 0;background-image: -webkit-linear-gradient(left, #FF7A00, #FE560A);background-image: linear-gradient(to right, #FF7A00, #FE560A);}
 
 
 /*加减号*/

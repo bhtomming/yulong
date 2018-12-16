@@ -13,10 +13,6 @@
                     <p><?php echo $this->_var['daliy']['brief']; ?></p>
                     <div class="goods-control">
                         <a class="icon icon-cart" href="javascript:addToCart(<?php echo $this->_var['daliy']['id']; ?>)"></a>
-                        <div class="icon-buy-border">
-                            <a class="icon-buy"  href="javascript:addToCart1(<?php echo $this->_var['daliy']['id']; ?>)">购买</a>
-                        </div>
-                        <span class="icon-rmb">RMB /</span>
                         <span class="price"><?php if ($this->_var['daliy']['promote_price']): ?><?php echo $this->_var['daliy']['promote_price']; ?><?php else: ?><?php echo $this->_var['daliy']['shop_price']; ?><?php endif; ?></span>
                     </div>
                 </div>

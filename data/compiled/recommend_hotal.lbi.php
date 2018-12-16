@@ -13,15 +13,11 @@ if ($this->_foreach['hotal_goods']['total'] > 0):
         <a href="<?php echo $this->_var['goods']['url']; ?>" title="<?php echo htmlspecialchars($this->_var['goods']['name']); ?>">
         <img src="<?php echo $this->_var['site_url']; ?><?php echo $this->_var['goods']['thumb']; ?>" alt="<?php echo htmlspecialchars($this->_var['goods']['name']); ?>">
         <div class="good-info">
-          <h4><?php echo $this->_var['goods']['name']; ?></h4>
-          <p><?php echo $this->_var['goods']['brief']; ?></p>
+            <h4><?php echo $this->_var['goods']['name']; ?></h4>
+          <!--p><?php echo $this->_var['goods']['brief']; ?></p-->
 			<div class="goods-control">
-				<a class="icon icon-cart" href="javascript:addToCart(<?php echo $this->_var['goods']['id']; ?>)"></a>
-				<div class="icon-buy-border">
-					<a class="icon-buy"  href="javascript:addToCart1(<?php echo $this->_var['goods']['id']; ?>)">购买</a>
-				</div>
-				<span class="icon-rmb">RMB /</span>
-				<span class="price"><?php if ($this->_var['goods']['promote_price']): ?><?php echo $this->_var['goods']['promote_price']; ?><?php else: ?><?php echo $this->_var['goods']['shop_price']; ?><?php endif; ?></span>				
+			    <a class="icon icon-cart" href="javascript:addToCart(<?php echo $this->_var['goods']['id']; ?>)"></a>
+			    <span class="price"><?php if ($this->_var['goods']['promote_price']): ?><?php echo $this->_var['goods']['promote_price']; ?><?php else: ?><?php echo $this->_var['goods']['shop_price']; ?><?php endif; ?></span>
 			</div>
         </div>
       </a>

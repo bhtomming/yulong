@@ -157,13 +157,8 @@ var	getPageList = (function(){
 					<img src="'+v.goods_thumb+'" alt="'+v.name+'">\
 					<div  class="good-info">\
 						<h4>'+v.name+'</h4>\
-						<p>'+v.goods_brief+'</p>\
 						<div class="goods-control">\
 							<a class="icon icon-cart" href="javascript:addToCart(1);"></a>\
-							<div class="icon-buy-border">\
-								<a class="icon-buy"  href="javascript:addToCart1(1);">购买</a>\
-							</div>\
-						<span class="icon-rmb">RMB /</span>\
 						<span class="price">价格</span>\
 						</div>\
 					</div>\
