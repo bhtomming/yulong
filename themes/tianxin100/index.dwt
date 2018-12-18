@@ -7,6 +7,7 @@
 <meta name="Description" content="{$description}" />
 <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0"> 
 <link href="{$ectouch_themes}/ectouch.css?v=1.1.1" rel="stylesheet" type="text/css" />
+<link href="{$ectouch_themes}/css/swiper.min.css?v=1.1.1" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="{$ectouch_themes}/css/mui.min.css?v=1.1.1">
 <link rel="stylesheet" type="text/css" href="{$ectouch_themes}/css/style.css?v=1.1.1">
 
@@ -18,16 +19,8 @@
 <div id="page" style="right: 0px; left: 0px; display: block; overflow-y: hidden;overflow-x : hidden; ">
 
 <!-- banner start -->
+<!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem --> 
 
-<div id="slider" class="mui-slider" >
-      <div class="mui-slider-group mui-slider-loop">      
-          {foreach from=$wap_index_ad item=ad name=wap_index_ad}
-           <div class="mui-slider-item">
-            <a href="{$ad.url}"><img src="{$ad.ad_code}"\/></a>
-          </div>         
-          {/foreach}   
-      </div>
-</div>
 <!-- banner end -->
 
 <!-- 搜索 start  -->
@@ -115,11 +108,9 @@
 
 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
 <script src="js/mui.min.js"></script>
-<script type="text/javascript" src="js/lhf.js" charset="utf-8"></script>
-	{insert_scripts files='jquery.json.js,transport_index.js'}
-<script type="text/javascript" src="themes/tianxin100/js/touchslider.dev.js"></script>
+{insert_scripts files='jquery.json.js,transport_index.js,swiper.min.js'}
 {insert_scripts files='common.js'}
-
+<script src="{$ectouch_themes}/js/index-swiper-config.js"></script>
 
 </body>
 </html>

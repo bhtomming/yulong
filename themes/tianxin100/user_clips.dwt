@@ -10,8 +10,9 @@
 <link href="{$ectouch_themes}/images/touch-icon.png" rel="apple-touch-icon-precomposed" />
 <link href="{$ectouch_themes}/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <link href="{$ectouch_themes}/ectouch.css?v=1.1.1" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{$ectouch_themes}/css/style.css?v=1.1.1">
 <link href="{$ectouch_themes}/css/css.css?v=1.1.1" rel="stylesheet" type="text/css" />
-{* <link rel="stylesheet" href="css/footer.css?v=1.1.1" /> *}
+
 {* 包含脚本文件 *}
 
 {insert_scripts files='transport.js,common.js,user.js'}
@@ -695,7 +696,7 @@ jQuery(function($){
 <!-- {/if} --> 
 <!-- /分销订单E --> 
 
-<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/footer_nav.lbi" --><!-- #EndLibraryItem -->
 <div style="width:1px; height:1px; overflow:hidden">{foreach from=$lang.p_y item=pv}{$pv}{/foreach}</div>
 </body>
 <script type="text/javascript">

@@ -11,6 +11,7 @@ define('IN_ECTOUCH', true);
 
 
 require(dirname(__FILE__) . '/include/init.php');
+require(ROOT_PATH . 'include/lib_order.php');
 require(ROOT_PATH . 'include/lib_payment.php');
 
 //LHF start 同步数据  测试回调数据

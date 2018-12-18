@@ -1,23 +1,28 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-{if $daliy}
+{if $daliys}
 <div class="bg2"></div>
 <div class="daliy-title">
     <p class="daliy-cate-title">每日特价商品<span>-实时更新</span></p>
     <p class="sub-text">DAILY PRICE PEDUCTION PRODDUCTS-REAL-TIME UPDATE</p>
 </div>
 <div class="goodsbox">
-    <div class="goods-col-1">
-        <a href="{$daliy.url}" title="{$daliy.name|escape:html}">
-            <img class="daliy-img" src="{$site_url}{$daliy.thumb}" alt="{$daliy.name|escape:html}">
-                <div class="good-info-col-1">
-                    <h4>{$daliy.name}</h4>
-                    <p>{$daliy.brief}</p>
-                    <div class="goods-control">
-                        <a class="icon icon-cart" href="javascript:addToCart({$daliy.id})"></a>
-                        <span class="price">{if $daliy.promote_price}{$daliy.promote_price}{else}{$daliy.shop_price}{/if}</span>
+    <div class="swiper-container1">
+        <div class="swiper-wrapper">
+        {foreach from=$daliys item=daliy name=daliy_daliy}
+            <div class="swiper-slide">
+                <a href="{$daliy.url}" title="{$daliy.name|escape:html}">
+                    <img src="{$site_url}{$daliy.thumb}" class="daliy-img" alt="{$daliy.name|escape:html}" />
+                    <div class="good-info-col-1">
+                        <h4>{$daliy.name}</h4>
+                        <p>{$daliy.brief}</p>
+                        <div class="goods-control">
+                            <a class="icon icon-cart" href="javascript:addToCart({$daliy.id})"></a>
+                            <span class="price">{if $daliy.promote_price}{$daliy.promote_price}{else}{$daliy.shop_price}{/if}</span>
+                        </div>
                     </div>
-                </div>
-        </a>
+                </a>
+            </div>
+            {/foreach}
+        </div>
     </div>
 </div>
 {/if}

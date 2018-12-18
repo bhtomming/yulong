@@ -9,6 +9,5 @@
    <li><a href="tel:19943192712">客服</a></li>
   </ul>
 </footer>
-<script src="http://w1.ttkefu.com/k/?fid=7J9FHF6"  charset=utf-8></script>
-<div style='display:none;'><a href='http://www.ttkefu.com'>在线客服</a></div>
-
+<!--script src="http://w1.ttkefu.com/k/?fid=7J9FHF6"  charset=utf-8></script-->
+<?php echo $this->smarty_insert_scripts(array('files'=>'ttkefu.js')); ?>

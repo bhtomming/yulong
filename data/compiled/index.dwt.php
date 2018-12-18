@@ -8,6 +8,7 @@
 <meta name="Description" content="<?php echo $this->_var['description']; ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0"> 
 <link href="<?php echo $this->_var['ectouch_themes']; ?>/ectouch.css?v=1.1.1" rel="stylesheet" type="text/css" />
+<link href="<?php echo $this->_var['ectouch_themes']; ?>/css/swiper.min.css?v=1.1.1" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo $this->_var['ectouch_themes']; ?>/css/mui.min.css?v=1.1.1">
 <link rel="stylesheet" type="text/css" href="<?php echo $this->_var['ectouch_themes']; ?>/css/style.css?v=1.1.1">
 
@@ -19,20 +20,8 @@
 <div id="page" style="right: 0px; left: 0px; display: block; overflow-y: hidden;overflow-x : hidden; ">
 
 
+<?php echo $this->fetch('library/index_ad.lbi'); ?> 
 
-<div id="slider" class="mui-slider" >
-      <div class="mui-slider-group mui-slider-loop">      
-          <?php $_from = $this->_var['wap_index_ad']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'ad');$this->_foreach['wap_index_ad'] = array('total' => count($_from), 'iteration' => 0);
-if ($this->_foreach['wap_index_ad']['total'] > 0):
-    foreach ($_from AS $this->_var['ad']):
-        $this->_foreach['wap_index_ad']['iteration']++;
-?>
-           <div class="mui-slider-item">
-            <a href="<?php echo $this->_var['ad']['url']; ?>"><img src="<?php echo $this->_var['ad']['ad_code']; ?>"\/></a>
-          </div>         
-          <?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?>   
-      </div>
-</div>
 
 
 
@@ -114,11 +103,9 @@ if ($this->_foreach['wap_index_ad']['total'] > 0):
 
 <script type="text/javascript" src="themes/tianxin100/js/jquery-1.9.1.min.js"></script>
 <script src="js/mui.min.js"></script>
-<script type="text/javascript" src="js/lhf.js" charset="utf-8"></script>
-	<?php echo $this->smarty_insert_scripts(array('files'=>'jquery.json.js,transport_index.js')); ?>
-<script type="text/javascript" src="themes/tianxin100/js/touchslider.dev.js"></script>
+<?php echo $this->smarty_insert_scripts(array('files'=>'jquery.json.js,transport_index.js,swiper.min.js')); ?>
 <?php echo $this->smarty_insert_scripts(array('files'=>'common.js')); ?>
-
+<script src="<?php echo $this->_var['ectouch_themes']; ?>/js/index-swiper-config.js"></script>
 
 </body>
 </html>

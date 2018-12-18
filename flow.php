@@ -859,7 +859,7 @@ elseif ($_REQUEST['step'] == 'checkout')
     $total = order_fee($order, $cart_goods, $consignee);
 
     //显示给用户购买后获得积分
-    $total['user_points'] = $total['will_get_integral'] * 0.2;
+    $total['user_points'] = floatval($total['will_get_integral']) * 0.2;
 
     $smarty->assign('total', $total);
     $smarty->assign('shopping_money', sprintf($_LANG['shopping_money'], $total['formated_goods_price']));
@@ -1367,7 +1367,7 @@ elseif ($_REQUEST['step'] == 'select_card')
         {
             $smarty->assign('is_group_buy', 1);
         }
-        $result['card_fee_formated'] = $total['card_fee_formated']; 
+        $result['card_fee_formated'] = $total['card_fee_formated'];
         $result['content'] = $smarty->fetch('library/order_total.lbi');
     }
 
@@ -1980,7 +1980,7 @@ elseif ($_REQUEST['step'] == 'done')
     }*/
     $parent_id = $user_info['parent_id'] ? $user_info['parent_id'] : 0;
     $user_points = 0;
-
+//var_dump($affiliate['config']);exit;
     //判断是否开启分成
     if(isset($affiliate['on']) && $affiliate['on'] == 1){
 
@@ -2095,7 +2095,7 @@ elseif ($_REQUEST['step'] == 'done')
 		
     }
 
-    /* 处理余额、积分、红包 */
+    /* 处理使用余额、积分购买的情况、红包 */
     if ($order['user_id'] > 0 && $order['surplus'] > 0)
     {
         log_account_change($order['user_id'], $order['surplus'] * (-1), 0, 0, $user_points, sprintf($_LANG['pay_order'], $order['order_sn']),5);
@@ -2182,7 +2182,7 @@ elseif ($_REQUEST['step'] == 'done')
 
                         /* 计算并发放积分 */
                         $integral = integral_to_give($order);
-                        log_account_change($order['user_id'], 0, 0, intval($integral['rank_points']), intval($integral['custom_points']), sprintf($_LANG['order_gift_integral'], $order['order_sn']));
+                        log_account_change($order['user_id'], 0, 0, 0, $user_points, sprintf($_LANG['order_gift_integral'], $order['order_sn']));
 
                         /* 发放红包 */
                         send_order_bonus($order['order_id']);

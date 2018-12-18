@@ -268,10 +268,7 @@ p.daliy-cate-title span{
     font-size: .75rem;
     font-weight: bolder;
 }
-.good-info .price {
-	color: #f95106;
-	font-size: 1.2rem;
-}
+
 .icon-cart{
 	background: url("../images/icon-cart.png") center no-repeat;
 	height: 1rem;
@@ -398,6 +395,13 @@ p.daliy-cate-title span{
 	width: 92%;
 	margin: 0 auto;
 }
+.goodsbox .daliy-img{
+	width: 55%;
+	float: left;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	height: 12rem;
+}
 .goodsbox ul{
 	overflow: hidden;
 	zoom: 1;
@@ -491,10 +495,13 @@ p.daliy-cate-title span{
 	line-height: 2.5rem;
 	margin: 0.5rem 0;
 }
-.goodsinfo .price {
-	font-size: 1.5rem;
-	margin: 0.5rem 0;
-	display: block;
+.goodsinfo .price,.good-info .price,.goods-control .price {
+	color: #f95106;
+	font-size: 1.2rem;
+}
+.price sub{
+	bottom: -0.1rem;
+	font-size: 45%;
 }
 .goodsinfo p span {
 	display: inline-block;
@@ -551,6 +558,9 @@ p.daliy-cate-title span{
 }
 .bottom-log img{
 	width: 7rem;
+}
+div.wrap{
+	margin-bottom: 2.6rem;;
 }
 footer {
 	position: fixed;

@@ -11,6 +11,7 @@
 <link href="<?php echo $this->_var['ectouch_themes']; ?>/images/touch-icon.png" rel="apple-touch-icon-precomposed" />
 <link href="<?php echo $this->_var['ectouch_themes']; ?>/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <link href="<?php echo $this->_var['ectouch_themes']; ?>/ectouch.css?v=1.1.1" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $this->_var['ectouch_themes']; ?>/css/style.css?v=1.1.1">
 <link href="<?php echo $this->_var['ectouch_themes']; ?>/css/css.css?v=1.1.1" rel="stylesheet" type="text/css" />
 
 
@@ -726,7 +727,7 @@ if ($this->_foreach['affdb']['total'] > 0):
 <?php endif; ?> 
  
 
-<?php echo $this->fetch('library/page_footer.lbi'); ?>
+<?php echo $this->fetch('library/footer_nav.lbi'); ?>
 <div style="width:1px; height:1px; overflow:hidden"><?php $_from = $this->_var['lang']['p_y']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'pv');if (count($_from)):
     foreach ($_from AS $this->_var['pv']):
 ?><?php echo $this->_var['pv']; ?><?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?></div>

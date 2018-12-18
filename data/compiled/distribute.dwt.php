@@ -125,17 +125,17 @@
 
 <section class="class="wrap"">
 <div class="content">
-  <?php $_from = $this->_var['user_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'user_0_24511200_1544780765');if (count($_from)):
-    foreach ($_from AS $this->_var['user_0_24511200_1544780765']):
+  <?php $_from = $this->_var['user_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'user_0_44120400_1545116250');if (count($_from)):
+    foreach ($_from AS $this->_var['user_0_44120400_1545116250']):
 ?>
    
-    	<a href="distribute.php?act=myorder&user_id=<?php echo $this->_var['user_0_24511200_1544780765']['user_id']; ?>&level=<?php echo $this->_var['user_0_24511200_1544780765']['level']; ?>">
+    	<a href="distribute.php?act=myorder&user_id=<?php echo $this->_var['user_0_44120400_1545116250']['user_id']; ?>&level=<?php echo $this->_var['user_0_44120400_1545116250']['level']; ?>">
         	<dl>
-            	<dt><?php if ($this->_var['user_0_24511200_1544780765']['head_url'] != ''): ?><img src="<?php echo $this->_var['user_0_24511200_1544780765']['head_url']; ?>"  border="0"><?php else: ?><img src="<?php echo $this->_var['ectouch_themes']; ?>/images/get_avatar.png"  border="0"><?php endif; ?></dt>
+            	<dt><?php if ($this->_var['user_0_44120400_1545116250']['head_url'] != ''): ?><img src="<?php echo $this->_var['user_0_44120400_1545116250']['head_url']; ?>"  border="0"><?php else: ?><img src="<?php echo $this->_var['ectouch_themes']; ?>/images/get_avatar.png"  border="0"><?php endif; ?></dt>
                 <div>
-                  <h3>&nbsp;会&nbsp;员&nbsp;名：<?php if ($this->_var['user_0_24511200_1544780765']['nickname']): ?><?php echo $this->_var['user_0_24511200_1544780765']['nickname']; ?><?php else: ?><?php echo $this->_var['user_0_24511200_1544780765']['user_name']; ?><?php endif; ?></h3>
-                  <h3>订单数量：<?php echo $this->_var['user_0_24511200_1544780765']['order_num']; ?></h3>
-                  <h3>提成金额：<?php echo $this->_var['user_0_24511200_1544780765']['order_amount']; ?></h3>
+                  <h3>&nbsp;会&nbsp;员&nbsp;名：<?php if ($this->_var['user_0_44120400_1545116250']['nickname']): ?><?php echo $this->_var['user_0_44120400_1545116250']['nickname']; ?><?php else: ?><?php echo $this->_var['user_0_44120400_1545116250']['user_name']; ?><?php endif; ?></h3>
+                  <h3>订单数量：<?php echo $this->_var['user_0_44120400_1545116250']['order_num']; ?></h3>
+                  <h3>提成金额：<?php echo $this->_var['user_0_44120400_1545116250']['order_amount']; ?></h3>
                 <p>
     </p></div>
             </dl>

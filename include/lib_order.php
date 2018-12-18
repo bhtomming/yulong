@@ -577,7 +577,8 @@ function order_fee($order, $goods, $consignee)
                     'cod_fee'          => 0,
                     'pay_fee'          => 0,
 					'fencheng'          => 0,
-                    'tax'              => 0);
+                    'tax'              => 0,
+                    'user_points'      =>0);
     $weight = 0;
 
     /* 商品总价 */
@@ -841,6 +842,8 @@ function order_fee($order, $goods, $consignee)
     {
         $total['will_get_integral'] = get_give_integral($goods);
     }
+    //用户返回积分
+    $total['user_points'] = floatval($total['will_get_integral']) * 0.2;
     $total['will_get_bonus']        = $order['extension_code'] == 'exchange_goods' ? 0 : price_format(get_total_bonus(), false);
     $total['formated_goods_price']  = price_format($total['goods_price'], false);
     $total['formated_market_price'] = price_format($total['market_price'], false);

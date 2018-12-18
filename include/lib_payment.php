@@ -149,12 +149,13 @@ function order_paid($log_id, $pay_status = PS_PAYED, $note = '')
         $pay_log = $GLOBALS['db']->getRow($sql);
         if ($pay_log && $pay_log['is_paid'] == 0)
         {
-            file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r($pay_log,true)."\n",FILE_APPEND);
+            file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r("是否已经支付:".$pay_log['is_paid'],true)."\n",FILE_APPEND);
 
             /* 修改此次支付操作的状态为已付款 */
             $sql = 'UPDATE ' . $GLOBALS['ecs']->table('pay_log') .
                     " SET is_paid = '1' WHERE log_id = '$log_id'";
             $GLOBALS['db']->query($sql);
+
 
             /* 根据记录类型做相应处理 */
             if ($pay_log['order_type'] == PAY_ORDER)
@@ -166,9 +167,9 @@ function order_paid($log_id, $pay_status = PS_PAYED, $note = '')
                 $order    = $GLOBALS['db']->getRow($sql);
                 $order_id = $order['order_id'];
                 $order_sn = $order['order_sn'];
-                file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r($order,true)."\n",FILE_APPEND);
+                file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r("订单支付订单号是:".$order['order_sn'],true)."\n",FILE_APPEND);
 
-                /* 修改订单状态为已付款 */
+                /* 修改订单状态为已付款*/
                 $sql = 'UPDATE ' . $GLOBALS['ecs']->table('order_info') .
                             " SET order_status = '" . OS_CONFIRMED . "', " .
                                 " confirm_time = '" . gmtime() . "', " .
@@ -183,12 +184,16 @@ function order_paid($log_id, $pay_status = PS_PAYED, $note = '')
 				/*甜 心  10 0  开发    */
 				$affiliate = unserialize($GLOBALS['_CFG']['affiliate']);
 				$fenxiao_flage=$affiliate['config']['ex_fenxiao_flag'];
-                file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r($fenxiao_flage,true)."\n",FILE_APPEND);
+
+
+
+                file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r("成为分销商的类型:".$fenxiao_flage,true)."\n",FILE_APPEND);
+                //成为分销商条件为发货
                 if($fenxiao_flage=="delivery"){
 					$integral = integral_to_give($order);
                     file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r($integral,true)."\n",FILE_APPEND);
 
-					log_account_change($order['user_id'], 0, 0, ceil($integral['rank_points']), ceil($integral['custom_points']), sprintf($_LANG['order_gift_integral'], $order['order_sn']));
+					log_account_change($order['user_id'], 0, 0, ceil($integral['rank_points']), ceil($integral['custom_points']) * intval($affiliate['item'][0]['level_point']/100), sprintf($_LANG['order_gift_integral'], $order['order_sn']),5);
 				}
 				
 
@@ -210,10 +215,12 @@ function order_paid($log_id, $pay_status = PS_PAYED, $note = '')
 				$wxch_order_name = 'pay';
 				include('../wxch_order.php');
 
+
+
                 /* 对虚拟商品的支持 */
                 $virtual_goods = get_virtual_goods($order_id);
 
-                file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r($virtual_goods,true)."\n",FILE_APPEND);
+                file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r("虚拟商品之前".$virtual_goods,true)."\n",FILE_APPEND);
 
                 if (!empty($virtual_goods))
                 {
@@ -222,7 +229,7 @@ function order_paid($log_id, $pay_status = PS_PAYED, $note = '')
                     {
                         $GLOBALS['_LANG']['pay_success'] .= '<div style="color:red;">'.$msg.'</div>'.$GLOBALS['_LANG']['virtual_goods_ship_fail'];
                     }
-                    file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r($order['shipping_id'],true)."\n",FILE_APPEND);
+                    file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r("虚拟商品订单".$order['shipping_id'],true)."\n",FILE_APPEND);
 
                     /* 如果订单没有配送方式，自动完成发货操作 */
                     if ($order['shipping_id'] == '-1')
@@ -240,18 +247,26 @@ function order_paid($log_id, $pay_status = PS_PAYED, $note = '')
                         $integral = integral_to_give($order);
                         file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r($integral,true)."\n",FILE_APPEND);
 
-                        log_account_change($order['user_id'], 0, 0, intval($integral['rank_points']), intval($integral['custom_points']), sprintf($GLOBALS['_LANG']['order_gift_integral'], $order['order_sn']));
+                        log_account_change($order['user_id'], 0, 0, intval($integral['rank_points']), intval($integral['custom_points']) * 0.2, sprintf($GLOBALS['_LANG']['order_gift_integral'], $order['order_sn']),5);
 
                         order_action($order_sn, OS_CONFIRMED, SS_SHIPPED, $pay_status, $note, $GLOBALS['_LANG']['buyer']);
 
                     }
                 }
 
+                //分配用户积分
+                $will_give_points = integral_to_give($order);
+                $user_points = intval($will_give_points['custom_points']) * floatval($affiliate['item'][0]['level_point']/100);
+                log_account_change($order['user_id'],0,0,0,$user_points,sprintf("自己购物订单:%s，获得积分", $order['order_sn']),5);
+                $success = '<xml><return_code><![CDATA[SUCCESS]]></return_code><return_msg><![CDATA[OK]]></return_msg></xml>';
+                echo $success;
+                file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r('完成积分分配并向微信服务器返回信息,获得积分:'.$user_points,true)."\n",FILE_APPEND);
             }
             elseif ($pay_log['order_type'] == PAY_SURPLUS)
             {
                 $sql = 'SELECT `id` FROM ' . $GLOBALS['ecs']->table('user_account') .  " WHERE `id` = '$pay_log[order_id]' AND `is_paid` = 1  LIMIT 1";
                 $res_id=$GLOBALS['db']->getOne($sql);
+
                 if(empty($res_id))
                 {
                     /* 更新会员预付款的到款状态 */
@@ -267,12 +282,12 @@ function order_paid($log_id, $pay_status = PS_PAYED, $note = '')
 
                     /* 修改会员帐户金额 */
                     $_LANG = array();
+                    file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r("余额付款",true)."\n",FILE_APPEND);
                     include_once(ROOT_PATH . 'lang/' . $GLOBALS['_CFG']['lang'] . '/user.php');
                     log_account_change($arr['user_id'], $arr['amount'], 0, 0, 0, $_LANG['surplus_type_0'], ACT_SAVING);
                 }
             }
-        }
-        else
+        } else
         {
             /* 取得已发货的虚拟商品信息 */
             $post_virtual_goods = get_virtual_goods($pay_log['order_id'], true);
@@ -280,6 +295,7 @@ function order_paid($log_id, $pay_status = PS_PAYED, $note = '')
             /* 有已发货的虚拟商品 */
             if (!empty($post_virtual_goods))
             {
+                file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r("这个订单在返回前已经完成!是已发货的虚拟商品",true)."\n",FILE_APPEND);
                 $msg = '';
                 /* 检查两次刷新时间有无超过12小时 */
                 $sql = 'SELECT pay_time, order_sn FROM ' . $GLOBALS['ecs']->table('order_info') . " WHERE order_id = '$pay_log[order_id]'";
@@ -317,8 +333,14 @@ function order_paid($log_id, $pay_status = PS_PAYED, $note = '')
            $virtual_goods = get_virtual_goods($pay_log['order_id'], false);
            if (!empty($virtual_goods))
            {
+               file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r("这个订单在返回前已经完成!是未发货的虚拟商品",true)."\n",FILE_APPEND);
                $GLOBALS['_LANG']['pay_success'] .= '<br />' . $GLOBALS['_LANG']['virtual_goods_ship_fail'];
            }
+
+
+            $success = '<xml><return_code><![CDATA[SUCCESS]]></return_code><return_msg><![CDATA[OK]]></return_msg></xml>';
+            echo $success;
+            file_put_contents(ROOT_PATH.'/data/wx_new_log.txt', date('Y-m-d H:i:s'.time()).'__'.__FILE__.__LINE__."\n".print_r("这个订单在返回前已经完成!向微信返回值",true)."\n",FILE_APPEND);
         }
     }
 }

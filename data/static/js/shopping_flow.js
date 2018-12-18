@@ -245,16 +245,15 @@ function orderSelectedResponse(result)
   try
   {
 	 if( result.pay_name){
+
 		 document.getElementById("selected2").innerHTML = result.pay_name;
 	     document.getElementById("payment").style.display = 'none';
 		 }
      if( result.pack_fee_formated){
-		 
 		 document.getElementById("selected5").innerHTML = result.pack_fee_formated;
 	     document.getElementById("package_box").style.display = 'none';
 	    }
 	 if( result.card_fee_formated){
-		 
 		  document.getElementById("selected6").innerHTML = result.card_fee_formated;
 	      document.getElementById("card_box").style.display = 'none';
 		 }
