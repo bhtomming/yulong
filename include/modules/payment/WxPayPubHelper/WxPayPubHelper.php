@@ -100,11 +100,12 @@ class Common_util_pub
 		}
 		//签名步骤一：按字典序排序参数
 		ksort($Parameters);
+
 		$String = $this->formatBizQueryParaMap($Parameters, false);
+
 		//echo '【string1】'.$String.'</br>';
 		//签名步骤二：在string后加入KEY
 		$String = $String."&key=".WXKEY;
-		//echo "【string2】".$String."</br>";
 		//签名步骤三：MD5加密
 		$String = md5($String);
 		//echo "【string3】 ".$String."</br>";
@@ -239,6 +240,15 @@ class Common_util_pub
 		var_dump($err);
 		print_r('</pre>');
 	}
+
+    function log($file,$txt)
+    {
+        $fp =  fopen($file,'a+');
+        fwrite($fp,''.local_date('Y-m-d H:i:s').'-----------------'.__FILE__);
+        fwrite($fp,$txt);
+        fwrite($fp,"\r\n\r\n\r\n");
+        fclose($fp);
+    }
 }
 
 /**
@@ -360,6 +370,56 @@ class UnifiedOrder_pub extends Wxpay_client_pub
 		$this->postXml();
 		$this->result = $this->xmlToArray($this->response);
 		$prepay_id = $this->result["prepay_id"];
+		$this->log('pay.log.txt','申请支付ID: '.var_export($this->result,true));
+		if($this->result['err_code'] == 'INVALID_REQUEST'){
+			//说明是修改过的订单需要取消原来订单
+			$this->url = "https://api.mch.weixin.qq.com/pay/closeorder";
+            $this->log('pay.log.txt','订单号重复，正在申请关闭订单');
+            $prepay_id = $this->closePay();
+		}
+		return $prepay_id;
+	}
+
+
+	function closePay(){
+		$body = $this->parameters['body'];
+		$notify_url = $this->parameters['notify_url'];
+		$openid = $this->parameters['openid'];
+		$spbill_create_ip = $this->parameters['spbill_create_ip'];
+		$total_fee = $this->parameters['total_fee'];
+		$attach = $this->parameters['attach'];
+		$trade_type = $this->parameters['trade_type'];
+		unset($this->parameters['body']);
+		unset($this->parameters['notify_url']);
+		unset($this->parameters['body']);
+		unset($this->parameters['openid']);
+		unset($this->parameters['spbill_create_ip']);
+		unset($this->parameters['total_fee']);
+		unset($this->parameters['attach']);
+		unset($this->parameters['trade_type']);
+		$this->parameters['package'] = '';
+		unset($this->parameters['package']);
+		unset($this->parameters['sign']);
+		//$this->parameters['sign_type'] = 'MD5';
+        $xml = parent::createXml();
+		$this->response = $this->postXmlCurl($xml,$this->url,$this->curl_timeout);
+
+        $prepay_id = '';
+        $this->result = $this->xmlToArray($this->response);
+		$this->log('pay.log.txt',var_export($this->result,true));
+        if($this->result["return_code"] == 'SUCCESS'){
+        	$this->parameters['body'] = $body;
+			$this->parameters['notify_url'] = $notify_url;
+			$this->parameters['openid'] = $openid;
+			$this->parameters['spbill_create_ip'] = $spbill_create_ip;
+			$this->parameters['total_fee'] = $total_fee;
+			$this->parameters['attach'] = $attach;
+			$this->parameters['trade_type'] = $trade_type;
+        	$this->url = "https://api.mch.weixin.qq.com/pay/unifiedorder";
+            $this->log('pay.log.txt','已经关闭订单，现在重新申请');
+            $prepay_id = $this->getPrepayId();
+            $this->log('pay.log.txt','重新申请结果是:'.var_export($this->result,true));
+		}
 		return $prepay_id;
 	}
 	

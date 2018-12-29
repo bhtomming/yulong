@@ -53,10 +53,11 @@ if (isset($set_modules) && $set_modules == TRUE)
 
 class wx_new_jspay
 {
+    private $jsApiParameters;
     function __construct()
     {
         $payment = get_payment('wx_new_jspay');
-    
+
         if(!defined('WXAPPID'))
         {
             $root_url = str_replace('mobile/', '', $GLOBALS['ecs']->url());
@@ -73,25 +74,23 @@ class wx_new_jspay
 
     }
 
-
     function get_code($order, $payment)
     {
-        
+
         $jsApi = new JsApi_pub();
 
-       
         if (!isset($_GET['code']))
         {
             $redirect = urlencode($GLOBALS['ecs']->url().'flow.php?step=ok&order_id='.$order['order_sn']);
             $url = $jsApi->createOauthUrlForCode($redirect);
-            Header("Location: $url"); 
+            Header("Location: $url");
         }else
         {
             $code = $_GET['code'];
             $jsApi->setCode($code);
             $openid = $jsApi->getOpenId();
         }
-        
+
         if($openid)
         {
             $unifiedOrder = new UnifiedOrder_pub();
@@ -101,21 +100,23 @@ class wx_new_jspay
             $unifiedOrder->setParameter("openid","$openid");//商品描述
             $unifiedOrder->setParameter("body",$order['order_sn']);//商品描述
             $out_trade_no = $order['order_sn'];
-            $unifiedOrder->setParameter("out_trade_no","$out_trade_no");//商户订单号 
+            $unifiedOrder->setParameter("out_trade_no","$out_trade_no");//商户订单号
             $unifiedOrder->setParameter("attach",strval($order['log_id']));//商户支付日志
             $unifiedOrder->setParameter("total_fee",strval(intval($order['order_amount']*100)));//总金额
-            $unifiedOrder->setParameter("notify_url",WXNOTIFY_URL);//通知地址 
+            $unifiedOrder->setParameter("notify_url",WXNOTIFY_URL);//通知地址
             $unifiedOrder->setParameter("trade_type","JSAPI");//交易类型
 
             $this->log(ROOT_PATH.'/data/wx_pay_order_log.txt',"total_fee==> \r\n".strval(intval($order['order_amount']*100)) ); //LHF 测试 订单
 
             $this->log(ROOT_PATH.'/data/wx_pay_order_log.txt',"notify_url ==> \r\n".WXNOTIFY_URL );
 
+
             $prepay_id = $unifiedOrder->getPrepayId();
+
 
             $jsApi->setPrepayId($prepay_id);
 
-            $jsApiParameters = $jsApi->getParameters();
+            $this->jsApiParameters = $jsApiParameters = $jsApi->getParameters();
 
 
             $user_agent = $_SERVER['HTTP_USER_AGENT'];
@@ -133,7 +134,7 @@ class wx_new_jspay
                     $allow_use_wxPay = false;
                 }
             }
-            $html .= '<script language="javascript">';
+            $html = '<script language="javascript">';
             if($allow_use_wxPay)
             {
                 $html .= "function jsApiCall(){";
@@ -165,32 +166,34 @@ class wx_new_jspay
                 $html .= "}";
 
             }
-
             $html .= '</script>';
             $html .= '<button  class="c-btn4"  type="button" onclick="callpay()">微信支付</button>';
-
-            return $html;
 
         }
         else
         {
-            $html .= '<script language="javascript">';
+            $html = '<script language="javascript">';
             $html .= 'function callpay(){';
             $html .= 'alert("请在微信中使用微信支付")';
             $html .= "}";
             $html .= '</script>';
-            $html .= '<button type="button" onclick="callpay()"       class="pay_bottom">微信支付</button>';
-
-            return $html;
+            $html .= '<button type="button" onclick="callpay()"   class="pay_bottom">微信支付</button>';
         }
+        return $html;
 
-        
     }
+
+
+
+
     function respond()
     {
         $payment  = get_payment('wx_new_jspay');
 
+        $this->log(ROOT_PATH.'/data/wx_pay_order_log.txt','payment是:'.var_export($payment,true).'\r\n');
+
         $notify = new Notify_pub();
+        $this->log(ROOT_PATH.'/data/wx_pay_order_log.txt','$notify是:'.var_export($notify,true).'\r\n');
         $xml = $GLOBALS['HTTP_RAW_POST_DATA'];
         $notify->saveData($xml);
         if($payment['logs'])
@@ -199,6 +202,8 @@ class wx_new_jspay
         }
         if($notify->checkSign() == TRUE)
         {
+            $this->log(ROOT_PATH.'/data/wx_pay_order_log.txt','验签成功\r\n');
+
             if ($notify->data["return_code"] == "FAIL") {
                 //此处应该更新一下订单状态，商户自行增删操作
                 if($payment['logs']){

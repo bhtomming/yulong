@@ -9,8 +9,9 @@
 <meta name="format-detection" content="telephone=no" />
 <link href="{$ectouch_themes}/images/touch-icon.png" rel="apple-touch-icon-precomposed" />
 <link href="{$ectouch_themes}/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-<link href="pt_1.css?v=1.1.1" rel="stylesheet" type="text/css" /><!--PRINCE 120029121-->
-<link href="css/pt_2.css?v=1.1.1" rel="stylesheet" type="text/css" /><!--PRINCE 120029121-->
+<!--link href="pt_1.css?v=1.1.1" rel="stylesheet" type="text/css" /><PRINCE 120029121-->
+<!--link href="css/pt_2.css?v=1.1.1" rel="stylesheet" type="text/css" /><PRINCE 120029121-->
+<link rel="stylesheet" type="text/css" href="{$ectouch_themes}/css/style.css?v=1.1.1">
  <script>
            //通过window.screen.width获取屏幕的宽度
           var offWidth = window.screen.width / 30; //这里用宽度/30表示1rem取得的px
@@ -36,7 +37,6 @@ onload = function(){
 		{foreach from=$pintuan.price_ladder item=item }
 		document.getElementById('number_{$item.amount}').value = 1;//更新数量
 		{/foreach}
-		document.getElementById('number_single_buy').value = 1;//更新数量
 }
 
 function changenum(diff) {
@@ -75,7 +75,7 @@ function goBack(){
 <!-- 产品信息 start -->
 <div id="pintuan" class="goodsinfo clearfix">
 
-	<div class="fl">
+	<div>
 		<h3>{$pintuan.act_name|escape:html}</h3>
 		<span class="price">￥88</span>
 		 <!-- {if $pintuan.status eq 1} 进行中 -->
@@ -96,28 +96,20 @@ function goBack(){
          <p class="clearfix"> <span>{$item.amount} 人拼团</span><a href="pintuan.php" >活动未开始</a></p>
         <!-- {/if}  -->
 	</div>
-	<div class="fr">
-
-			 {$pintuan.pintuan_desc}
-
+	<div>
+	    {$pintuan.pintuan_desc}
 	</div>
+</div>
+<div class="bottom-log">
+    <img src="{$ectouch_themes}/images/bottom-logo.png" />
+    <p>玉泷商城期待您的加入!</p>
 </div>
 <!-- 产品信息 end -->
 
-<!-- 搜索 start  -->
-<div id="search">
-  <span>在 商 城 内 搜 索</span>
-  <form  method="post" action="search.php" name="searchForm" id="searchForm_id">
-    <input type="text" name="keywords"  class="keyword" id="keywordfoot" />
-    <input type="submit" name="" class="btn" value=""  onclick="return check('keywordfoot')" />
-  </form>
-</div>
-<!-- 搜索 end  -->
 
 <!-- {if $new_pintuan }-->
 <div class="bg2"></div>
 <div class="title"><i></i>以下小伙伴正在发起拼团，您可以直接参加</div>
-
 <div id="seller" class="box_two clearfix"  >
 
  <!-- {foreach from=$new_pintuan item=pintuan } -->
@@ -144,41 +136,25 @@ function goBack(){
 
 </div>
 <!-- {/if} -->
-<!-- 每日降价 end -->
 
-
-
-<!-- 每日降价 start -->
-<!-- #BeginLibraryItem "/library/recommend_promotion.lbi" --><!-- #EndLibraryItem -->
-<!-- 每日降价 end -->
-
-<!-- 新品区 start -->
-<!-- #BeginLibraryItem "/library/recommend_new.lbi" -->
- <!-- #EndLibraryItem -->
-<!-- 新品区 end -->
 
 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
 <script src="js/mui.min.js"></script>
-<script type="text/javascript" src="js/lhf.js" charset="utf-8"></script>
 
 <div class="activity_nav">
  <ul> 
  <li class="activity_bian"><a href="index.php"><em class="goods_nav1"></em><span>首页</span></a> </li>
- <li style=" width:66%; line-height:50px; text-align:center; color:#FF0000;" >
- <a  href="pintuan.php?act=userlist" style="color:#FF0000;">我的拼团</a>  
+ <li>
+ <a  href="pintuan.php?act=userlist"><em class="goods_nav2"></em><span>我的拼团</span></a>
  </li>
+ <li class="flow"><a class="button active_button" onclick="showFDiv();"><em class="goods_nav3"></em><span>分享活动<span></a> </li>
+   <!--{if $pintuan.need_login && ($userid eq 0)   }-->
+      <li class="goumai"><a style="display:block;" onclick="showReg();"><em class="goods_nav4"></em><span>发起拼团</span></a> </li>
+   <!--{else}-->
+      <li class="goumai"><a style="display:block;" href="#pintuan" ><em class="goods_nav4"></em><span>发起拼团</span></a> </li>
+   <!--{/if}-->
  </ul>
- <dl>
-  <dd class="flow"><a class="button active_button" onclick="showFDiv();">分享活动</a> </dd>
-  <!--{if $pintuan.need_login && ($userid eq 0)   }-->
-     <dd class="goumai"><a style="display:block;" onclick="showReg();">发起拼团</a> </dd>
-  <!--{else}-->
-     <dd class="goumai"><a style="display:block;" href="#pintuan" >发起拼团</a> </dd>
-  <!--{/if}-->
 
-
-
- </dl>                
 </div>
  
 </div>
@@ -195,7 +171,7 @@ function goBack(){
             function closeFDiv(){
                 document.getElementById('popDiv').style.display = 'none';
 				document.getElementById('hidDiv').style.display = 'none';
-				document.getElementById('tipsDiv').style.display = 'none';
+
             }
             function showReg(){
                 document.getElementById('popReg').style.display = 'block';
@@ -212,7 +188,7 @@ function goBack(){
         }
         </script>
         <div class="tipMask" id="hidDiv" style="display:none; z-index:9000; background-color:#000; opacity:0.5;" ></div>
-        <div class="popGeneral" id="popDiv" style="background:none; top:0px; ">
+        <div class="popGeneral" id="popDiv" style="background:rgba(0,0,0,0.5);position: absolute; top:0px; bottom: 50px; ">
         <img src="{$ectouch_themes}/images/share_guide.png" onClick="closeFDiv()"  width="100%" height="100%"/>
         </div>
         
@@ -241,15 +217,7 @@ function goBack(){
         </div>
         <!--关注弹出框 E-->
   
-		<div class="float_right">
-            <!--{if $userid  }-->
-            <a href="javascript:showFDiv();" class="float_icon" ><img src="{$ectouch_themes}/images/float_share.png"></a> 
-            <!-- {else} -->
-            <a href="javascript:showReg();" class="float_icon" ><img src="{$ectouch_themes}/images/float_add.png"></a> 
-            <!-- {/if} -->    
-            <br /><br /><a href="#" class="float_icon" ><img src="{$ectouch_themes}/images/new_topup.png"></a> 
-       </div>
-    <!--关注+分享+返回顶部-End  PRINCE 120029121-->
+
 
 
 {insert_scripts files='transport.js,utils.js'}
@@ -307,5 +275,6 @@ function goBack(){
 });
 <!-- {literal} -->
 </script>
+
 </body>
 </html>

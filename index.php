@@ -104,6 +104,10 @@ if ($act == 'cat_rec')
 /* 缓存编号 */
 $cache_id = sprintf('%X', crc32($_SESSION['user_rank'] . '-' . $_CFG['lang']));
 
+//直接进入客服对话
+$chat = $_GET['chat'];
+$smarty->assign('chat',$chat);
+
 if (!$smarty->is_cached('index.dwt', $cache_id))
 {
     assign_template();

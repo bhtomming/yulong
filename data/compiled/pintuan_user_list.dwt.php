@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="Generator" content="ECSHOP v2.7.3" />
 <meta charset="utf-8" />
-<title>{$page_title}</title>
+<title><?php echo $this->_var['page_title']; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="format-detection" content="telephone=no" />
-<link href="{$ectouch_themes}/images/touch-icon.png" rel="apple-touch-icon-precomposed" />
-<link href="{$ectouch_themes}/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="<?php echo $this->_var['ectouch_themes']; ?>/images/touch-icon.png" rel="apple-touch-icon-precomposed" />
+<link href="<?php echo $this->_var['ectouch_themes']; ?>/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <!--link href="pt_1.css?v=1.1.1" rel="stylesheet" type="text/css" /><PRINCE 120029121-->
 <!--link href="css/pt_2.css?v=1.1.1" rel="stylesheet" type="text/css" /><PRINCE 120029121-->
-<link rel="stylesheet" type="text/css" href="{$ectouch_themes}/css/style.css?v=1.1.1">
+<link rel="stylesheet" type="text/css" href="<?php echo $this->_var['ectouch_themes']; ?>/css/style.css?v=1.1.1">
 
 <script>
 /* PRINCE 120029121  */
@@ -27,7 +28,7 @@ function goBack(){
 <body>
 <div id="page" style="right: 0px; left: 0px; display: block;">
   <header id="header">
-       <div class="header_l header_return"> <a class="ico_10"  href="javascript:goBack()"> 返回 </a> </div><!--PRINCE 120029121 -->
+       <div class="header_l header_return"> <a class="ico_10"  href="javascript:goBack()"> 返回 </a> </div>
     <h2> 我的拼团 </h2>
   </header>
 
@@ -37,13 +38,13 @@ function goBack(){
 </div>
 
   <a href="javascript:;" class="get_more"></a>
-  <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+  <?php echo $this->fetch('library/page_footer.lbi'); ?>
 </div>
-<script type="text/javascript" src="{$ectouch_themes}/js/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->_var['ectouch_themes']; ?>/js/jquery.min.js"></script>
 <script src="js/mui.min.js"></script>
 <script type="text/javascript" src="js/lhf.js" charset="utf-8"></script>
 <script type="text/javascript">
-var max_page = 2 ; //'{$max_page}' ; //分页数量
+var max_page = 2 ; //'<?php echo $this->_var['max_page']; ?>' ; //分页数量
 jQuery(function($){
   getPageList();
   console.log('已经执行');

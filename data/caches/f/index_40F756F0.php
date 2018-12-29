@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:11:{i:0;s:50:"D:/phpStudy/WWW/yulong/themes/tianxin100/index.dwt";i:1;s:61:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/index_ad.lbi";i:2;s:63:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/index_icon.lbi";i:3;s:72:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_promotion.lbi";i:4;s:67:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_best.lbi";i:5;s:68:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_hotal.lbi";i:6;s:72:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_specialty.lbi";i:7;s:73:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_furnishing.lbi";i:8;s:68:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_house.lbi";i:9;s:63:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/footer_nav.lbi";i:10;s:75:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/top_tianxin100_guanzhu.lbi";}s:7:"expires";i:1546056347;s:8:"maketime";i:1546052747;}<!DOCTYPE html >
+<?php exit;?>a:3:{s:8:"template";a:11:{i:0;s:50:"D:/phpStudy/WWW/yulong/themes/tianxin100/index.dwt";i:1;s:61:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/index_ad.lbi";i:2;s:63:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/index_icon.lbi";i:3;s:72:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_promotion.lbi";i:4;s:67:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_best.lbi";i:5;s:68:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_hotal.lbi";i:6;s:72:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_specialty.lbi";i:7;s:73:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_furnishing.lbi";i:8;s:68:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/recommend_house.lbi";i:9;s:63:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/footer_nav.lbi";i:10;s:75:"D:/phpStudy/WWW/yulong/themes/tianxin100/library/top_tianxin100_guanzhu.lbi";}s:7:"expires";i:1545966397;s:8:"maketime";i:1545962797;}<!DOCTYPE html >
 <html>
 <head>
 <meta name="Generator" content="ECSHOP v2.7.3" />
@@ -56,7 +56,7 @@
 </div> 
 <div class="title"><a class="fr" href="pintuan.php">查看更多 > </a><i></i>拼团商品区</div>
 <div class="trem">
-  <a href="pintuan.php?act=view&act_id=5&scene_id=5639&u=5639" class="clearfix">
+  <a href="pintuan.php?act=view&act_id=5&scene_id=0&u=0" class="clearfix">
     <div class="img">
       <img src="images/201809/thumb_img/10_thumb_G_1537836230063.jpg">
       <span class="title" ></span >
@@ -78,7 +78,7 @@
 <div class="goodsbox hotal">
   <ul>
         <li class="clearfix hotel-list">
-        <a href="goods.php?id=16&u=5639&scene_id=5639" title="豪华亲子房">
+        <a href="goods.php?id=16" title="豪华亲子房">
         <img src="images/201809/thumb_img/16_thumb_G_1538008921159.jpg" alt="豪华亲子房">
         <div class="good-info">
             <h4>豪华亲子房</h4>
@@ -91,7 +91,7 @@
       </a>
     </li>
         <li class="clearfix hotel-list">
-        <a href="goods.php?id=15&u=5639&scene_id=5639" title="标准双床房">
+        <a href="goods.php?id=15" title="标准双床房">
         <img src="images/201809/thumb_img/15_thumb_G_1538008937327.jpg" alt="标准双床房">
         <div class="good-info">
             <h4>标准双床房</h4>
@@ -104,7 +104,7 @@
       </a>
     </li>
         <li class="clearfix hotel-list">
-        <a href="goods.php?id=14&u=5639&scene_id=5639" title="标准大床房">
+        <a href="goods.php?id=14" title="标准大床房">
         <img src="images/201809/thumb_img/14_thumb_G_1538008963882.jpg" alt="标准大床房">
         <div class="good-info">
             <h4>标准大床房</h4>
@@ -118,7 +118,7 @@
     </li>
       </ul>
       <div class="hai-bao">
-    <a href="goods.php?id=19&u=5639&scene_id=5639" title="海鸭蛋">
+    <a href="goods.php?id=19" title="海鸭蛋">
         <img src="images/201812/thumb_img/19_thumb_G_1544738682954.png" alt="海鸭蛋">
     </a>
   </div>
@@ -128,7 +128,7 @@
 <div class="goodsbox hotal">
   <ul>
         <li class="clearfix">
-        <a href="goods.php?id=11&u=5639&scene_id=5639" title="九叶青花椒粉">
+        <a href="goods.php?id=11" title="九叶青花椒粉">
         <img src="images/201809/thumb_img/11_thumb_G_1537836884330.jpg" alt="九叶青花椒粉">
         <div class="good-info">
           <h4>九叶青花椒粉</h4>
@@ -140,7 +140,7 @@
       </a>
     </li>
         <li class="clearfix">
-        <a href="goods.php?id=10&u=5639&scene_id=5639" title="北部湾红树林海鸭蛋">
+        <a href="goods.php?id=10" title="北部湾红树林海鸭蛋">
         <img src="images/201809/thumb_img/10_thumb_G_1537836230063.jpg" alt="北部湾红树林海鸭蛋">
         <div class="good-info">
           <h4>北部湾红树林海鸭蛋</h4>
@@ -152,7 +152,7 @@
       </a>
     </li>
         <li class="clearfix">
-        <a href="goods.php?id=9&u=5639&scene_id=5639" title="江津九叶青干花椒">
+        <a href="goods.php?id=9" title="江津九叶青干花椒">
         <img src="images/201809/thumb_img/9_thumb_G_1537811397490.jpg" alt="江津九叶青干花椒">
         <div class="good-info">
           <h4>江津九叶青干花椒</h4>
@@ -172,7 +172,7 @@
 <div class="goodsbox hotal">
   <ul>
         <li class="clearfix">
-        <a href="goods.php?id=17&u=5639&scene_id=5639" title="客舍酒店观海大床房">
+        <a href="goods.php?id=17" title="客舍酒店观海大床房">
         <img src="data/static/images/no_picture.gif" alt="客舍酒店观海大床房">
         <div class="good-info">
             <h4>客舍酒店观海大床房</h4>
@@ -184,7 +184,7 @@
       </a>
     </li>
         <li class="clearfix">
-        <a href="goods.php?id=13&u=5639&scene_id=5639" title="北海蓝色之都房型B">
+        <a href="goods.php?id=13" title="北海蓝色之都房型B">
         <img src="images/201809/thumb_img/13_thumb_G_1538004230757.jpg" alt="北海蓝色之都房型B">
         <div class="good-info">
             <h4>北海蓝色之都房型B</h4>
@@ -196,7 +196,7 @@
       </a>
     </li>
         <li class="clearfix">
-        <a href="goods.php?id=12&u=5639&scene_id=5639" title="北海蓝色之都小户型A">
+        <a href="goods.php?id=12" title="北海蓝色之都小户型A">
         <img src="images/201809/thumb_img/12_thumb_G_1538003435899.jpg" alt="北海蓝色之都小户型A">
         <div class="good-info">
             <h4>北海蓝色之都小户型A</h4>

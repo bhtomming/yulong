@@ -101,6 +101,12 @@ elseif ($_REQUEST['act'] == 'query')
     admin_priv('order_view');
 
     $order_list = order_list();
+    foreach ($order_list['orders'] as $index => $order){
+        $order_id = $order['order_id'];
+        $order['g_list'] = get_order_goods($order);
+        $order_list['orders'][$index] = $order;
+        //var_dump($order);exit;
+    }
 
     $smarty->assign('order_list',   $order_list['orders']);
     $smarty->assign('filter',       $order_list['filter']);
@@ -109,6 +115,7 @@ elseif ($_REQUEST['act'] == 'query')
     $sort_flag  = sort_flag($order_list['filter']);
     $smarty->assign($sort_flag['tag'], $sort_flag['img']);
     make_json_result($smarty->fetch('order_list.htm'), '', array('filter' => $order_list['filter'], 'page_count' => $order_list['page_count']));
+    //make_json_result($smarty->fetch('order_list.htm'), '', array('filter' => $order_list['filter'], 'page_count' => $order_list['page_count']));
 }
 
 /*------------------------------------------------------ */
@@ -1261,6 +1268,9 @@ elseif ($_REQUEST['act'] == 'step_post')
     /* 取得参数 step_act 添加还是编辑 */
     $step_act = isset($_REQUEST['step_act']) ? $_REQUEST['step_act'] : 'add';
 
+
+
+
     /* 插入订单信息 */
     if ('user' == $step)
     {
@@ -1344,9 +1354,8 @@ elseif ($_REQUEST['act'] == 'step_post')
               }
               else
               {
+                  //商品数量不足
                sys_msg($_LANG['goods_num_err']);
-
-
               }
             }
 
@@ -1361,10 +1370,14 @@ elseif ($_REQUEST['act'] == 'step_post')
             /* todo 记录日志 */
             $sn = $old_order['order_sn'];
             $new_order = order_info($order_id);
+            /*重新生成订单号*/
+            $new_order['order_sn'] = get_order_sn();
+
             if ($old_order['total_fee'] != $new_order['total_fee'])
             {
                 $sn .= ',' . sprintf($_LANG['order_amount_change'], $old_order['total_fee'], $new_order['total_fee']);
             }
+            update_order($new_order['order_id'],$new_order);
             admin_log($sn, 'edit', 'order');
         }
 

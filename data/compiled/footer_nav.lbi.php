@@ -12,6 +12,11 @@
 </footer>
 <!--script src="http://w1.ttkefu.com/k/?fid=7J9FHF6"  charset=utf-8></script-->
 <?php echo $this->smarty_insert_scripts(array('files'=>'ttkefu.js')); ?>
+<?php if ($this->_var['chat']): ?>
+<script>
+tana(2);
+</script>
+<?php endif; ?>
 
 
 

@@ -118,15 +118,8 @@ if ($_REQUEST['act'] == 'asynclist')
         $cache_id = sprintf('%X', crc32($cache_id));
     }
 
-     /*
-     * 异步显示商品列表 by wang
-     */
-    if ($_GET['act'] == 'asynclist')
-    {
-//        $asyn_last = intval($_POST['last']) + 1;
-//        $size = $_POST['amount'];
-//        $page = ($asyn_last > 0) ? ceil($asyn_last / $size) : 1;
-    }
+
+
     $goodslist = pintuan_list($size, $page);
     $sayList = array();
     if (is_array($goodslist)) {
@@ -150,44 +143,7 @@ if ($_REQUEST['act'] == 'asynclist')
     );
     echo json_encode($arrRespone) ;
     die;
-   //  print_r( $goodslist  );
-    echo json_encode($sayList);
-    exit;
-    /*
-     * 异步显示商品列表 by wang end
-     */
 
-    /* 如果没有缓存，生成缓存 */
-    if (!$smarty->is_cached('pintuan_list.dwt', $cache_id))
-    {
-        if ($count > 0)
-        {
-            /* 取得当前页的拼团活动 */
-            $pt_list = pintuan_list($size, $page);
-            $smarty->assign('pt_list',  $pt_list);
-
-            /* 设置分页链接 */
-            $pager = get_pager('pintuan.php', array('act' => 'list'), $count, $page, $size);
-            $smarty->assign('pager', $pager);
-        }
-
-        /* 模板赋值 */
-        $smarty->assign('cfg', $_CFG);
-        assign_template();
-        $position = assign_ur_here();
-        $smarty->assign('page_title', $position['title']);    // 页面标题
-        $smarty->assign('ur_here',    $position['ur_here']);  // 当前位置
-        $smarty->assign('categories', get_categories_tree()); // 分类树
-        $smarty->assign('helps',      get_shop_help());       // 网店帮助
-        $smarty->assign('top_goods',  get_top10());           // 销售排行
-        $smarty->assign('promotion_info', get_promotion_info());
-        $smarty->assign('feed_url',         ($_CFG['rewrite'] == 1) ? "feed-typepintuan.xml" : 'feed.php?type=pintuan'); // RSS URL
-
-        assign_dynamic('pintuan_list');
-    }
-
-    /* 显示模板 */
-    $smarty->display('pintuan_list.dwt', $cache_id);
 }
 
 
@@ -197,56 +153,6 @@ if ($_REQUEST['act'] == 'asynclist')
 /*------------------------------------------------------ */
 if ($_REQUEST['act'] == 'userlist')
 {    
-    
-    /* 取得拼团活动总数 */
-    $count = user_pintuan_count();
-    if ($count > 0)
-    {
-        /* 取得每页记录数 */
-        $size = isset($_CFG['page_size']) && intval($_CFG['page_size']) > 0 ? intval($_CFG['page_size']) : 10;
-
-        /* 计算总页数 */
-        $page_count = ceil($count / $size);
-
-        /* 取得当前页 */
-        $page = isset($_REQUEST['page']) && intval($_REQUEST['page']) > 0 ? intval($_REQUEST['page']) : 1;
-        $page = $page > $page_count ? $page_count : $page;
-
-        /* 缓存id：语言 - 每页记录数 - 当前页 */
-        $cache_id = $_CFG['lang'] . '-' . $size . '-' . $page;
-        $cache_id = sprintf('%X', crc32($cache_id));
-    }
-    else
-    {
-        /* 缓存id：语言 */
-        $cache_id = $_CFG['lang'];
-        $cache_id = sprintf('%X', crc32($cache_id));
-    }
-
-    /* 如果没有缓存，生成缓存 */
-    if (!$smarty->is_cached('pintuan_user_list.dwt', $cache_id))
-    {
-        if ($count > 0)
-        {
-            /* 取得当前页的拼团活动 */
-            $pt_user_list = pintuan_user_list($size, $page);
-            $smarty->assign('pt_user_list',  $pt_user_list);
-
-            /* 设置分页链接 */
-            $pager = get_pager('pintuan.php', array('act' => 'userlist'), $count, $page, $size);
-            $smarty->assign('pager', $pager);
-        }
-
-        /* 模板赋值 */
-        $smarty->assign('cfg', $_CFG);
-        assign_template();
-        $position = assign_ur_here();
-        $smarty->assign('page_title', $position['title']);    // 页面标题
-        $smarty->assign('ur_here',    $position['ur_here']);  // 当前位置
-
-
-        assign_dynamic('pintuan_user_list');
-    }
 
     /* 显示模板 */
     $smarty->display('pintuan_user_list.dwt', $cache_id);
@@ -257,6 +163,9 @@ if ($_REQUEST['act'] == 'userlist')
 /*------------------------------------------------------ */
 if ($_REQUEST['act'] == 'asyncuserlist')
 {
+    $a = array('a'=>1,'b'=>'fbald','list'=>array('a'=>2));
+    echo json_encode($a);
+    exit;
     /* 取得拼团活动总数 */
     $count = user_pintuan_count();
 
@@ -313,22 +222,7 @@ if ($_REQUEST['act'] == 'asyncuserlist')
 			}
 			$vo['url']='pintuan.php?act=pt_view&pt_id=' . $vo['pt_id'];
             $goodslist = $vo ;
-//            $sayList[] = array(
-//                'pro-inner' => '<div>
-//        <div class="proImg-wrap" > <a href="' . $vo['url'] . '" > <img src="' . $img_url . '" alt="' . $vo['goods_name'] . '" > </a>
-//		</div>
-//        <table><tr><td><div class="ptInfo-wrap"> <a href="' . $vo['url'] . '" >
-//          <div class="proTitle" style="font-size:12px;" >' . $vo['act_name'] . '</div>
-//          <div class="ptPrice">
-//            <em >' . $vo['need_people'] ."人团&nbsp;&nbsp;".$vo['price'].'/件</em>
-//          </div></a>
-//		</div></td></tr></table>
-//		</div>',
-//                'pro-pt_inner' => '
-//		  <div class="pt_status" >' . $status . '</div>
-//		  <div class="pt_actions" ><a href="user.php?act=order_detail&order_id=' . $vo['order_id'] . '">查看订单</a></div>
-//		  <div class="pt_actions" ><a href="' . $vo['url'] . '">拼团详情</a></div>	'
-//            );
+
         }
     }
     $arrRespone = array(
@@ -337,46 +231,9 @@ if ($_REQUEST['act'] == 'asyncuserlist')
         'max_page' => $max_page,
         'loadMore' => $page < $max_page ? true : false ,
     );
+
     echo json_encode($arrRespone) ;
     die;
-   //  print_r( $goodslist  );
-    echo json_encode($sayList);
-    exit;
-    /*
-     * 异步显示商品列表 by wang end
-     */
-
-    /* 如果没有缓存，生成缓存 */
-    if (!$smarty->is_cached('pintuan_user_list.dwt', $cache_id))
-    {
-        if ($count > 0)
-        {
-            /* 取得当前页的拼团活动 */
-            $pt_user_list = pintuan_user_list($size, $page);
-            $smarty->assign('pt_user_list',  $pt_user_list);
-            // print_r( $pt_user_list );
-            /* 设置分页链接 */
-            $pager = get_pager('pintuan.php', array('act' => 'userlist'), $count, $page, $size);
-            $smarty->assign('pager', $pager);
-        }
-
-        /* 模板赋值 */
-        $smarty->assign('cfg', $_CFG);
-        assign_template();
-        $position = assign_ur_here();
-        $smarty->assign('page_title', $position['title']);    // 页面标题
-        $smarty->assign('ur_here',    $position['ur_here']);  // 当前位置
-        $smarty->assign('categories', get_categories_tree()); // 分类树
-        $smarty->assign('helps',      get_shop_help());       // 网店帮助
-        $smarty->assign('top_goods',  get_top10());           // 销售排行
-        $smarty->assign('promotion_info', get_promotion_info());
-        $smarty->assign('feed_url',         ($_CFG['rewrite'] == 1) ? "feed-typepintuan.xml" : 'feed.php?type=pintuan'); // RSS URL
-
-        assign_dynamic('pintuan_user_list');
-    }
-
-    /* 显示模板 */
-    $smarty->display('pintuan_user_list.dwt', $cache_id);
 }
 
 /*------------------------------------------------------ */

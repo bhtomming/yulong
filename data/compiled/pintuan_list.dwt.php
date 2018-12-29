@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="Generator" content="ECSHOP v2.7.3" />
 <meta charset="utf-8" />
-<title>{$page_title}</title>
+<title><?php echo $this->_var['page_title']; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="format-detection" content="telephone=no" />
-<link href="{$ectouch_themes}/images/touch-icon.png" rel="apple-touch-icon-precomposed" />
-<link href="{$ectouch_themes}/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="<?php echo $this->_var['ectouch_themes']; ?>/images/touch-icon.png" rel="apple-touch-icon-precomposed" />
+<link href="<?php echo $this->_var['ectouch_themes']; ?>/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <!--link href="pt_1.css?v=1.1.1" rel="stylesheet" type="text/css" /><PRINCE 120029121-->
 <!--link href="css/pt_2.css?v=1.1.1" rel="stylesheet" type="text/css" /><PRINCE 120029121-->
-<link rel="stylesheet" type="text/css" href="{$ectouch_themes}/css/style.css?v=1.1.1">
+<link rel="stylesheet" type="text/css" href="<?php echo $this->_var['ectouch_themes']; ?>/css/style.css?v=1.1.1">
 
 </head>
 <body>
 <div id="page">
   <header id="header">
-   <img src="{$ectouch_themes}/images/pintuan.jpg" />
+   <img src="<?php echo $this->_var['ectouch_themes']; ?>/images/pintuan.jpg" />
   </header>
 
-<!-- 搜索 start  -->
+
 <div id="search">
   <span>在 商 城 内 搜 索</span>
   <form  method="post" action="search.php" name="searchForm" id="searchForm_id">
@@ -28,13 +29,13 @@
     <input type="submit" name="" class="btn" value=""  onclick="return check('keywordfoot')" />
   </form>
 </div>
-<!-- 搜索 end  -->
+
 
 <div class="trem">
   
 </div>
 <div class="bottom-log">
-    <img src="{$ectouch_themes}/images/bottom-logo.png" />
+    <img src="<?php echo $this->_var['ectouch_themes']; ?>/images/bottom-logo.png" />
     <p>玉泷商城期待您的加入!</p>
 </div>
 <!-- 
@@ -50,15 +51,15 @@
   
   <a href="javascript:;" class="get_more"></a> 
   <br /><br /><br />
-   <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+   <?php echo $this->fetch('library/page_footer.lbi'); ?>
     </div>
 </div>
-<script type="text/javascript" src="{$ectouch_themes}/js/jquery.min.js"></script> 
-<script type="text/javascript" src="{$ectouch_themes}/js/ectouch.js"></script> 
+<script type="text/javascript" src="<?php echo $this->_var['ectouch_themes']; ?>/js/jquery.min.js"></script> 
+<script type="text/javascript" src="<?php echo $this->_var['ectouch_themes']; ?>/js/ectouch.js"></script> 
 <script src="js/mui.min.js"></script>
 <script type="text/javascript" src="js/lhf.js" charset="utf-8"></script>
 <script type="text/javascript">
-var max_page = 2 ; //'{$max_page}' ; //分页数量
+var max_page = 2 ; //'<?php echo $this->_var['max_page']; ?>' ; //分页数量
 jQuery(function($){
 
   $(window).scroll(function () {

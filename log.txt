@@ -60554,3 +60554,766 @@
     [mmaain] => www.yulong.com
 )
 
+2018-12-22 14:00:52  =>  $_REQUEST => Array
+(
+)
+
+2018-12-22 14:00:52  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 5639
+    [user_name] => 13517798466
+    [email] => 
+    [user_rank] => 101
+    [discount] => 1
+    [login_fail] => 0
+    [last_time] => 1545090398
+    [last_ip] => 127.0.0.1
+)
+
+2018-12-22 14:00:52  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [display] => grid
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 19,14,15,11,18,9,17,16
+        )
+
+)
+
+2018-12-22 15:29:03  =>  $_REQUEST => Array
+(
+)
+
+2018-12-22 15:29:03  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1545434940
+    [last_ip] => 127.0.0.1
+    [flow_type] => 0
+    [extension_code] => pintuan
+    [extension_id] => 5
+    [pintuan_level] => 3
+    [pintuan_price] => 25
+    [pintuan_pt_id] => 0
+    [pintuan_nickname] => 13517798466
+    [pintuan_headimgurl] => 
+    [pintuan_time_limit] => 24
+    [pintuan_act_user] => 5639
+    [flow_order] => Array
+        (
+            [extension_code] => 
+        )
+
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2018-12-22 15:29:03  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [display] => grid
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 19,14,15,11,18,9,17,16
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => 124439ba07af04277559a519122ed77ea1da298a
+    [kuse] => 24446
+    [ECSCP_ID] => 4c259306a86e4749ba2f89a051e6d96dee02512d
+    [ecshop_affiliate_uid] => 5639
+)
+
+2018-12-22 16:09:36  =>  $_REQUEST => Array
+(
+)
+
+2018-12-22 16:09:36  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1545437353
+    [last_ip] => 127.0.0.1
+    [flow_type] => 0
+    [extension_code] => pintuan
+    [extension_id] => 5
+    [pintuan_level] => 3
+    [pintuan_price] => 25
+    [pintuan_pt_id] => 0
+    [pintuan_nickname] => 13517798466
+    [pintuan_headimgurl] => 
+    [pintuan_time_limit] => 24
+    [pintuan_act_user] => 5639
+    [flow_order] => Array
+        (
+            [extension_code] => 
+        )
+
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2018-12-22 16:09:36  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [display] => grid
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 19,14,15,11,18,9,17,16
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => 124439ba07af04277559a519122ed77ea1da298a
+    [kuse] => 24446
+    [ECSCP_ID] => 4c259306a86e4749ba2f89a051e6d96dee02512d
+    [ecshop_affiliate_uid] => 5639
+    [mmaain] => www.yulong.com
+)
+
+2018-12-22 16:10:15  =>  $_REQUEST => Array
+(
+)
+
+2018-12-22 16:10:15  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1545437385
+    [last_ip] => 127.0.0.1
+    [flow_type] => 0
+    [extension_code] => pintuan
+    [extension_id] => 5
+    [pintuan_level] => 3
+    [pintuan_price] => 25
+    [pintuan_pt_id] => 0
+    [pintuan_nickname] => 13517798466
+    [pintuan_headimgurl] => 
+    [pintuan_time_limit] => 24
+    [pintuan_act_user] => 5639
+    [flow_order] => Array
+        (
+            [extension_code] => 
+        )
+
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2018-12-22 16:10:15  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [display] => grid
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 16,19,14,15,11,18,9,17
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => 124439ba07af04277559a519122ed77ea1da298a
+    [kuse] => 24446
+    [ECSCP_ID] => 4c259306a86e4749ba2f89a051e6d96dee02512d
+    [ecshop_affiliate_uid] => 5639
+    [mmaain] => www.yulong.com
+)
+
+2018-12-22 16:15:31  =>  $_REQUEST => Array
+(
+)
+
+2018-12-22 16:15:31  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1545437669
+    [last_ip] => 127.0.0.1
+    [flow_type] => 0
+    [extension_code] => pintuan
+    [extension_id] => 5
+    [pintuan_level] => 3
+    [pintuan_price] => 25
+    [pintuan_pt_id] => 0
+    [pintuan_nickname] => 13517798466
+    [pintuan_headimgurl] => 
+    [pintuan_time_limit] => 24
+    [pintuan_act_user] => 5639
+    [flow_order] => Array
+        (
+            [extension_code] => 
+        )
+
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2018-12-22 16:15:31  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [display] => grid
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 16,19,14,15,11,18,9,17
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => 124439ba07af04277559a519122ed77ea1da298a
+    [kuse] => 24446
+    [ECSCP_ID] => 4c259306a86e4749ba2f89a051e6d96dee02512d
+    [ecshop_affiliate_uid] => 5639
+)
+
+2018-12-22 16:17:40  =>  $_REQUEST => Array
+(
+)
+
+2018-12-22 16:17:40  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1545437748
+    [last_ip] => 127.0.0.1
+    [flow_type] => 0
+    [extension_code] => pintuan
+    [extension_id] => 5
+    [pintuan_level] => 3
+    [pintuan_price] => 25
+    [pintuan_pt_id] => 0
+    [pintuan_nickname] => 13517798466
+    [pintuan_headimgurl] => 
+    [pintuan_time_limit] => 24
+    [pintuan_act_user] => 5639
+    [flow_order] => Array
+        (
+            [extension_code] => 
+        )
+
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2018-12-22 16:17:40  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [display] => grid
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 16,19,14,15,11,18,9,17
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => 124439ba07af04277559a519122ed77ea1da298a
+    [kuse] => 24446
+    [ECSCP_ID] => 4c259306a86e4749ba2f89a051e6d96dee02512d
+    [ecshop_affiliate_uid] => 5639
+    [mmaain] => www.yulong.com
+)
+
+2018-12-22 16:17:41  =>  $_REQUEST => Array
+(
+)
+
+2018-12-22 16:17:41  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1545437860
+    [last_ip] => 127.0.0.1
+    [flow_type] => 0
+    [extension_code] => pintuan
+    [extension_id] => 5
+    [pintuan_level] => 3
+    [pintuan_price] => 25
+    [pintuan_pt_id] => 0
+    [pintuan_nickname] => 13517798466
+    [pintuan_headimgurl] => 
+    [pintuan_time_limit] => 24
+    [pintuan_act_user] => 5639
+    [flow_order] => Array
+        (
+            [extension_code] => 
+        )
+
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2018-12-22 16:17:41  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [display] => grid
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 16,19,14,15,11,18,9,17
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => 124439ba07af04277559a519122ed77ea1da298a
+    [kuse] => 24446
+    [ECSCP_ID] => 4c259306a86e4749ba2f89a051e6d96dee02512d
+    [ecshop_affiliate_uid] => 5639
+    [mmaain] => www.yulong.com
+)
+
+2018-12-22 16:47:07  =>  $_REQUEST => Array
+(
+)
+
+2018-12-22 16:47:07  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1545439362
+    [last_ip] => 127.0.0.1
+    [flow_type] => 0
+    [extension_code] => pintuan
+    [extension_id] => 5
+    [pintuan_level] => 3
+    [pintuan_price] => 25
+    [pintuan_pt_id] => 0
+    [pintuan_nickname] => 13517798466
+    [pintuan_headimgurl] => 
+    [pintuan_time_limit] => 24
+    [pintuan_act_user] => 5639
+    [flow_order] => Array
+        (
+            [extension_code] => 
+        )
+
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2018-12-22 16:47:07  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [display] => grid
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 16,19,14,15,11,18,9,17
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => 124439ba07af04277559a519122ed77ea1da298a
+    [kuse] => 24446
+    [ECSCP_ID] => 4c259306a86e4749ba2f89a051e6d96dee02512d
+    [ecshop_affiliate_uid] => 5639
+    [mmaain] => www.yulong.com
+)
+
+2018-12-22 17:05:59  =>  $_REQUEST => Array
+(
+)
+
+2018-12-22 17:05:59  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1545440727
+    [last_ip] => 127.0.0.1
+    [flow_type] => 0
+    [extension_code] => pintuan
+    [extension_id] => 5
+    [pintuan_level] => 3
+    [pintuan_price] => 25
+    [pintuan_pt_id] => 0
+    [pintuan_nickname] => 13517798466
+    [pintuan_headimgurl] => 
+    [pintuan_time_limit] => 24
+    [pintuan_act_user] => 5639
+    [flow_order] => Array
+        (
+            [extension_code] => 
+        )
+
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2018-12-22 17:05:59  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [display] => grid
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 16,19,14,15,11,18,9,17
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => 124439ba07af04277559a519122ed77ea1da298a
+    [kuse] => 24446
+    [ECSCP_ID] => 4c259306a86e4749ba2f89a051e6d96dee02512d
+    [ecshop_affiliate_uid] => 5639
+    [mmaain] => www.yulong.com
+)
+
+2018-12-22 17:06:47  =>  $_REQUEST => Array
+(
+)
+
+2018-12-22 17:06:47  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1545440800
+    [last_ip] => 127.0.0.1
+    [flow_type] => 0
+    [extension_code] => pintuan
+    [extension_id] => 5
+    [pintuan_level] => 3
+    [pintuan_price] => 25
+    [pintuan_pt_id] => 0
+    [pintuan_nickname] => 13517798466
+    [pintuan_headimgurl] => 
+    [pintuan_time_limit] => 24
+    [pintuan_act_user] => 5639
+    [flow_order] => Array
+        (
+            [extension_code] => 
+        )
+
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2018-12-22 17:06:47  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [display] => grid
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 16,19,14,15,11,18,9,17
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => 124439ba07af04277559a519122ed77ea1da298a
+    [kuse] => 24446
+    [ECSCP_ID] => 4c259306a86e4749ba2f89a051e6d96dee02512d
+    [ecshop_affiliate_uid] => 5639
+    [mmaain] => www.yulong.com
+)
+
+2018-12-22 17:54:03  =>  $_REQUEST => Array
+(
+)
+
+2018-12-22 17:54:03  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1545443594
+    [last_ip] => 127.0.0.1
+    [flow_type] => 0
+    [extension_code] => pintuan
+    [extension_id] => 5
+    [pintuan_level] => 3
+    [pintuan_price] => 25
+    [pintuan_pt_id] => 0
+    [pintuan_nickname] => 13517798466
+    [pintuan_headimgurl] => 
+    [pintuan_time_limit] => 24
+    [pintuan_act_user] => 5639
+    [flow_order] => Array
+        (
+            [extension_code] => 
+        )
+
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2018-12-22 17:54:03  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [display] => grid
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 16,19,14,15,11,18,9,17
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => 124439ba07af04277559a519122ed77ea1da298a
+    [kuse] => 24446
+    [ECSCP_ID] => 4c259306a86e4749ba2f89a051e6d96dee02512d
+    [ecshop_affiliate_uid] => 5639
+    [mmaain] => www.yulong.com
+)
+
+2018-12-28 10:06:37  =>  $_REQUEST => Array
+(
+)
+
+2018-12-28 10:06:37  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 0
+    [user_name] => 
+    [email] => 
+    [user_rank] => 0
+    [discount] => 1
+    [login_fail] => 0
+)
+
+2018-12-28 10:06:37  =>  $_COOKIE => Array
+(
+)
+
+2018-12-29 10:33:26  =>  $_REQUEST => Array
+(
+)
+
+2018-12-29 10:33:26  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 5639
+    [user_name] => 13517798466
+    [email] => 
+    [user_rank] => 101
+    [discount] => 1
+    [login_fail] => 0
+    [last_time] => 1545444294
+    [last_ip] => 127.0.0.1
+)
+
+2018-12-29 10:33:26  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 16,19,14,15,11,18,9,17
+        )
+
+)
+
+2018-12-29 10:34:02  =>  $_REQUEST => Array
+(
+)
+
+2018-12-29 10:34:02  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546022006
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2018-12-29 10:34:02  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 16,19,14,15,11,18,9,17
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => d44227ee2434cb158c8093334a2cc8a3e0da32ae
+    [kuse] => 24446
+    [ECSCP_ID] => 57fa4e238e3394f9f92a615012b9d710e12b3220
+)
+
+2018-12-29 11:05:15  =>  $_REQUEST => Array
+(
+    [chat] => 1
+)
+
+2018-12-29 11:05:15  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 5637
+    [user_name] => 18577906076
+    [email] => 212313qq.com
+    [user_rank] => 101
+    [discount] => 1
+    [login_fail] => 0
+    [last_time] => 1545960391
+    [last_ip] => 127.0.0.1
+)
+
+2018-12-29 11:05:15  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411507959
+    [ECS] => Array
+        (
+            [history] => 11,9,17,16
+            [username] => 18577906076
+            [user_id] => 5637
+            [password] => 83ad2fa10f050e33982660e753c5e014
+        )
+
+)
+
+2018-12-29 11:05:41  =>  $_REQUEST => Array
+(
+)
+
+2018-12-29 11:05:41  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 5639
+    [user_name] => 13517798466
+    [email] => 
+    [user_rank] => 101
+    [discount] => 1
+    [login_fail] => 0
+    [last_time] => 1546022059
+    [last_ip] => 127.0.0.1
+)
+
+2018-12-29 11:05:41  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 19,16,14,15,11,18,9,17
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => d44227ee2434cb158c8093334a2cc8a3e0da32ae
+    [kuse] => 24446
+    [ECSCP_ID] => 57fa4e238e3394f9f92a615012b9d710e12b3220
+    [ecshop_affiliate_uid] => 5639
+)
+
+2018-12-29 11:05:47  =>  $_REQUEST => Array
+(
+)
+
+2018-12-29 11:05:47  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546023941
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2018-12-29 11:05:47  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 19,16,14,15,11,18,9,17
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => d44227ee2434cb158c8093334a2cc8a3e0da32ae
+    [kuse] => 24446
+    [ECSCP_ID] => 57fa4e238e3394f9f92a615012b9d710e12b3220
+    [ecshop_affiliate_uid] => 5639
+    [mmaain] => www.yulong.com
+)
+
