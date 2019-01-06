@@ -7,8 +7,8 @@ require(ROOT_PATH . 'include/lib_weixintong.php');
 	$wxid=$GLOBALS['db']->GetOne($sql_two);
 	$w_title="您有新朋友加入了，赶紧看看吧";
 	$w_description="新朋友的消费您都将有积分哦";
-    $w_url="http://www.bhyulong.cn/distribute.php";
-	$w_picurl="";
+    $w_url="http://bhyulong.cn/distribute.php";
+	$w_picurl="http://bhyulong.cn/images/bh_dichan_icon.png";
 	$post_msg = '{
        "touser":"'.$wxid.'",
        "msgtype":"news",

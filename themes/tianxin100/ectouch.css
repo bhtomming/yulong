@@ -930,9 +930,9 @@ Template Type: type_0
 	.itemlist{ padding:0.8rem 0;    border:1px solid #ddd; background:#FFF}
 	.itemlist li{ padding:0.9rem  ;position:relative; border-bottom:1px solid #ddd  }
 	.itemlist li h4{ padding-right:2rem; height:2.2rem; font-size: 0.8rem; line-height:1.1rem; overflow:hidden}
-	.itemlist li .b{   line-height:2.2rem; }
+	.itemlist li .b{   line-height:2.2rem; position: relative; }
 	.itemlist li .b .cha{ 
-	width:1.5rem; height:1.5rem; display:block; background-color:#CCC; position:absolute; right:0.9rem;top:0.9rem;
+	width:1.5rem; height:1.5rem; display:block; background-color:#CCC; position:absolute; right: 1.5rem;top: 0.2rem;
 	-moz-border-radius: 0.75rem;      /* Gecko browsers */
 	-webkit-border-radius:  0.75rem;   /* Webkit browsers */
 	border-radius: 0.75rem;

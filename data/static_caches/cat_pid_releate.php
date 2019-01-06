@@ -11,7 +11,7 @@ $data = array (
     'grade' => '0',
     'sort_order' => '1',
     'has_children' => '0',
-    'goods_num' => '3',
+    'goods_num' => '2',
   ),
   1 => 
   array (
@@ -24,7 +24,7 @@ $data = array (
     'grade' => '0',
     'sort_order' => '2',
     'has_children' => '0',
-    'goods_num' => '3',
+    'goods_num' => '4',
   ),
   2 => 
   array (

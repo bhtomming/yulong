@@ -115,7 +115,7 @@ Message.show = function()
 {
   try
   {
-    Message.controlSound('msgBeep');
+      Message.controlSound('msgBeep');
     document.getElementById(Message.elem).style.visibility = "visible"
     document.getElementById(Message.elem).style.display = "block"
 

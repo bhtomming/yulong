@@ -60,6 +60,7 @@ elseif ($_REQUEST['act'] == 'list')
     /* 检查权限 */
     admin_priv('order_view');
 
+
     /* 模板赋值 */
     $smarty->assign('ur_here', $_LANG['02_order_list']);
     $smarty->assign('action_link', array('href' => 'order.php?act=order_query', 'text' => $_LANG['03_order_query']));
@@ -73,13 +74,45 @@ elseif ($_REQUEST['act'] == 'list')
 
     $order_list = order_list();
 
+    $hotelAdmin = is_hotel_admin(); //酒店管理员的订单显示
+    $hotelRecord = 0; //酒店订单记录
+    $pageCounter = 1; //酒店页面
+
+
+
     foreach ($order_list['orders'] as $index => $order){
         $order_id = $order['order_id'];
         $order['g_list'] = get_order_goods($order);
+        //酒店管理员数据处理
+        if($hotelAdmin){
+            foreach ($order['g_list'] as $i => $goods){
+                foreach ($goods as $good){
+                    //默认不是酒店订单
+                    $hotelGoods = false;
+                    //目前酒店分类ID是2,这里处理非酒店订单
+                    if(isset($good['cat_id']) && $good['cat_id'] != 2 ) {
+                        unset($order);
+                        unset($order_id);
+                        unset($order_list['orders'][$index]);
+                        continue;
+                    }
+                    //酒店订单处理
+                    if(isset($good['cat_id']) && $good['cat_id'] == 2){
+                        $hotelGoods = true;
+                        $hotelRecord++;
+                        echo "计数".$hotelRecord;
+                        $order_list['record_count'] = $hotelRecord;
+                        $order_list['page_count'] = ceil($hotelRecord /50);
+                    }
+
+                }
+            }
+        }
         $order_list['orders'][$index] = $order;
-        //var_dump($order);exit;
     }
-    //var_dump($order_list['orders']);exit;
+
+    //var_dump($order_list['record_count']);exit;
+
     $smarty->assign('order_list',   $order_list['orders']);
     //$smarty->assign('goods_list',   $goods_list);
     $smarty->assign('filter',       $order_list['filter']);
@@ -5899,7 +5932,7 @@ function get_order_goods($order)
 {
     $goods_list = array();
     $goods_attr = array();
-    $sql = "SELECT o.*,g.goods_thumb, g.suppliers_id AS suppliers_id,IF(o.product_id > 0, p.product_number, g.goods_number) AS storage, o.goods_attr, IFNULL(b.brand_name, '') AS brand_name, p.product_sn " .
+    $sql = "SELECT o.*,g.cat_id,g.goods_thumb, g.suppliers_id AS suppliers_id,IF(o.product_id > 0, p.product_number, g.goods_number) AS storage, o.goods_attr, IFNULL(b.brand_name, '') AS brand_name, p.product_sn " .
             "FROM " . $GLOBALS['ecs']->table('order_goods') . " AS o ".
             "LEFT JOIN " . $GLOBALS['ecs']->table('products') . " AS p ON o.product_id = p.product_id " .
             "LEFT JOIN " . $GLOBALS['ecs']->table('goods') . " AS g ON o.goods_id = g.goods_id " .
@@ -7108,6 +7141,20 @@ function get_payment($code)
     }
 
     return $payment;
+}
+
+/**
+ * 检查当前管理用户是否是酒店管理员
+*/
+function is_hotel_admin(){
+    $adminId = $_SESSION['admin_id'];
+    $sql = 'SELECT role_id FROM ' . $GLOBALS['ecs']->table('admin_user').
+        " WHERE user_id = '$adminId'";
+    $roleId = $GLOBALS['db']->getOne($sql);
+    if($roleId == '4'){ //4是目前的酒店管理员角色ID
+        return true;
+    }
+    return false;
 }
 
 

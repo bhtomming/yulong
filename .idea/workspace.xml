@@ -2,24 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c739815-e528-4f20-8703-760855abd486" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/themes/tianxin100/images/pintuan.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/voide/dingdang.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/js/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/caches/a/index_21621178.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/caches/a/index_21621178.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/compiled/footer_nav.lbi.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/compiled/footer_nav.lbi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/compiled/recommend_furnishing.lbi.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/compiled/recommend_furnishing.lbi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/modules/payment/WxPayPubHelper/WxPayPubHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/modules/payment/WxPayPubHelper/WxPayPubHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/modules/payment/wx_new_jspay.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/modules/payment/wx_new_jspay.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/templates/pagefooter.htm" beforeDir="false" afterPath="$PROJECT_DIR$/admin/templates/pagefooter.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/templates/wxch_autoreg.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/templates/wxch_autoreg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/templates/wxch_pagefooter.htm" beforeDir="false" afterPath="$PROJECT_DIR$/admin/templates/wxch_pagefooter.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/caches/1/pintuan_goods_998D06F5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/caches/4/goods_494EB0ED.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/caches/5/pintuan_goods_5C2A387B.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/caches/7/pintuan_user_list_8E8CD29.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/caches/9/pintuan_goods_A8651C68.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/caches/9/pintuan_list_C5A54C97.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/caches/a/index_21621178.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/caches/e/goods_DAB6442B.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/caches/f/index_40F756F0.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/admin/article_info.htm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/admin/article_list.htm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/admin/delivery_list.htm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/admin/group_buy_info.htm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/admin/group_buy_list.htm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/admin/order_step.htm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/admin/pagefooter.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/compiled/admin/pagefooter.htm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/admin/pintuan_info.htm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/admin/pintuan_view.htm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/admin/shop_config.htm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/admin/shop_config_form.htm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/admin/wxch_keywords.html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/admin/wxch_pagefooter.htm.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/compiled/admin/wxch_pagefooter.htm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/admin/wxch_wxewm.html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/article.dwt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/comments_list.lbi.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/compiled/comments_list.lbi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/consignee.lbi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/distribute.dwt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/ectouch.dwt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/footer_nav.lbi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/goods.dwt.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/compiled/goods.dwt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/goods_list_search.lbi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/index.dwt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/index_ad.lbi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/index_icon.lbi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/message.dwt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/order_total.lbi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/page_footer.lbi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/pages.lbi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/pintuan_goods.dwt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/pintuan_list.dwt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/pintuan_user_list.dwt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/recommend_best.lbi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/recommend_furnishing.lbi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/recommend_hotal.lbi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/recommend_house.lbi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/recommend_new.lbi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/recommend_promotion.lbi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/recommend_specialty.lbi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/search.dwt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/top_tianxin100_guanzhu.lbi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/user_clips.dwt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/user_transaction.dwt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/compiled/user_transaction1.dwt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/static_caches/api_str.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/static_caches/cat_option_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/static_caches/cat_option_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/static_caches/cat_pid_releate.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/static_caches/cat_pid_releate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/static_caches/shop_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/static_caches/shop_config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lang/zh_cn/admin/priv_action.php" beforeDir="false" afterPath="$PROJECT_DIR$/lang/zh_cn/admin/priv_action.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pintuan.php" beforeDir="false" afterPath="$PROJECT_DIR$/pintuan.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/tianxin100/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/tianxin100/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/tianxin100/library/footer_nav.lbi" beforeDir="false" afterPath="$PROJECT_DIR$/themes/tianxin100/library/footer_nav.lbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/tianxin100/pintuan_goods.dwt" beforeDir="false" afterPath="$PROJECT_DIR$/themes/tianxin100/pintuan_goods.dwt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/tianxin100/pintuan_list.dwt" beforeDir="false" afterPath="$PROJECT_DIR$/themes/tianxin100/pintuan_list.dwt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/tianxin100/pintuan_user_list.dwt" beforeDir="false" afterPath="$PROJECT_DIR$/themes/tianxin100/pintuan_user_list.dwt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/tianxin100/ectouch.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/tianxin100/ectouch.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxch_share.php" beforeDir="false" afterPath="$PROJECT_DIR$/wxch_share.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +82,7 @@
     <session id="369217354">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="26" />
+          <entry key="project.closed" value="29" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="7" />
@@ -39,26 +90,27 @@
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.8" value="5" />
           <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="27" />
+          <entry key="project.opened" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="11" />
-          <entry key="dwt" value="30" />
+          <entry key="css" value="18" />
+          <entry key="dwt" value="31" />
           <entry key="gif" value="1" />
           <entry key="gitingore" value="1" />
-          <entry key="htm" value="12" />
+          <entry key="htm" value="16" />
           <entry key="html" value="10" />
           <entry key="jpg" value="148" />
-          <entry key="js" value="20" />
+          <entry key="js" value="24" />
           <entry key="json" value="2" />
           <entry key="lbi" value="65" />
           <entry key="md" value="14" />
-          <entry key="php" value="355" />
+          <entry key="php" value="364" />
           <entry key="php20160201" value="1" />
           <entry key="png" value="7" />
           <entry key="ts" value="2" />
@@ -67,38 +119,38 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="11" />
-          <entry key="HTML" value="22" />
+          <entry key="CSS" value="18" />
+          <entry key="HTML" value="26" />
           <entry key="Image" value="156" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="20" />
+          <entry key="JavaScript" value="24" />
           <entry key="Markdown" value="14" />
-          <entry key="PHP" value="355" />
-          <entry key="PLAIN_TEXT" value="112" />
+          <entry key="PHP" value="364" />
+          <entry key="PLAIN_TEXT" value="113" />
           <entry key="TypeScript" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="3208" />
+          <entry key="css" value="3224" />
           <entry key="dwt" value="662" />
           <entry key="gitingore" value="36" />
           <entry key="htm" value="517" />
           <entry key="html" value="10" />
-          <entry key="js" value="138" />
+          <entry key="js" value="147" />
           <entry key="lbi" value="596" />
-          <entry key="md" value="786" />
-          <entry key="php" value="9545" />
+          <entry key="md" value="848" />
+          <entry key="php" value="10508" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="3208" />
+          <entry key="CSS" value="3224" />
           <entry key="HTML" value="527" />
-          <entry key="JavaScript" value="138" />
-          <entry key="Markdown" value="786" />
-          <entry key="PHP" value="9545" />
+          <entry key="JavaScript" value="147" />
+          <entry key="Markdown" value="848" />
+          <entry key="PHP" value="10508" />
           <entry key="PLAIN_TEXT" value="1297" />
         </counts>
       </usages-collector>
@@ -107,79 +159,52 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/modules/payment/wx_new_jspay.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="641">
-              <caret line="113" column="48" selection-start-line="113" selection-start-column="48" selection-end-line="113" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="286">
-                <caret line="37" column="17" lean-forward="true" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+              <first_editor relative-caret-position="520">
+                <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/modules/payment/WxPayPubHelper/WxPayPubHelper.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="368" column="5" selection-start-line="368" selection-start-column="5" selection-end-line="368" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="106" column="10" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/tianxin100/library/footer_nav.lbi">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wx_native_callback.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="41" column="13" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flow.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="2022" column="34" selection-start-line="2022" selection-start-column="34" selection-end-line="2022" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/lib_payment.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="147" column="44" selection-start-line="147" selection-start-column="44" selection-end-line="147" selection-end-column="44" />
+            <state relative-caret-position="679">
+              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/templates/order_list.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="83" column="26" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/templates/page.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/js/listtable.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7761">
+              <caret line="199" column="34" selection-start-line="199" selection-start-column="25" selection-end-line="199" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -195,20 +220,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$old_order</find>
-      <find>$old_order =</find>
-      <find>prepay_id</find>
-      <find>total_fee</find>
-      <find>createXml</find>
-      <find>mchid</find>
-      <find>unifiedOrder</find>
-      <find>WxPayUnifiedOrder</find>
-      <find>postXmlCurl</find>
-      <find>arrayToUdXml</find>
-      <find>postXml</find>
-      <find>getSign</find>
-      <find>don</find>
-      <find>appid</find>
       <find>order_info</find>
       <find>ok</find>
       <find>wxpay</find>
@@ -225,6 +236,20 @@
       <find>order_sn</find>
       <find>log</find>
       <find>edit_goods</find>
+      <find>cart</find>
+      <find>jianju</find>
+      <find>cha</find>
+      <find>.cha</find>
+      <find>img</find>
+      <find>ectouch.css</find>
+      <find>.ico8</find>
+      <find>ico_08</find>
+      <find>.b</find>
+      <find>Message.elem</find>
+      <find>controlSound</find>
+      <find>提示</find>
+      <find>edit</find>
+      <find>'list</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -233,10 +258,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/weixin/open-api.php" />
-        <option value="$PROJECT_DIR$/themes/tianxin100/library/index_icon.lbi" />
-        <option value="$PROJECT_DIR$/../m.bhhmzx.com/zt/hmqg/sdkh.html" />
-        <option value="$PROJECT_DIR$/../m.bhhmzx.com/zt/hmqg/index.php" />
         <option value="$PROJECT_DIR$/../www.bhhmmr.com/zt/hmqg/index.php" />
         <option value="$PROJECT_DIR$/../www.bhhmmr.com/zt/hmqg/sdkh.html" />
         <option value="$PROJECT_DIR$/include/init.php" />
@@ -280,10 +301,14 @@
         <option value="$PROJECT_DIR$/flow.php" />
         <option value="$PROJECT_DIR$/include/modules/payment/wx_new_jspay.php" />
         <option value="$PROJECT_DIR$/include/modules/payment/WxPayPubHelper/WxPayPubHelper.php" />
-        <option value="$PROJECT_DIR$/admin/order.php" />
         <option value="$PROJECT_DIR$/themes/tianxin100/library/footer_nav.lbi" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/themes/tianxin100/ectouch.css" />
+        <option value="$PROJECT_DIR$/lang/zh_cn/admin/priv_action.php" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/admin/js/common.js" />
+        <option value="$PROJECT_DIR$/admin/templates/pagefooter.htm" />
+        <option value="$PROJECT_DIR$/admin/order.php" />
       </list>
     </option>
   </component>
@@ -293,7 +318,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="154" />
     <option name="y" value="104" />
     <option name="width" value="1400" />
@@ -317,18 +342,42 @@
             <path>
               <item name="yulong" type="b2602c69:ProjectViewProjectNode" />
               <item name="yulong" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yulong" type="b2602c69:ProjectViewProjectNode" />
               <item name="yulong" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yulong" type="b2602c69:ProjectViewProjectNode" />
               <item name="yulong" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="tianxin100" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yulong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yulong" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yulong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yulong" type="462c0819:PsiDirectoryNode" />
+              <item name="lang" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yulong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yulong" type="462c0819:PsiDirectoryNode" />
+              <item name="lang" type="462c0819:PsiDirectoryNode" />
+              <item name="zh_cn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yulong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yulong" type="462c0819:PsiDirectoryNode" />
+              <item name="lang" type="462c0819:PsiDirectoryNode" />
+              <item name="zh_cn" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -345,11 +394,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\phpStudy\WWW\yulong\data\voide" />
       <recent name="D:\phpStudy\WWW\yulong\themes\tianxin100\images" />
       <recent name="D:\phpStudy\WWW\yulong\themes\tianxin100\js" />
       <recent name="D:\phpStudy\WWW\yulong\themes\tianxin100\css" />
       <recent name="D:\phpStudy\WWW\yulong\data\static\js" />
-      <recent name="D:\phpStudy\WWW\yulong\data\afficheimg" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -400,18 +449,21 @@
       <workItem from="1545870471428" duration="46000" />
       <workItem from="1545890566216" duration="9808000" />
       <workItem from="1545957457158" duration="26425000" />
-      <workItem from="1546043085515" duration="8045000" />
+      <workItem from="1546043085515" duration="8213000" />
+      <workItem from="1546505946729" duration="2116000" />
+      <workItem from="1546673797730" duration="7846000" />
+      <workItem from="1546735218279" duration="9646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="392716000" />
+    <option name="totallyTimeSpent" value="412492000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18230277" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18869936" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -460,77 +512,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/themes/tianxin100/library/order_total.lbi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/lib_uc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/website/config/renn_config1.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/lib_time.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-287">
-          <caret line="168" column="9" selection-start-line="168" selection-start-column="9" selection-end-line="168" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/js/validator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="31" column="42" lean-forward="true" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/website/config/renn_config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wxch_share.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/lib_weixintong.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/user_account1.php" />
-    <entry file="file://$PROJECT_DIR$/admin/users.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/user_account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="757" column="9" lean-forward="true" selection-start-line="757" selection-start-column="9" selection-end-line="757" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wx_native_callback1.php" />
-    <entry file="file://$PROJECT_DIR$/wxch_order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/lib_base.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30498">
@@ -562,20 +543,6 @@
     <entry file="file://$PROJECT_DIR$/wechat/api.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/lib_common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-703">
-          <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/tianxin100/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29055">
-          <caret line="745" column="23" selection-start-line="745" selection-start-column="23" selection-end-line="745" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pintuan.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6396">
@@ -587,13 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3471">
           <caret line="89" column="58" selection-start-line="89" selection-start-column="52" selection-end-line="89" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/order_list.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="62" column="29" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -639,20 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/lib_main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6552">
-          <caret line="190" column="9" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/tianxin100/flow.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30108">
-          <caret line="772" column="47" selection-start-line="772" selection-start-column="36" selection-end-line="772" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/Downloads/WxpayAPI_php/php_sdk_v3.0.9/example/WxPay.Config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1437" />
@@ -686,23 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/lib_payment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="147" column="44" selection-start-line="147" selection-start-column="44" selection-end-line="147" selection-end-column="44" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wx_native_callback.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/includes/lib_order.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -717,119 +646,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flow.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="2022" column="34" selection-start-line="2022" selection-start-column="34" selection-end-line="2022" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2970">
-          <caret line="1379" column="60" selection-start-line="1379" selection-start-column="60" selection-end-line="1379" selection-end-column="60" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/modules/payment/WxPayPubHelper/WxPayPubHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="368" column="5" selection-start-line="368" selection-start-column="5" selection-end-line="368" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/static/js/ttkefu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9828">
-          <folding>
-            <element signature="n#style#0;n#iframe#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#font#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#font#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-9828" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/tianxin100/library/page_footer.lbi">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="106" column="10" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -840,20 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/tianxin100/library/footer_nav.lbi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/modules/payment/wx_new_jspay.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="113" column="48" selection-start-line="113" selection-start-column="48" selection-end-line="113" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/Downloads/WxpayAPI_php/php_sdk_v3.0.9/example/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
@@ -861,13 +672,196 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/include/modules/payment/wx_new_jspay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="113" column="48" selection-start-line="113" selection-start-column="48" selection-end-line="113" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cat_all.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-805">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/tianxin100/css/public.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/tianxin100/css/css.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/tianxin100/css/catalog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/tianxin100/css/share.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/tianxin100/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/tianxin100/ectouch.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="931" column="66" selection-start-line="931" selection-start-column="66" selection-end-line="931" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/modules/payment/WxPayPubHelper/WxPayPubHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="368" column="5" selection-start-line="368" selection-start-column="5" selection-end-line="368" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/tianxin100/library/footer_nav.lbi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wx_native_callback.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="478" column="9" lean-forward="true" selection-start-line="478" selection-start-column="9" selection-end-line="478" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/role.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lang/zh_cn/admin/priv_action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/lib_common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3822">
+          <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/lib_main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="338" column="9" selection-start-line="338" selection-start-column="9" selection-end-line="338" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/lib_payment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="147" column="44" selection-start-line="147" selection-start-column="44" selection-end-line="147" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="106" column="10" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/tianxin100/flow.dwt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="125" column="36" selection-start-line="125" selection-start-column="36" selection-end-line="125" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/lib_weixintong.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="897">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="286">
-            <caret line="37" column="17" lean-forward="true" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+          <first_editor relative-caret-position="520">
+            <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4251">
+          <caret line="119" column="42" selection-start-line="119" selection-start-column="42" selection-end-line="119" selection-end-column="42" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/pagefooter.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/order_list.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="83" column="26" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/js/listtable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7761">
+          <caret line="199" column="34" selection-start-line="199" selection-start-column="25" selection-end-line="199" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/page.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="679">
+          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

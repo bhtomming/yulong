@@ -61317,3 +61317,280 @@
     [mmaain] => www.yulong.com
 )
 
+2019-01-03 16:33:35  =>  $_REQUEST => Array
+(
+)
+
+2019-01-03 16:33:35  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 5639
+    [user_name] => 13517798466
+    [email] => 
+    [user_rank] => 101
+    [discount] => 1
+    [login_fail] => 0
+    [last_time] => 1546023947
+    [last_ip] => 127.0.0.1
+)
+
+2019-01-03 16:33:35  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 19,16,14,15,11,18,9,17
+        )
+
+)
+
+2019-01-03 17:06:11  =>  $_REQUEST => Array
+(
+)
+
+2019-01-03 17:06:11  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546477565
+    [last_ip] => 127.0.0.1
+    [flow_type] => 0
+    [flow_order] => Array
+        (
+            [extension_code] => 
+            [shipping_id] => 15
+            [pay_id] => 8
+            [pack_id] => 8
+            [card_id] => 0
+            [bonus] => 0
+            [integral] => 0
+            [surplus] => 0
+        )
+
+    [flow_consignee] => Array
+        (
+            [address_id] => 27
+            [address_name] => 
+            [user_id] => 5639
+            [consignee] => 唐烽
+            [email] => 12346@qq.com
+            [country] => 1
+            [province] => 7
+            [city] => 100
+            [district] => 894
+            [address] => 北海市
+            [zipcode] => 
+            [tel] => 13517798466
+            [mobile] => 
+            [sign_building] => 
+            [best_time] => 
+        )
+
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-03 17:06:11  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 19,16,14,15,11,18,9,17
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => d649ce551ca4b9586078765620658a844b7eb515
+    [kuse] => 24446
+    [ecshop_affiliate_uid] => 5639
+)
+
+2019-01-05 15:21:18  =>  $_REQUEST => Array
+(
+)
+
+2019-01-05 15:21:18  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 5639
+    [user_name] => 13517798466
+    [email] => 
+    [user_rank] => 101
+    [discount] => 1
+    [login_fail] => 0
+    [last_time] => 1546477584
+    [last_ip] => 127.0.0.1
+)
+
+2019-01-05 15:21:18  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 15,19,16,14,11,18,9,17
+        )
+
+)
+
+2019-01-05 15:34:24  =>  $_REQUEST => Array
+(
+)
+
+2019-01-05 15:34:24  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546644078
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-05 15:34:24  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 15,19,16,14,11,18,9,17
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => 749eb5f4e46b6240a7795f1b83312269df83f6b1
+    [kuse] => 24446
+    [ECSCP_ID] => 63efc7213b21a3ccbf6fd269ecc5049cb5897c8a
+)
+
+2019-01-05 15:45:17  =>  $_REQUEST => Array
+(
+)
+
+2019-01-05 15:45:17  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546644905
+    [last_ip] => 127.0.0.1
+    [flow_type] => 0
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-05 15:45:17  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 11,15,19,16,14,18,9,17
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => 749eb5f4e46b6240a7795f1b83312269df83f6b1
+    [kuse] => 24446
+    [ecshop_affiliate_uid] => 5639
+)
+
+2019-01-05 16:10:13  =>  $_REQUEST => Array
+(
+)
+
+2019-01-05 16:10:13  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546645532
+    [last_ip] => 127.0.0.1
+    [flow_type] => 0
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-05 16:10:13  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 14,11,15,19,16,18,9,17
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => 749eb5f4e46b6240a7795f1b83312269df83f6b1
+    [kuse] => 24446
+    [ecshop_affiliate_uid] => 5639
+    [ECSCP_ID] => 1c84e808ab1510683d3a0dc2041d002a6cb22ff8
+)
+
+2019-01-05 17:55:15  =>  $_REQUEST => Array
+(
+)
+
+2019-01-05 17:55:15  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 5639
+    [user_name] => 13517798466
+    [email] => 
+    [user_rank] => 101
+    [discount] => 1
+    [login_fail] => 0
+    [last_time] => 1546647029
+    [last_ip] => 127.0.0.1
+)
+
+2019-01-05 17:55:15  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 11,14,15,19,16,18,9,17
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => 749eb5f4e46b6240a7795f1b83312269df83f6b1
+    [kuse] => 24446
+    [ecshop_affiliate_uid] => 5639
+    [ECSCP_ID] => 8fafdc93e45c32d6633700f3cdddd392c1bd6ace
+)
+

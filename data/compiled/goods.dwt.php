@@ -532,17 +532,17 @@ if ($this->_foreach['releated_goods_data']['total'] > 0):
     </h2>
       <div class="bd">
         <ul>
-           <?php $_from = $this->_var['fittings']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'goods_0_32380100_1545466184');if (count($_from)):
-    foreach ($_from AS $this->_var['goods_0_32380100_1545466184']):
+           <?php $_from = $this->_var['fittings']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'goods_0_94460000_1546740690');if (count($_from)):
+    foreach ($_from AS $this->_var['goods_0_94460000_1546740690']):
 ?>
           <li>
-            <a href="<?php echo $this->_var['goods_0_32380100_1545466184']['url']; ?>">
+            <a href="<?php echo $this->_var['goods_0_94460000_1546740690']['url']; ?>">
               <div class="products_kuang">
-                <img src="<?php echo $this->_var['goods_0_32380100_1545466184']['goods_thumb']; ?>"></div>
-              <div class="goods_name"><?php echo htmlspecialchars($this->_var['goods_0_32380100_1545466184']['short_name']); ?></div>
+                <img src="<?php echo $this->_var['goods_0_94460000_1546740690']['goods_thumb']; ?>"></div>
+              <div class="goods_name"><?php echo htmlspecialchars($this->_var['goods_0_94460000_1546740690']['short_name']); ?></div>
               <div class="price" >
-              <p href="<?php echo $this->_var['goods_0_32380100_1545466184']['url']; ?>"><?php echo $this->_var['goods_0_32380100_1545466184']['fittings_price']; ?> </p>
-                 <a href="javascript:addToCart(<?php echo $this->_var['goods_0_32380100_1545466184']['goods_id']; ?>);" class="car">
+              <p href="<?php echo $this->_var['goods_0_94460000_1546740690']['url']; ?>"><?php echo $this->_var['goods_0_94460000_1546740690']['fittings_price']; ?> </p>
+                 <a href="javascript:addToCart(<?php echo $this->_var['goods_0_94460000_1546740690']['goods_id']; ?>);" class="car">
                     <img src="themes/tianxin100/images/xin/cutp.png">
                 </a>
               </div>
