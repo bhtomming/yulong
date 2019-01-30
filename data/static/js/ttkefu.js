@@ -1931,7 +1931,7 @@ if(window.location.href.substring(0,8)!="file:///" && window.location.href.subst
     document.getElementById("sj_ttkefuyaoqing").style.left=(window.innerWidth-244)/2+"px";
     document.getElementById("sj_ttkefuyaoqing").style.top=(window.innerHeight-111)/2+"px";*/
 
-    /*var ttkefuyaoqing={
+    var ttkefuyaoqing={
         kfid:0,kgid:0,kfnicheng:'',
         show:function(strtext,kfid,kgid,nicheng){
             if(kfid){this.kfid=kfid}if(kgid){this.kgid=kgid}
@@ -1960,7 +1960,7 @@ if(window.location.href.substring(0,8)!="file:///" && window.location.href.subst
                 tanb(this.kfid,this.kgid,'0',this.kfnicheng);
             }
         }
-    };*/
+    };
 
 
     /*setTimeout('ttkefuyaoqing.show()',5*1000);

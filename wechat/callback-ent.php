@@ -247,6 +247,9 @@ class wechatCallbackapi {
                                             $tianxin100_t="推荐人：".$parent_name;
                                                                                                     /*甜心100新增扫描关注带提醒*/
                                             $up_uid=$affiliate_p;
+                                                /***给用户的上级加1积分**/
+                                                $add_points = "UPDATE ecs_users SET pay_points = pay_points + 1 WHERE user_id = '$up_uid'";
+                                                $db->query($add_points);
                                             require(ROOT_PATH . 'wxch_share.php');
                                         }
 									$db->query("UPDATE  ecs_users SET `wxch_bd`='ok',`wxid`='$fromUsername' WHERE `user_name`='$ecs_user_name'");
@@ -379,11 +382,17 @@ class wechatCallbackapi {
                 W_log('推荐码的值是:'.$postObj -> EventKey);
 				$qrscene = $postObj -> EventKey;
 				$scene_id = $qrscene;
-				$update_sql = "UPDATE `wxch_qr` SET `scan`=`scan` + 1 WHERE `scene_id`= '$scene_id';";
-				$db -> query("$update_sql");				
-				$scan_ret = $db -> getRow("SELECT * FROM `wxch_qr` WHERE scene_id =$scene_id");
-				if ($scan_ret['affiliate'] >= 1) {
-					$postObj -> EventKey = 'affiliate_推荐成功_' . $scan_ret['affiliate'];
+
+                //查询推荐人
+                //$scan_ret = $db -> getRow("SELECT * FROM `wxch_qr` WHERE scene_id =$scene_id");
+                $scan_ret = $db -> getRow("SELECT qr_path,scene_id FROM wxch_qr_tianxin100 WHERE scene_id = '$scene_id' order by id desc ");
+
+                //推荐人二维码扫描次数加1，没发现有什么用
+                $update_sql = "UPDATE `wxch_qr` SET `scan`=`scan` + 1 WHERE `scene_id`= '$scene_id';";
+                $db -> query($update_sql);
+
+				if ($scan_ret['scene_id'] >= 1) {
+					$postObj -> EventKey = 'affiliate_推荐成功_' . $scan_ret['scene_id'];
 				} else {
 						$msgType = "text";
 						$contentStr = '推荐失败，找不到推荐人ID为'. $scene_id."的推荐人";
@@ -470,6 +479,7 @@ class wechatCallbackapi {
 					}else{
 						$flag=true;
 					}
+					//新关注的用户
 					if(empty($parent_id)){
 						if (!empty($aff_db)&&$flag&&$flagetianxin100) {
 							//绑定会员账号
@@ -509,6 +519,9 @@ class wechatCallbackapi {
 							//查询店铺名字
 							$sql = "SELECT value FROM `ecs_touch_shop_config` ". " WHERE code='shop_name'";
 							$shop_name = $db->getOne($sql);
+							/***给用户的上级加1积分**/
+                            $add_points = "UPDATE ecs_users SET pay_points = pay_points + 1 WHERE user_id = '$aff_arr[2]'";
+                            $db -> query($add_points);
 							/*甜心100新增扫描关注带提醒*/
 							$up_uid=$aff_arr[2];
 							require(ROOT_PATH . 'wxch_share.php');
@@ -547,17 +560,16 @@ class wechatCallbackapi {
 			}
 
 			if ($keyword == 'bd') {
-								
-						$bd_url = '<a href="' . $m_url . 'user_wxch.php?wxid=' . $fromUsername . '">点击绑定会员</a>';
-						$bd_lang = $db -> getOne("SELECT `lang_value` FROM `wxch_lang` WHERE `lang_name` = 'bd'");
-						$contentStr = $bd_url . $bd_lang . '';
-						$contentStr=$contentStr.$m_url;
-						$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
-						$this -> plusPoint($db, $uname, $keyword, $fromUsername);
-						$this -> insert_wmessage($db, $fromUsername, $contentStr, $time, $belong);
-						$this -> universal($fromUsername, $base_url);
-						echo $resultStr;
-						exit;
+                $bd_url = '<a href="' . $m_url . 'user_wxch.php?wxid=' . $fromUsername . '">点击绑定会员</a>';
+                $bd_lang = $db -> getOne("SELECT `lang_value` FROM `wxch_lang` WHERE `lang_name` = 'bd'");
+                $contentStr = $bd_url . $bd_lang . '';
+                $contentStr=$contentStr.$m_url;
+                $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+                $this -> plusPoint($db, $uname, $keyword, $fromUsername);
+                $this -> insert_wmessage($db, $fromUsername, $contentStr, $time, $belong);
+                $this -> universal($fromUsername, $base_url);
+                echo $resultStr;
+                exit;
 					
 			}
 			elseif ($keyword == 'cxsc') {

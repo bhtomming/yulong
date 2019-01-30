@@ -1,6 +1,6 @@
-﻿<!--全局导航-Start-->
 
-<!-- 底部导航 -->
+
+
 <footer>
   <ul>
     <li><a href="./">首页</a></li>
@@ -11,12 +11,12 @@
   </ul>
 </footer>
 <!--script src="http://w1.ttkefu.com/k/?fid=7J9FHF6"  charset=utf-8></script-->
-{insert_scripts files='ttkefu.js'}
-<!-- {if $chat} -->
+<?php echo $this->smarty_insert_scripts(array('files'=>'ttkefu.js')); ?>
+<?php if ($this->_var['chat']): ?>
 <script>
 ttkefuyaoqing.startchats();
 </script>
-<!--{/if}-->
+<?php endif; ?>
 
 
 

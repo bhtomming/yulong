@@ -37,7 +37,12 @@ array('login','act_login','register','act_register','act_edit_password','get_pas
 /* 显示页面的action列表 */
 $ui_arr = array('register', 'login', 'profile','dianpu', 'act_dianpu', 'order_list', 'order_detail', 'order_tracking', 'address_list', 'act_edit_address', 'collection_list',
 'message_list', 'tag_list', 'get_password', 'reset_password', 'booking_list', 'add_booking', 'account_raply',
-'account_deposit', 'account_log', 'account_detail', 'act_account', 'pay', 'default', 'bonus', 'group_buy', 'group_buy_detail', 'affiliate', 'comment_list','validate_email','track_packages', 'transform_points','qpassword_name', 'get_passwd_question', 'check_answer','point','point_order','user_card','fenxiao1','myorder','myorder_detail','fenxiao2','fenxiao3','fenxiao4','tuiguang');
+'account_deposit', 'account_log', 'account_detail', 'act_account', 'pay', 'default', 'bonus', 'group_buy',
+    'group_buy_detail', 'affiliate', 'comment_list','validate_email','track_packages', 'transform_points',
+    'qpassword_name', 'get_passwd_question', 'check_answer','point','point_order','user_card','fenxiao1',
+    'myorder','myorder_detail','fenxiao2','fenxiao3','fenxiao4','tuiguang','pnt_t_ant','points_to_account',
+    'ant_t_pnt','account_to_point'
+);
 /* 未登录处理 */
 if (empty($_SESSION['user_id']))
 {
@@ -1149,13 +1154,16 @@ elseif ($action == 'order_list')
 elseif ($action == 'async_order_list')
 {
     include_once(ROOT_PATH . 'include/lib_transaction.php');
-    
+
     $start = $_POST['last'];
     $limit = $_POST['amount'];
-    
     $orders = get_user_orders($user_id, $limit, $start);
     if(is_array($orders)){
         foreach($orders as $vo){
+            //已经取消的订单不显示
+            if($vo['order_status'] == '已取消,未付款,未发货'){
+                continue;
+            }
             //获取订单第一个商品的图片
             $img = $db->getOne("SELECT g.goods_thumb FROM " .$ecs->table('order_goods'). " as og left join " .$ecs->table('goods'). " g on og.goods_id = g.goods_id WHERE og.order_id = ".$vo['order_id']." limit 1");
             $tracking = ($vo['shipping_id'] > 0) ? '<a href="user.php?act=order_tracking&order_id='.$vo['order_id'].'" class="c-btn3">订单跟踪</a>':'';
@@ -3767,7 +3775,7 @@ elseif ($action == 'point_order')
     $user_id=$_SESSION['user_id'];
     $sql = "select rank_points,pay_points from  " . $ecs->table('users') . " where user_id = '$user_id'";
     $row =  $db->getRow($sql);
-    $paiming = $db->getOne("select count(user_id) from  " . $ecs->table('users') . " where rank_points > '".$row['rank_points']."'");
+    $paiming = $db->getOne("select count(user_id) from  " . $ecs->table('users') . " where pay_points > '".$row['pay_points']."'");
     $paiming +=1 ;
     if($paiming <= 1000){
         $pm = "第 $paiming 名";
@@ -3793,6 +3801,61 @@ elseif ($action == 'point_order')
 //    print_r($list);
 //    die;
 }
+
+elseif($action == 'pnt_t_ant'){
+    $smarty->display('user_clips.dwt');
+}
+//会员积分兑换余额
+elseif($action == 'points_to_account'){
+    $user = get_user_info($user_id);
+    $points = floatval($_POST['points']);
+    $data = [
+        'msg' => '兑换成功',
+    ];
+    if($points < 0 || type($points) == 'string'){
+        $data['msg'] = '请输入合法的积分';
+        echo json_encode($data);
+        exit;
+    }
+    if($points > $user['pay_points'] ){
+        $data['msg'] = '兑换积分不能大于您的积分，请重新输入!';
+        echo json_encode($data);
+        exit;
+    }
+    $account = $points * 10; //积分兑换余额比例
+    log_account_change($user_id,$account,0,0,'-'.$points,'积分兑换余额',6);
+    echo json_encode($data);
+    exit;
+}
+
+//余额兑积分界面
+elseif($action == 'ant_t_pnt'){
+    $smarty->display('user_clips.dwt');
+}
+//会员余额兑换积分
+elseif($action == 'points_to_account'){
+    $user = get_user_info($user_id);
+    $account = floatval($_POST['account']);
+    $data = [
+        'msg' => '兑换成功',
+    ];
+    if($points < 0 || type($points) == 'string'){
+        $data['msg'] = '请输入合法的积分';
+        echo json_encode($data);
+        exit;
+    }
+    if($points > $user['pay_points'] ){
+        $data['msg'] = '兑换积分不能大于您的积分，请重新输入!';
+        echo json_encode($data);
+        exit;
+    }
+    $account = $points * 10; //积分兑换余额比例
+    log_account_change($user_id,$account,0,0,'-'.$points,'积分兑换余额',6);
+    echo json_encode($data);
+    exit;
+}
+
+
 //生成随机数 by wang
 function random($length = 6, $numeric = 0) {
     PHP_VERSION < '4.2.0' && mt_srand((double) microtime() * 1000000);

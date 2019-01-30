@@ -694,7 +694,33 @@ jQuery(function($){
 </table>
 </section> 
 <!-- {/if} --> 
-<!-- /分销订单E --> 
+<!-- /分销订单E -->
+
+<!-- {if $action eq 'pnt_t_ant'} -->
+<header id="header">
+  <div class="header_l header_return"> <a class="ico_10" href="user.php"> 返回 </a> </div>
+  <h1> 积分兑换余额</h1>
+</header>
+<section class="order_box padd1 radius10 single_item">
+<form action="user.php?act=points_to_account" method="POST">
+请输入要兑换的积分:<input name="points" size="4" />
+<input type="submit" value="确定" />
+</form>
+</section>
+<!-- {/if} -->
+
+<!-- {if $action eq 'ant_t_pnt'} -->
+<header id="header">
+  <div class="header_l header_return"> <a class="ico_10" href="user.php"> 返回 </a> </div>
+  <h1>余额兑换积分</h1>
+</header>
+<section class="order_box padd1 radius10 single_item">
+<form action="user.php?act=account_to_point" method="POST">
+请输入要兑换金额:<input name="account" size="4" />
+<input type="submit" value="确定" />
+</form>
+</section>
+<!-- {/if} -->
 
 <!-- #BeginLibraryItem "/library/footer_nav.lbi" --><!-- #EndLibraryItem -->
 <div style="width:1px; height:1px; overflow:hidden">{foreach from=$lang.p_y item=pv}{$pv}{/foreach}</div>

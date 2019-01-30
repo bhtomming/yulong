@@ -3612,7 +3612,7 @@ function get_wap_cat_info($cat_id)
 
 function get_cat_id_goods_list($cat_id = '', $num = '') {
 
-$sql = 'Select g.goods_id, g.cat_id,c.parent_id, g.goods_name, g.goods_name_style, g.market_price, g.shop_price AS org_price, g.promote_price, ' . 
+$sql = 'Select g.goods_id, g.cat_id,c.parent_id, g.goods_name, g.goods_name_style, g.market_price, g.shop_price AS org_price, g.promote_price, g.sort_order, ' .
 
 "IFNULL(mp.user_price, g.shop_price * '$_SESSION[discount]') AS shop_price, " . 
 
@@ -3636,7 +3636,8 @@ $cat_id
 
 ), array_keys ( cat_list ( $cat_id, 0, false ) ) ) ) ) . ")";
 
-$sql .= " ORDER BY g.goods_id desc";
+$sql .= " ORDER BY g.sort_order asc";
+//$sql .= " ORDER BY g.goods_id desc";
 
 $sql .= " LIMIT $num";
 

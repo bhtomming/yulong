@@ -130,7 +130,7 @@ if (!$smarty->is_cached('index.dwt', $cache_id))
     //$smarty->assign('best_goods',      get_recommend_goods('best'));    // 推荐商品
 
     //$smarty->assign('new_goods',       get_recommend_goods('new'));     // 最新商品
-    $smarty->assign('hotal_goods',       get_cat_id_goods_list(2,5));     // 获取5条酒店信息
+    $smarty->assign('hotal_goods',       get_cat_id_goods_list(2,4));     // 获取4条酒店信息
     $smarty->assign('specialty_goods',       get_cat_id_goods_list(3,4));     // 获取4条特产信息
     $smarty->assign('furnishing_goods',       get_cat_id_goods_list(4,4));     // 获取4条智能家居信息
     $smarty->assign('house_goods',       get_cat_id_goods_list(1,4));     // 获取4条房产信息

@@ -1,5 +1,5 @@
-<link rel="stylesheet" type="text/css" href="{$ectouch_themes}/css/style.css?v=1.1.1">
-<!-- 底部导航 -->
+<link rel="stylesheet" type="text/css" href="<?php echo $this->_var['ectouch_themes']; ?>/css/style.css?v=1.1.1">
+
 <footer>
   <ul>
     <li><a href="./">首页</a></li>

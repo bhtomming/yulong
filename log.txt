@@ -61594,3 +61594,1356 @@
     [ECSCP_ID] => 8fafdc93e45c32d6633700f3cdddd392c1bd6ace
 )
 
+2019-01-06 16:32:37  =>  $_REQUEST => Array
+(
+)
+
+2019-01-06 16:32:37  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 5639
+    [user_name] => 13517798466
+    [email] => 
+    [user_rank] => 101
+    [discount] => 1
+    [login_fail] => 0
+    [last_time] => 1546711892
+    [last_ip] => 127.0.0.1
+)
+
+2019-01-06 16:32:37  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 17,14,11,15,19,16,18,9
+        )
+
+    [kuse] => 24446
+    [real_ipd] => 127.0.0.1
+    [ECSCP_ID] => 918669398023625439de7ad2f24b17cd68e29694
+    [ECS_ID] => b58cc7dd540fa61aab760450d3f05aad74c5bb83
+)
+
+2019-01-08 16:46:44  =>  $_REQUEST => Array
+(
+)
+
+2019-01-08 16:46:44  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 5639
+    [user_name] => 13517798466
+    [email] => 
+    [user_rank] => 101
+    [discount] => 1
+    [login_fail] => 0
+    [last_time] => 1546734916
+    [last_ip] => 127.0.0.1
+)
+
+2019-01-08 16:46:44  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 17,14,11,15,19,16,18,9
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECSCP_ID] => e5be6b48396cc7b1e7703f156bfded7c6d96e673
+)
+
+2019-01-08 16:46:55  =>  $_REQUEST => Array
+(
+)
+
+2019-01-08 16:46:55  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546908404
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-08 16:46:55  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 17,14,11,15,19,16,18,9
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECSCP_ID] => e5be6b48396cc7b1e7703f156bfded7c6d96e673
+    [ECS_ID] => c2c6118b3275b99398e091cedcf125a5f711b8fc
+    [mmaain] => www.yulong.com
+    [kuse] => 24446
+)
+
+2019-01-08 16:48:46  =>  $_REQUEST => Array
+(
+)
+
+2019-01-08 16:48:46  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546908415
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-08 16:48:46  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 17,14,11,15,19,16,18,9
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECSCP_ID] => e5be6b48396cc7b1e7703f156bfded7c6d96e673
+    [ECS_ID] => c2c6118b3275b99398e091cedcf125a5f711b8fc
+    [kuse] => 24446
+)
+
+2019-01-08 17:33:06  =>  $_REQUEST => Array
+(
+)
+
+2019-01-08 17:33:06  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 5639
+    [user_name] => 13517798466
+    [email] => 
+    [user_rank] => 101
+    [discount] => 1
+    [login_fail] => 0
+    [last_time] => 1546908526
+    [last_ip] => 127.0.0.1
+)
+
+2019-01-08 17:33:06  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 17,14,11,15,19,16,18,9
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECSCP_ID] => e5be6b48396cc7b1e7703f156bfded7c6d96e673
+    [ECS_ID] => c2c6118b3275b99398e091cedcf125a5f711b8fc
+    [kuse] => 24446
+)
+
+2019-01-08 17:39:49  =>  $_REQUEST => Array
+(
+)
+
+2019-01-08 17:39:49  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546911186
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-08 17:39:49  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 17,14,11,15,19,16,18,9
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECSCP_ID] => e5be6b48396cc7b1e7703f156bfded7c6d96e673
+    [ECS_ID] => c2c6118b3275b99398e091cedcf125a5f711b8fc
+    [kuse] => 24446
+)
+
+2019-01-08 17:59:41  =>  $_REQUEST => Array
+(
+)
+
+2019-01-08 17:59:41  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546912102
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-08 17:59:41  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 17,14,11,15,19,16,18,9
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECSCP_ID] => e5be6b48396cc7b1e7703f156bfded7c6d96e673
+    [ECS_ID] => c2c6118b3275b99398e091cedcf125a5f711b8fc
+    [kuse] => 24446
+    [mmaain] => www.yulong.com
+)
+
+2019-01-09 11:29:49  =>  $_REQUEST => Array
+(
+)
+
+2019-01-09 11:29:49  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 5639
+    [user_name] => 13517798466
+    [email] => 
+    [user_rank] => 101
+    [discount] => 1
+    [login_fail] => 0
+    [last_time] => 1546912785
+    [last_ip] => 127.0.0.1
+)
+
+2019-01-09 11:29:49  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 17,14,11,15,19,16,18,9
+            [display] => grid
+        )
+
+    [kuse] => 24446
+)
+
+2019-01-09 11:30:02  =>  $_REQUEST => Array
+(
+)
+
+2019-01-09 11:30:02  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546975789
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-09 11:30:02  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [history] => 17,14,11,15,19,16,18,9
+            [display] => grid
+        )
+
+    [kuse] => 24446
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ff16ca21902af58af5a5c90ef56121154e7aba55
+    [mmaain] => www.yulong.com
+)
+
+2019-01-09 11:30:40  =>  $_REQUEST => Array
+(
+)
+
+2019-01-09 11:30:40  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546975816
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-09 11:30:40  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [display] => grid
+            [history] => 16,17,14,11,15,19,18,9
+        )
+
+    [kuse] => 24446
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ff16ca21902af58af5a5c90ef56121154e7aba55
+    [mmaain] => www.yulong.com
+    [ecshop_affiliate_uid] => 5639
+)
+
+2019-01-09 11:37:12  =>  $_REQUEST => Array
+(
+)
+
+2019-01-09 11:37:12  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546975840
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-09 11:37:12  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [display] => grid
+            [history] => 16,17,14,11,15,19,18,9
+        )
+
+    [kuse] => 24446
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ff16ca21902af58af5a5c90ef56121154e7aba55
+    [mmaain] => www.yulong.com
+    [ecshop_affiliate_uid] => 5639
+)
+
+2019-01-09 11:40:00  =>  $_REQUEST => Array
+(
+)
+
+2019-01-09 11:40:00  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546976232
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-09 11:40:00  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [display] => grid
+            [history] => 16,17,14,11,15,19,18,9
+        )
+
+    [kuse] => 24446
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ff16ca21902af58af5a5c90ef56121154e7aba55
+    [ecshop_affiliate_uid] => 5639
+)
+
+2019-01-09 11:40:27  =>  $_REQUEST => Array
+(
+)
+
+2019-01-09 11:40:27  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546976400
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-09 11:40:27  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [display] => grid
+            [history] => 16,17,14,11,15,19,18,9
+        )
+
+    [kuse] => 24446
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ff16ca21902af58af5a5c90ef56121154e7aba55
+    [ecshop_affiliate_uid] => 5639
+    [mmaain] => www.yulong.com
+    [miniwindowstate] => 1
+)
+
+2019-01-09 11:40:52  =>  $_REQUEST => Array
+(
+)
+
+2019-01-09 11:40:52  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546976427
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-09 11:40:52  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [display] => grid
+            [history] => 16,17,14,11,15,19,18,9
+        )
+
+    [kuse] => 24446
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ff16ca21902af58af5a5c90ef56121154e7aba55
+    [ecshop_affiliate_uid] => 5639
+    [mmaain] => www.yulong.com
+    [miniwindowstate] => 1
+)
+
+2019-01-09 11:41:15  =>  $_REQUEST => Array
+(
+)
+
+2019-01-09 11:41:15  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546976452
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-09 11:41:15  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [display] => grid
+            [history] => 16,17,14,11,15,19,18,9
+        )
+
+    [kuse] => 24446
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ff16ca21902af58af5a5c90ef56121154e7aba55
+    [ecshop_affiliate_uid] => 5639
+    [mmaain] => www.yulong.com
+    [miniwindowstate] => 1
+)
+
+2019-01-09 11:41:31  =>  $_REQUEST => Array
+(
+)
+
+2019-01-09 11:41:31  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546976475
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-09 11:41:31  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [display] => grid
+            [history] => 16,17,14,11,15,19,18,9
+        )
+
+    [kuse] => 24446
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ff16ca21902af58af5a5c90ef56121154e7aba55
+    [ecshop_affiliate_uid] => 5639
+    [mmaain] => www.yulong.com
+    [miniwindowstate] => 1
+)
+
+2019-01-09 11:51:11  =>  $_REQUEST => Array
+(
+)
+
+2019-01-09 11:51:11  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546976491
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-09 11:51:11  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [display] => grid
+            [history] => 16,17,14,11,15,19,18,9
+        )
+
+    [kuse] => 24446
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ff16ca21902af58af5a5c90ef56121154e7aba55
+    [ecshop_affiliate_uid] => 5639
+    [mmaain] => www.yulong.com
+    [miniwindowstate] => 1
+)
+
+2019-01-09 11:53:14  =>  $_REQUEST => Array
+(
+)
+
+2019-01-09 11:53:14  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546977071
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-09 11:53:14  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [display] => grid
+            [history] => 16,17,14,11,15,19,18,9
+        )
+
+    [kuse] => 24446
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ff16ca21902af58af5a5c90ef56121154e7aba55
+    [ecshop_affiliate_uid] => 5639
+    [mmaain] => www.yulong.com
+    [miniwindowstate] => 1
+)
+
+2019-01-09 11:54:16  =>  $_REQUEST => Array
+(
+)
+
+2019-01-09 11:54:16  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1546977194
+    [last_ip] => 127.0.0.1
+    [user_id] => 5639
+    [admin_id] => 0
+    [user_name] => 13517798466
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 
+)
+
+2019-01-09 11:54:16  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [username] => 13517798466
+            [user_id] => 5639
+            [password] => 2a938e2e7b0c011d67963fcf97ea539d
+            [display] => grid
+            [history] => 16,17,14,11,15,19,18,9
+        )
+
+    [kuse] => 24446
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ff16ca21902af58af5a5c90ef56121154e7aba55
+    [ecshop_affiliate_uid] => 5639
+    [mmaain] => www.yulong.com
+    [miniwindowstate] => 1
+)
+
+2019-01-16 09:13:46  =>  $_REQUEST => Array
+(
+)
+
+2019-01-16 09:13:46  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 0
+    [user_name] => 
+    [email] => 
+    [user_rank] => 0
+    [discount] => 1
+    [login_fail] => 0
+)
+
+2019-01-16 09:13:46  =>  $_COOKIE => Array
+(
+    [kfltjs] => 271411216268
+    [ECS] => Array
+        (
+            [history] => 16,17,14,11,15,19,18,9
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECSCP_ID] => 633e1cb63417db5eec062ef9de0186dc1dbc084e
+)
+
+2019-01-18 11:26:23  =>  $_REQUEST => Array
+(
+)
+
+2019-01-18 11:26:23  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 0
+    [user_name] => 
+    [email] => 
+    [user_rank] => 0
+    [discount] => 1
+    [login_fail] => 0
+)
+
+2019-01-18 11:26:23  =>  $_COOKIE => Array
+(
+)
+
+2019-01-22 08:49:28  =>  $_REQUEST => Array
+(
+)
+
+2019-01-22 08:49:28  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 0
+    [user_name] => 
+    [email] => 
+    [user_rank] => 0
+    [discount] => 1
+    [login_fail] => 0
+)
+
+2019-01-22 08:49:28  =>  $_COOKIE => Array
+(
+    [kfltjs] => 161012437292
+)
+
+2019-01-22 08:50:46  =>  $_REQUEST => Array
+(
+)
+
+2019-01-22 08:50:46  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1548089442
+    [last_ip] => 127.0.0.1
+    [user_id] => 5637
+    [admin_id] => 0
+    [user_name] => 18577906076
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 212313qq.com
+)
+
+2019-01-22 08:50:46  =>  $_COOKIE => Array
+(
+    [kfltjs] => 161012437292
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => b8e2ef68a6383794fe837d3140ed869098b6e515
+    [kuse] => 24446
+    [ECS] => Array
+        (
+            [username] => 18577906076
+            [user_id] => 5637
+            [password] => 83ad2fa10f050e33982660e753c5e014
+        )
+
+    [mmaain] => www.yulong.com
+)
+
+2019-01-22 10:38:33  =>  array (
+  0 => 
+  array (
+    'order_status' => '订单状态：已确认,已付款,未发货',
+    'order_handler' => '<span style="color:red">已确认</span>',
+    'order_content' => '<a href="user.php?act=order_detail&order_id=109"><table width="100%" border="0" cellpadding="5" cellspacing="0" class="ectouch_table_no_border">
+            <tr>
+                <td><img src="images/201809/thumb_img/16_thumb_G_1538008921159.jpg" width="50" height="50" /></td>
+                <td>订单编号：2019012275855<br>
+                订单金额：<sub>￥</sub>221.00<br>
+                下单时间：2019-01-22 08:51:23</td>
+                <td style="position:relative"><span class="new-arr"></span></td>
+            </tr>
+          </table></a>',
+    'order_tracking' => '<a href="user.php?act=order_tracking&order_id=109" class="c-btn3">订单跟踪</a>',
+    'order_back' => '<a href="user.php?act=back_order&order_id=109" class="c-btn3">申请退款</a>',
+  ),
+  1 => 
+  array (
+    'order_status' => '订单状态：申请退货,已付款,未发货',
+    'order_handler' => '<span style="color:red">申请退货</span>',
+    'order_content' => '<a href="user.php?act=order_detail&order_id=95"><table width="100%" border="0" cellpadding="5" cellspacing="0" class="ectouch_table_no_border">
+            <tr>
+                <td><img src="images/201809/thumb_img/11_thumb_G_1537836884330.jpg" width="50" height="50" /></td>
+                <td>订单编号：2018121390508<br>
+                订单金额：<sub>￥</sub>44.00<br>
+                下单时间：2018-12-13 17:06:57</td>
+                <td style="position:relative"><span class="new-arr"></span></td>
+            </tr>
+          </table></a>',
+    'order_tracking' => '<a href="user.php?act=order_tracking&order_id=95" class="c-btn3">订单跟踪</a>',
+    'order_back' => '',
+  ),
+  2 => 
+  array (
+    'order_status' => '订单状态：已确认,已付款,未发货',
+    'order_handler' => '<span style="color:red">已确认</span>',
+    'order_content' => '<a href="user.php?act=order_detail&order_id=92"><table width="100%" border="0" cellpadding="5" cellspacing="0" class="ectouch_table_no_border">
+            <tr>
+                <td><img src="images/201809/thumb_img/11_thumb_G_1537836884330.jpg" width="50" height="50" /></td>
+                <td>订单编号：2018121348970<br>
+                订单金额：<sub>￥</sub>44.00<br>
+                下单时间：2018-12-13 10:02:42</td>
+                <td style="position:relative"><span class="new-arr"></span></td>
+            </tr>
+          </table></a>',
+    'order_tracking' => '<a href="user.php?act=order_tracking&order_id=92" class="c-btn3">订单跟踪</a>',
+    'order_back' => '',
+  ),
+)
+2019-01-22 10:38:38  =>  array (
+  0 => 
+  array (
+    'order_status' => '订单状态：已确认,已付款,未发货',
+    'order_handler' => '<span style="color:red">已确认</span>',
+    'order_content' => '<a href="user.php?act=order_detail&order_id=90"><table width="100%" border="0" cellpadding="5" cellspacing="0" class="ectouch_table_no_border">
+            <tr>
+                <td><img src="images/201809/thumb_img/11_thumb_G_1537836884330.jpg" width="50" height="50" /></td>
+                <td>订单编号：2018121128089<br>
+                订单金额：<sub>￥</sub>44.00<br>
+                下单时间：2018-12-11 17:40:50</td>
+                <td style="position:relative"><span class="new-arr"></span></td>
+            </tr>
+          </table></a>',
+    'order_tracking' => '<a href="user.php?act=order_tracking&order_id=90" class="c-btn3">订单跟踪</a>',
+    'order_back' => '',
+  ),
+  1 => 
+  array (
+    'order_status' => '订单状态：已确认,已付款,未发货',
+    'order_handler' => '<span style="color:red">已确认</span>',
+    'order_content' => '<a href="user.php?act=order_detail&order_id=88"><table width="100%" border="0" cellpadding="5" cellspacing="0" class="ectouch_table_no_border">
+            <tr>
+                <td><img src="images/201809/thumb_img/9_thumb_G_1537811397490.jpg" width="50" height="50" /></td>
+                <td>订单编号：2018120999628<br>
+                订单金额：<sub>￥</sub>113.00<br>
+                下单时间：2018-12-09 15:03:40</td>
+                <td style="position:relative"><span class="new-arr"></span></td>
+            </tr>
+          </table></a>',
+    'order_tracking' => '<a href="user.php?act=order_tracking&order_id=88" class="c-btn3">订单跟踪</a>',
+    'order_back' => '',
+  ),
+  2 => 
+  array (
+    'order_status' => '订单状态：已确认,已付款,未发货',
+    'order_handler' => '<span style="color:red">已确认</span>',
+    'order_content' => '<a href="user.php?act=order_detail&order_id=87"><table width="100%" border="0" cellpadding="5" cellspacing="0" class="ectouch_table_no_border">
+            <tr>
+                <td><img src="images/201809/thumb_img/14_thumb_G_1538008963882.jpg" width="50" height="50" /></td>
+                <td>订单编号：2018120962349<br>
+                订单金额：<sub>￥</sub>123.00<br>
+                下单时间：2018-12-09 14:55:09</td>
+                <td style="position:relative"><span class="new-arr"></span></td>
+            </tr>
+          </table></a>',
+    'order_tracking' => '<a href="user.php?act=order_tracking&order_id=87" class="c-btn3">订单跟踪</a>',
+    'order_back' => '',
+  ),
+)
+2019-01-22 10:38:59  =>  array (
+  0 => 
+  array (
+    'order_status' => '订单状态：已确认,已付款,未发货',
+    'order_handler' => '<span style="color:red">已确认</span>',
+    'order_content' => '<a href="user.php?act=order_detail&order_id=86"><table width="100%" border="0" cellpadding="5" cellspacing="0" class="ectouch_table_no_border">
+            <tr>
+                <td><img src="images/201809/thumb_img/9_thumb_G_1537811397490.jpg" width="50" height="50" /></td>
+                <td>订单编号：2018120686209<br>
+                订单金额：<sub>￥</sub>74.00<br>
+                下单时间：2018-12-06 11:07:32</td>
+                <td style="position:relative"><span class="new-arr"></span></td>
+            </tr>
+          </table></a>',
+    'order_tracking' => '<a href="user.php?act=order_tracking&order_id=86" class="c-btn3">订单跟踪</a>',
+    'order_back' => '',
+  ),
+  1 => 
+  array (
+    'order_status' => '订单状态：退货,未付款,未发货',
+    'order_handler' => '<span style="color:red">退货</span>',
+    'order_content' => '<a href="user.php?act=order_detail&order_id=85"><table width="100%" border="0" cellpadding="5" cellspacing="0" class="ectouch_table_no_border">
+            <tr>
+                <td><img src="images/201809/thumb_img/10_thumb_G_1537836230063.jpg" width="50" height="50" /></td>
+                <td>订单编号：2018112566323<br>
+                订单金额：<sub>￥</sub>78.00<br>
+                下单时间：2018-11-25 15:08:03</td>
+                <td style="position:relative"><span class="new-arr"></span></td>
+            </tr>
+          </table></a>',
+    'order_tracking' => '<a href="user.php?act=order_tracking&order_id=85" class="c-btn3">订单跟踪</a>',
+    'order_back' => '',
+  ),
+  2 => 
+  array (
+    'order_status' => '订单状态：退货,未付款,未发货',
+    'order_handler' => '<span style="color:red">退货</span>',
+    'order_content' => '<a href="user.php?act=order_detail&order_id=84"><table width="100%" border="0" cellpadding="5" cellspacing="0" class="ectouch_table_no_border">
+            <tr>
+                <td><img src="images/201809/thumb_img/11_thumb_G_1537836884330.jpg" width="50" height="50" /></td>
+                <td>订单编号：2018112570534<br>
+                订单金额：<sub>￥</sub>44.00<br>
+                下单时间：2018-11-25 15:01:42</td>
+                <td style="position:relative"><span class="new-arr"></span></td>
+            </tr>
+          </table></a>',
+    'order_tracking' => '<a href="user.php?act=order_tracking&order_id=84" class="c-btn3">订单跟踪</a>',
+    'order_back' => '',
+  ),
+)
+2019-01-22 10:38:59  =>  array (
+  0 => 
+  array (
+    'order_status' => '订单状态：已确认,已付款,未发货',
+    'order_handler' => '<span style="color:red">已确认</span>',
+    'order_content' => '<a href="user.php?act=order_detail&order_id=86"><table width="100%" border="0" cellpadding="5" cellspacing="0" class="ectouch_table_no_border">
+            <tr>
+                <td><img src="images/201809/thumb_img/9_thumb_G_1537811397490.jpg" width="50" height="50" /></td>
+                <td>订单编号：2018120686209<br>
+                订单金额：<sub>￥</sub>74.00<br>
+                下单时间：2018-12-06 11:07:32</td>
+                <td style="position:relative"><span class="new-arr"></span></td>
+            </tr>
+          </table></a>',
+    'order_tracking' => '<a href="user.php?act=order_tracking&order_id=86" class="c-btn3">订单跟踪</a>',
+    'order_back' => '',
+  ),
+  1 => 
+  array (
+    'order_status' => '订单状态：退货,未付款,未发货',
+    'order_handler' => '<span style="color:red">退货</span>',
+    'order_content' => '<a href="user.php?act=order_detail&order_id=85"><table width="100%" border="0" cellpadding="5" cellspacing="0" class="ectouch_table_no_border">
+            <tr>
+                <td><img src="images/201809/thumb_img/10_thumb_G_1537836230063.jpg" width="50" height="50" /></td>
+                <td>订单编号：2018112566323<br>
+                订单金额：<sub>￥</sub>78.00<br>
+                下单时间：2018-11-25 15:08:03</td>
+                <td style="position:relative"><span class="new-arr"></span></td>
+            </tr>
+          </table></a>',
+    'order_tracking' => '<a href="user.php?act=order_tracking&order_id=85" class="c-btn3">订单跟踪</a>',
+    'order_back' => '',
+  ),
+  2 => 
+  array (
+    'order_status' => '订单状态：退货,未付款,未发货',
+    'order_handler' => '<span style="color:red">退货</span>',
+    'order_content' => '<a href="user.php?act=order_detail&order_id=84"><table width="100%" border="0" cellpadding="5" cellspacing="0" class="ectouch_table_no_border">
+            <tr>
+                <td><img src="images/201809/thumb_img/11_thumb_G_1537836884330.jpg" width="50" height="50" /></td>
+                <td>订单编号：2018112570534<br>
+                订单金额：<sub>￥</sub>44.00<br>
+                下单时间：2018-11-25 15:01:42</td>
+                <td style="position:relative"><span class="new-arr"></span></td>
+            </tr>
+          </table></a>',
+    'order_tracking' => '<a href="user.php?act=order_tracking&order_id=84" class="c-btn3">订单跟踪</a>',
+    'order_back' => '',
+  ),
+)
+2019-01-22 17:25:44  =>  $_REQUEST => Array
+(
+)
+
+2019-01-22 17:25:44  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1548119881
+    [last_ip] => 127.0.0.1
+    [flow_type] => 4
+    [extension_code] => exchange_goods
+    [extension_id] => 9
+    [user_id] => 5637
+    [admin_id] => 0
+    [user_name] => 18577906076
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 212313qq.com
+)
+
+2019-01-22 17:25:44  =>  $_COOKIE => Array
+(
+    [kfltjs] => 161012437292
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => b8e2ef68a6383794fe837d3140ed869098b6e515
+    [kuse] => 24446
+    [ECS] => Array
+        (
+            [username] => 18577906076
+            [user_id] => 5637
+            [password] => 83ad2fa10f050e33982660e753c5e014
+            [history] => 16
+            [display] => grid
+        )
+
+    [ecshop_affiliate_uid] => 5637
+)
+
+2019-01-22 17:43:49  =>  $_REQUEST => Array
+(
+)
+
+2019-01-22 17:43:49  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 0
+    [user_name] => 
+    [email] => 
+    [user_rank] => 0
+    [discount] => 1
+    [login_fail] => 0
+)
+
+2019-01-22 17:43:49  =>  $_COOKIE => Array
+(
+)
+
+2019-01-24 15:30:18  =>  $_REQUEST => Array
+(
+)
+
+2019-01-24 15:30:18  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [user_id] => 5637
+    [user_name] => 18577906076
+    [email] => 212313qq.com
+    [user_rank] => 101
+    [discount] => 1
+    [login_fail] => 0
+    [last_time] => 1548121154
+    [last_ip] => 127.0.0.1
+)
+
+2019-01-24 15:30:18  =>  $_COOKIE => Array
+(
+    [kfltjs] => 161012437292
+    [ECS] => Array
+        (
+            [username] => 18577906076
+            [user_id] => 5637
+            [password] => 83ad2fa10f050e33982660e753c5e014
+            [history] => 16
+            [display] => grid
+        )
+
+)
+
+2019-01-24 15:36:00  =>  $_REQUEST => Array
+(
+)
+
+2019-01-24 15:36:00  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1548286217
+    [last_ip] => 127.0.0.1
+    [user_id] => 5637
+    [admin_id] => 0
+    [user_name] => 18577906076
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 212313qq.com
+)
+
+2019-01-24 15:36:00  =>  $_COOKIE => Array
+(
+    [kfltjs] => 161012437292
+    [ECS] => Array
+        (
+            [username] => 18577906076
+            [user_id] => 5637
+            [password] => 83ad2fa10f050e33982660e753c5e014
+            [history] => 16
+            [display] => grid
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ba339d976952d2feb030dc5f002e60df6629c530
+    [ECSCP_ID] => b37d4750c5bc05ee10162e0ab63a9a491606b844
+)
+
+2019-01-24 15:36:18  =>  $_REQUEST => Array
+(
+)
+
+2019-01-24 15:36:18  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1548286560
+    [last_ip] => 127.0.0.1
+    [user_id] => 5637
+    [admin_id] => 0
+    [user_name] => 18577906076
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 212313qq.com
+)
+
+2019-01-24 15:36:18  =>  $_COOKIE => Array
+(
+    [kfltjs] => 161012437292
+    [ECS] => Array
+        (
+            [username] => 18577906076
+            [user_id] => 5637
+            [password] => 83ad2fa10f050e33982660e753c5e014
+            [history] => 16
+            [display] => grid
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ba339d976952d2feb030dc5f002e60df6629c530
+    [ECSCP_ID] => b37d4750c5bc05ee10162e0ab63a9a491606b844
+)
+
+2019-01-24 15:36:22  =>  $_REQUEST => Array
+(
+)
+
+2019-01-24 15:36:22  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1548286578
+    [last_ip] => 127.0.0.1
+    [user_id] => 5637
+    [admin_id] => 0
+    [user_name] => 18577906076
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 212313qq.com
+)
+
+2019-01-24 15:36:22  =>  $_COOKIE => Array
+(
+    [kfltjs] => 161012437292
+    [ECS] => Array
+        (
+            [username] => 18577906076
+            [user_id] => 5637
+            [password] => 83ad2fa10f050e33982660e753c5e014
+            [history] => 16
+            [display] => grid
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ba339d976952d2feb030dc5f002e60df6629c530
+    [ECSCP_ID] => b37d4750c5bc05ee10162e0ab63a9a491606b844
+)
+
+2019-01-24 15:39:06  =>  $_REQUEST => Array
+(
+)
+
+2019-01-24 15:39:06  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1548286582
+    [last_ip] => 127.0.0.1
+    [user_id] => 5637
+    [admin_id] => 0
+    [user_name] => 18577906076
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 212313qq.com
+)
+
+2019-01-24 15:39:06  =>  $_COOKIE => Array
+(
+    [kfltjs] => 161012437292
+    [ECS] => Array
+        (
+            [username] => 18577906076
+            [user_id] => 5637
+            [password] => 83ad2fa10f050e33982660e753c5e014
+            [history] => 16
+            [display] => grid
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ba339d976952d2feb030dc5f002e60df6629c530
+    [ECSCP_ID] => b37d4750c5bc05ee10162e0ab63a9a491606b844
+)
+
+2019-01-24 15:39:17  =>  $_REQUEST => Array
+(
+)
+
+2019-01-24 15:39:17  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1548286746
+    [last_ip] => 127.0.0.1
+    [user_id] => 5637
+    [admin_id] => 0
+    [user_name] => 18577906076
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 212313qq.com
+)
+
+2019-01-24 15:39:17  =>  $_COOKIE => Array
+(
+    [kfltjs] => 161012437292
+    [ECS] => Array
+        (
+            [username] => 18577906076
+            [user_id] => 5637
+            [password] => 83ad2fa10f050e33982660e753c5e014
+            [history] => 16
+            [display] => grid
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ba339d976952d2feb030dc5f002e60df6629c530
+    [ECSCP_ID] => b37d4750c5bc05ee10162e0ab63a9a491606b844
+)
+
+2019-01-24 15:40:07  =>  $_REQUEST => Array
+(
+)
+
+2019-01-24 15:40:07  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1548286757
+    [last_ip] => 127.0.0.1
+    [user_id] => 5637
+    [admin_id] => 0
+    [user_name] => 18577906076
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 212313qq.com
+)
+
+2019-01-24 15:40:07  =>  $_COOKIE => Array
+(
+    [kfltjs] => 161012437292
+    [ECS] => Array
+        (
+            [username] => 18577906076
+            [user_id] => 5637
+            [password] => 83ad2fa10f050e33982660e753c5e014
+            [history] => 16
+            [display] => grid
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ba339d976952d2feb030dc5f002e60df6629c530
+    [ECSCP_ID] => b37d4750c5bc05ee10162e0ab63a9a491606b844
+)
+
+2019-01-24 15:40:30  =>  $_REQUEST => Array
+(
+)
+
+2019-01-24 15:40:30  =>  $_SESSION => Array
+(
+    [from_ad] => 0
+    [referer] => 本站
+    [login_fail] => 0
+    [last_time] => 1548286807
+    [last_ip] => 127.0.0.1
+    [user_id] => 5637
+    [admin_id] => 0
+    [user_name] => 18577906076
+    [user_rank] => 101
+    [discount] => 1
+    [email] => 212313qq.com
+)
+
+2019-01-24 15:40:30  =>  $_COOKIE => Array
+(
+    [kfltjs] => 161012437292
+    [ECS] => Array
+        (
+            [username] => 18577906076
+            [user_id] => 5637
+            [password] => 83ad2fa10f050e33982660e753c5e014
+            [history] => 16
+            [display] => grid
+        )
+
+    [real_ipd] => 127.0.0.1
+    [ECS_ID] => ba339d976952d2feb030dc5f002e60df6629c530
+    [ECSCP_ID] => b37d4750c5bc05ee10162e0ab63a9a491606b844
+)
+

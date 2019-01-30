@@ -167,6 +167,7 @@ elseif ($_REQUEST['act'] == 'info')
     {
         $order_sn = trim($_REQUEST['order_sn']);
         $order = order_info(0, $order_sn);
+
     }
     else
     {
@@ -322,7 +323,7 @@ elseif ($_REQUEST['act'] == 'info')
     $smarty->assign('order', $order);
 
 
-    if($order['invoice_no']){
+    if($order['invoice_no'] && $order['shipping_id'] != -1){
         //生成快递100查询接口链接
         $shipping   = get_shipping_object($order['shipping_id']);
 //        var_dump($shipping);
@@ -3526,7 +3527,6 @@ elseif ($_REQUEST['act'] == 'operate')
         $anonymous      = $order['user_id'] == 0;
         $action         = $_LANG['op_return'];
         $operation      = 'return';
-
     }
     /* 指派 */
     elseif (isset($_POST['assign']))

@@ -256,7 +256,7 @@
   <tr>
     <td><div align="right">
       - <?php echo $this->_var['lang']['label_money_paid']; ?><strong><?php echo $this->_var['order']['formated_money_paid']; ?></strong> - <?php echo $this->_var['lang']['label_surplus']; ?> <strong><?php echo $this->_var['order']['formated_surplus']; ?></strong>
-      - <?php echo $this->_var['lang']['label_integral']; ?> <strong><?php echo $this->_var['order']['formated_integral_money']; ?></strong>
+      - <?php echo $this->_var['lang']['label_integral']; ?> <strong><?php echo $this->_var['order']['integral']; ?></strong>
       - <?php echo $this->_var['lang']['label_bonus']; ?> <strong><?php echo $this->_var['order']['formated_bonus']; ?></strong>
     </div></td>
   <tr>
